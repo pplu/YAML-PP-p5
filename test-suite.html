@@ -62,7 +62,7 @@ pre.diff {
 </style>
 </head>
 <body>
-Generated with YAML::PP v0.004-26-ge42086e<br>
+Generated with YAML::PP v0.004-26-gf7f474e<br>
 <a href="#valid">Valid (203)</a><br>
 <a href="#invalid">Invalid (41)</a><br>
 <h1><a name="valid">Valid</a></h1>
@@ -100,7 +100,7 @@ Generated with YAML::PP v0.004-26-ge42086e<br>
 ]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    {
       &quot;avg&quot; : 0.278,
       &quot;hr&quot; : 65,
@@ -115,13 +115,13 @@ Generated with YAML::PP v0.004-26-ge42086e<br>
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- avg: 0.278
-  hr: 65
-  name: &quot;Mark McGwire&quot;
-- avg: 0.288
-  hr: 63
-  name: &quot;Sammy Sosa&quot;
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">avg</span><span class="colon">:</span><span class="default"> </span><span class="default">0.278</span><span class="comment">
+</span><span class="indent">  </span><span class="default">hr</span><span class="colon">:</span><span class="default"> </span><span class="default">65</span><span class="comment">
+</span><span class="indent">  </span><span class="default">name</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Mark McGwire</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">avg</span><span class="colon">:</span><span class="default"> </span><span class="default">0.288</span><span class="comment">
+</span><span class="indent">  </span><span class="default">hr</span><span class="colon">:</span><span class="default"> </span><span class="default">63</span><span class="comment">
+</span><span class="indent">  </span><span class="default">name</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -158,7 +158,7 @@ Generated with YAML::PP v0.004-26-ge42086e<br>
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;top1&quot; : {
       &quot;key1&quot; : &quot;scalar1&quot;
    },
@@ -179,18 +179,18 @@ Generated with YAML::PP v0.004-26-ge42086e<br>
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>top1:
-  key1: scalar1
-top2:
-  key2: scalar2
-top3:
-  scalar1: scalar3
-top4:
-  scalar2: scalar4
-top5: scalar5
-top6:
-  key6: scalar6
-</pre>
+<pre><span class="default">top1</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key1</span><span class="colon">:</span><span class="default"> </span><span class="default">scalar1</span><span class="comment">
+</span><span class="default">top2</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key2</span><span class="colon">:</span><span class="default"> </span><span class="default">scalar2</span><span class="comment">
+</span><span class="default">top3</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">scalar1</span><span class="colon">:</span><span class="default"> </span><span class="default">scalar3</span><span class="comment">
+</span><span class="default">top4</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">scalar2</span><span class="colon">:</span><span class="default"> </span><span class="default">scalar4</span><span class="comment">
+</span><span class="default">top5</span><span class="colon">:</span><span class="default"> </span><span class="default">scalar5</span><span class="comment">
+</span><span class="default">top6</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key6</span><span class="colon">:</span><span class="default"> </span><span class="default">scalar6</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -210,12 +210,12 @@ top6:
 <pre>$doc1 = &quot;text&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;text&quot;
+<pre>Doc 1: &quot;text&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>text
-</pre>
+<pre><span class="default">text</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -237,7 +237,7 @@ top6:
 <pre>$doc1 = [&quot;a&quot;, &quot;b&quot;, 42, &quot;d&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;a&quot;,
    &quot;b&quot;,
    42,
@@ -246,11 +246,11 @@ top6:
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- a
-- b
-- 42
-- d
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">42</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -279,7 +279,7 @@ top6:
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;-foo&quot; : &quot;safe dash&quot;,
    &quot;:foo&quot; : &quot;safe colon&quot;,
    &quot;?foo&quot; : &quot;safe question mark&quot;,
@@ -289,12 +289,12 @@ top6:
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>-foo: &quot;safe dash&quot;
-&quot;:foo&quot;: &quot;safe colon&quot;
-&quot;?foo&quot;: &quot;safe question mark&quot;
-&quot;a!\&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~&quot;: safe
-&quot;this is#not&quot;: &quot;a comment&quot;
-</pre>
+<pre><span class="default">-foo</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">safe dash</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">:foo</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">safe colon</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">?foo</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">safe question mark</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">a!\&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">safe</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">this is#not</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a comment</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -314,14 +314,14 @@ top6:
 <pre>$doc1 = { &quot;&quot; =&gt; &quot;b&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;&quot; : &quot;b&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;&quot;: b
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -343,12 +343,12 @@ top6:
 <pre>$doc1 = &quot;foo&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;foo&quot;
+<pre>Doc 1: &quot;foo&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>foo
-</pre>
+<pre><span class="default">foo</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -369,16 +369,16 @@ top6:
 <pre>$doc1 = { foo =&gt; &quot;key&quot;, key =&gt; &quot;value&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;foo&quot; : &quot;key&quot;,
    &quot;key&quot; : &quot;value&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>foo: key
-key: value
-</pre>
+<pre><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">key</span><span class="comment">
+</span><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -403,7 +403,7 @@ key: value
 <pre>$doc1 = { &quot;Ken Griff&quot; =&gt; undef, &quot;Mark McGwire&quot; =&gt; undef, &quot;Sammy Sosa&quot; =&gt; undef }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;Ken Griff&quot; : null,
    &quot;Mark McGwire&quot; : null,
    &quot;Sammy Sosa&quot; : null
@@ -411,10 +411,10 @@ key: value
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;Ken Griff&quot;:
-&quot;Mark McGwire&quot;:
-&quot;Sammy Sosa&quot;:
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">Ken Griff</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">Mark McGwire</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -442,23 +442,23 @@ $doc2 = [&quot;c&quot;]
 $doc3 = &quot;d e&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a&quot; : &quot;b&quot;
 }
 
-Doc 1: [
+Doc 2: [
    &quot;c&quot;
 ]
 
-Doc 2: &quot;d e&quot;
+Doc 3: &quot;d e&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a: b
----
-- c
---- &quot;d e&quot;
-</pre>
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="comment">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">d e</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -479,7 +479,7 @@ Doc 2: &quot;d e&quot;
 <pre>$doc1 = [[&quot;s1_i1&quot;, &quot;s1_i2&quot;], &quot;s2&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    [
       &quot;s1_i1&quot;,
       &quot;s1_i2&quot;
@@ -489,10 +489,10 @@ Doc 2: &quot;d e&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- - &quot;s1_i1&quot;
-  - &quot;s1_i2&quot;
-- s2
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">s1_i1</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">s1_i2</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">s2</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -519,7 +519,7 @@ Doc 2: &quot;d e&quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;First occurrence&quot; : &quot;Foo&quot;,
    &quot;Override anchor&quot; : &quot;Bar&quot;,
    &quot;Reuse anchor&quot; : &quot;Bar&quot;,
@@ -528,11 +528,11 @@ Doc 2: &quot;d e&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;First occurrence&quot;: Foo
-&quot;Override anchor&quot;: Bar
-&quot;Reuse anchor&quot;: Bar
-&quot;Second occurrence&quot;: Foo
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">First occurrence</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">Foo</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">Override anchor</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">Bar</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">Reuse anchor</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">Bar</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">Second occurrence</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">Foo</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -552,12 +552,12 @@ Doc 2: &quot;d e&quot;
 <pre>$doc1 = &quot;k:#foo &amp;a !t s&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;k:#foo &amp;a !t s&quot;
+<pre>Doc 1: &quot;k:#foo &amp;a !t s&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;k:#foo &amp;a !t s&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">k:#foo &amp;a !t s</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -616,16 +616,16 @@ YAML      : &quot;&quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;plain&quot; : &quot;This unquoted scalar spans many lines.&quot;,
    &quot;quoted&quot; : &quot;So does this quoted scalar.\n&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>plain: &quot;This unquoted scalar spans many lines.&quot;
-quoted: &quot;So does this quoted scalar.\n&quot;
-</pre>
+<pre><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">This unquoted scalar spans many lines.</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">So does this quoted scalar.\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -644,12 +644,12 @@ quoted: &quot;So does this quoted scalar.\n&quot;
 <pre>$doc1 = &quot;here&#39;s to \&quot;quotes\&quot;&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;here&#39;s to \&quot;quotes\&quot;&quot;
+<pre>Doc 1: &quot;here&#39;s to \&quot;quotes\&quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;here&#39;s to \&quot;quotes\&quot;&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">here&#39;s to \&quot;quotes\&quot;</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -675,12 +675,12 @@ quoted: &quot;So does this quoted scalar.\n&quot;
 <pre>$doc1 = &quot;ab cd\nef\n\ngh\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;ab cd\nef\n\ngh\n&quot;
+<pre>Doc 1: &quot;ab cd\nef\n\ngh\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;ab cd\nef\n\ngh\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">ab cd\nef\n\ngh\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -708,7 +708,7 @@ quoted: &quot;So does this quoted scalar.\n&quot;
 <pre>$doc1 = [&quot;detected\n&quot;, &quot;\n\n# detected\n&quot;, &quot; explicit\n&quot;, &quot;detected\n&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;detected\n&quot;,
    &quot;\n\n# detected\n&quot;,
    &quot; explicit\n&quot;,
@@ -717,11 +717,11 @@ quoted: &quot;So does this quoted scalar.\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- &quot;detected\n&quot;
-- &quot;\n\n# detected\n&quot;
-- &quot; explicit\n&quot;
-- &quot;detected\n&quot;
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">detected\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\n\n# detected\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> explicit\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">detected\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -740,12 +740,12 @@ quoted: &quot;So does this quoted scalar.\n&quot;
 <pre>$doc1 = &quot;foo: bar\&quot;: baz&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;foo: bar\&quot;: baz&quot;
+<pre>Doc 1: &quot;foo: bar\&quot;: baz&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;foo: bar\&quot;: baz&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">foo: bar\&quot;: baz</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -765,12 +765,12 @@ quoted: &quot;So does this quoted scalar.\n&quot;
 <pre>$doc1 = &quot;plain\\value\\with\\backslashes&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;plain\\value\\with\\backslashes&quot;
+<pre>Doc 1: &quot;plain\\value\\with\\backslashes&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;plain\\value\\with\\backslashes&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">plain\\value\\with\\backslashes</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -799,7 +799,7 @@ quoted: &quot;So does this quoted scalar.\n&quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;block&quot; : &quot;text\n \tlines\n&quot;,
    &quot;plain&quot; : &quot;text lines&quot;,
    &quot;quoted&quot; : &quot;text lines&quot;
@@ -807,10 +807,10 @@ quoted: &quot;So does this quoted scalar.\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>block: &quot;text\n \tlines\n&quot;
-plain: &quot;text lines&quot;
-quoted: &quot;text lines&quot;
-</pre>
+<pre><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">text\n \tlines\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">text lines</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">text lines</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -830,12 +830,12 @@ quoted: &quot;text lines&quot;
 <pre>$doc1 = &quot;a&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;a&quot;
+<pre>Doc 1: &quot;a&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a
-</pre>
+<pre><span class="default">a</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -896,7 +896,7 @@ YAML      : &quot;&quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;canonical&quot; : &quot;R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLCAgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=&quot;,
    &quot;description&quot; : &quot;The binary value above is a tiny arrow encoded as a gif image.&quot;,
    &quot;generic&quot; : &quot;R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5\nOTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+\n+f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC\nAgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=\n&quot;
@@ -904,10 +904,10 @@ YAML      : &quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>canonical: &quot;R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLCAgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=&quot;
-description: &quot;The binary value above is a tiny arrow encoded as a gif image.&quot;
-generic: &quot;R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5\nOTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+\n+f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC\nAgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=\n&quot;
-</pre>
+<pre><span class="default">canonical</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLCAgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">description</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">The binary value above is a tiny arrow encoded as a gif image.</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">generic</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5\nOTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+\n+f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC\nAgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -931,7 +931,7 @@ generic: &quot;R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5\nO
 <pre>$doc1 = { mapping =&gt; { foo =&gt; &quot;bar&quot; }, sequence =&gt; [&quot;entry&quot;, [&quot;nested&quot;]] }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;mapping&quot; : {
       &quot;foo&quot; : &quot;bar&quot;
    },
@@ -945,12 +945,12 @@ generic: &quot;R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5\nO
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>mapping:
-  foo: bar
-sequence:
-- entry
-- - nested
-</pre>
+<pre><span class="default">mapping</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">bar</span><span class="comment">
+</span><span class="default">sequence</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">entry</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">nested</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -974,16 +974,16 @@ sequence:
 <pre>$doc1 = { folded =&gt; &quot;some text\n&quot;, literal =&gt; &quot;some\ntext\n&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;folded&quot; : &quot;some text\n&quot;,
    &quot;literal&quot; : &quot;some\ntext\n&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>folded: &quot;some text\n&quot;
-literal: &quot;some\ntext\n&quot;
-</pre>
+<pre><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">some text\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">some\ntext\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1040,16 +1040,16 @@ YAML      : &quot;- &quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;Chomping&quot; : &quot;Clipped empty lines\n&quot;,
    &quot;Folding&quot; : &quot;Empty line\nas a line feed&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Chomping: &quot;Clipped empty lines\n&quot;
-Folding: &quot;Empty line\nas a line feed&quot;
-</pre>
+<pre><span class="default">Chomping</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Clipped empty lines\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">Folding</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Empty line\nas a line feed</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1097,14 +1097,14 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = { key =&gt; &quot;value&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;key&quot; : &quot;value&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>key: value
-</pre>
+<pre><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1130,15 +1130,15 @@ YAML      : &quot;- &quot;
 $doc2 = &quot;green&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;fluorescent&quot;
+<pre>Doc 1: &quot;fluorescent&quot;
 
-Doc 1: &quot;green&quot;
+Doc 2: &quot;green&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>fluorescent
---- green
-</pre>
+<pre><span class="default">fluorescent</span><span class="comment">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="default">green</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1161,7 +1161,7 @@ Doc 1: &quot;green&quot;
 <pre>$doc1 = { &quot;block key\n&quot; =&gt; [&quot;one&quot;, &quot;two&quot;], &quot;explicit key&quot; =&gt; undef }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;block key\n&quot; : [
       &quot;one&quot;,
       &quot;two&quot;
@@ -1171,11 +1171,11 @@ Doc 1: &quot;green&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;block key\n&quot;:
-- one
-- two
-&quot;explicit key&quot;:
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">block key\n</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">explicit key</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1194,14 +1194,14 @@ Doc 1: &quot;green&quot;
 <pre>$doc1 = [&quot;foo&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;foo&quot;
 ]
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- foo
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">foo</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1222,7 +1222,7 @@ Doc 1: &quot;green&quot;
 <pre>$doc1 = [{ foo =&gt; &quot;bar&quot; }, [&quot;baz&quot;, &quot;baz&quot;]]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    {
       &quot;foo&quot; : &quot;bar&quot;
    },
@@ -1234,10 +1234,10 @@ Doc 1: &quot;green&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- foo: bar
-- - baz
-  - baz
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">bar</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">baz</span><span class="comment">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">baz</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1260,7 +1260,7 @@ Doc 1: &quot;green&quot;
 <pre>$doc1 = [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;foo&quot;,
    &quot;bar&quot;,
    &quot;baz&quot;
@@ -1268,10 +1268,10 @@ Doc 1: &quot;green&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- foo
-- bar
-- baz
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">foo</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">bar</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">baz</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1294,12 +1294,12 @@ Doc 1: &quot;green&quot;
 <pre>$doc1 = &quot;ab\n\n \n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;ab\n\n \n&quot;
+<pre>Doc 1: &quot;ab\n\n \n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;ab\n\n \n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">ab\n\n \n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1318,14 +1318,14 @@ Doc 1: &quot;green&quot;
 <pre>$doc1 = { &quot;foo: bar\\&quot; =&gt; &quot;baz&#39;&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;foo: bar\\&quot; : &quot;baz&#39;&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;foo: bar\\&quot;: &quot;baz&#39;&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">foo: bar\\</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">baz&#39;</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1385,12 +1385,12 @@ YAML      : &quot; Flow style: &quot;
 <pre>$doc1 = &quot;\\//||\\/||\n// ||  ||__\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;\\//||\\/||\n// ||  ||__\n&quot;
+<pre>Doc 1: &quot;\\//||\\/||\n// ||  ||__\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;\\//||\\/||\n// ||  ||__\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">\\//||\\/||\n// ||  ||__\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1412,7 +1412,7 @@ YAML      : &quot; Flow style: &quot;
 <pre>$doc1 = { foo =&gt; [&quot;a&quot;, { key =&gt; &quot;value&quot; }] }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;foo&quot; : [
       &quot;a&quot;,
       {
@@ -1423,10 +1423,10 @@ YAML      : &quot; Flow style: &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>foo:
-- a
-- key: value
-</pre>
+<pre><span class="default">foo</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1447,12 +1447,12 @@ YAML      : &quot; Flow style: &quot;
 <pre>$doc1 = &quot;foo&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;foo&quot;
+<pre>Doc 1: &quot;foo&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>foo
-</pre>
+<pre><span class="default">foo</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1473,16 +1473,16 @@ YAML      : &quot; Flow style: &quot;
 <pre>$doc1 = { &quot;&quot; =&gt; &quot;a&quot;, &quot;a&quot; =&gt; &quot;b&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;&quot; : &quot;a&quot;,
    &quot;a&quot; : &quot;b&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;&quot;: a
-a: b
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1502,16 +1502,16 @@ a: b
 <pre>$doc1 = { &quot;foo\nbar:baz\tx \\\$%^&amp;*()x&quot; =&gt; 23, &quot;x\\ny:z\\tx \$%^&amp;*()x&quot; =&gt; 24 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;foo\nbar:baz\tx \\$%^&amp;*()x&quot; : 23,
    &quot;x\\ny:z\\tx $%^&amp;*()x&quot; : 24
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;foo\nbar:baz\tx \\$%^&amp;*()x&quot;: 23
-&quot;x\\ny:z\\tx $%^&amp;*()x&quot;: 24
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">foo\nbar:baz\tx \\$%^&amp;*()x</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">23</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">x\\ny:z\\tx $%^&amp;*()x</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">24</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1537,12 +1537,12 @@ a: b
 <pre>$doc1 = &quot;Sammy Sosa completed another fine season with great stats.\n\n  63 Home Runs\n  0.288 Batting Average\n\nWhat a year!\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;Sammy Sosa completed another fine season with great stats.\n\n  63 Home Runs\n  0.288 Batting Average\n\nWhat a year!\n&quot;
+<pre>Doc 1: &quot;Sammy Sosa completed another fine season with great stats.\n\n  63 Home Runs\n  0.288 Batting Average\n\nWhat a year!\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;Sammy Sosa completed another fine season with great stats.\n\n  63 Home Runs\n  0.288 Batting Average\n\nWhat a year!\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa completed another fine season with great stats.\n\n  63 Home Runs\n  0.288 Batting Average\n\nWhat a year!\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1569,15 +1569,15 @@ a: b
 $doc2 = &quot;bar&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;bar&quot;
+<pre>Doc 1: &quot;bar&quot;
 
-Doc 1: &quot;bar&quot;
+Doc 2: &quot;bar&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>bar
---- bar
-</pre>
+<pre><span class="default">bar</span><span class="comment">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="default">bar</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1603,12 +1603,12 @@ Doc 1: &quot;bar&quot;
 <pre>$doc1 = &quot; foo\nbar\nbaz &quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot; foo\nbar\nbaz &quot;
+<pre>Doc 1: &quot; foo\nbar\nbaz &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot; foo\nbar\nbaz &quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted"> foo\nbar\nbaz </span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1635,21 +1635,21 @@ $doc2 = undef
 $doc3 = { &quot;matches %&quot; =&gt; 20 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;Document&quot;
+<pre>Doc 1: &quot;Document&quot;
 
-Doc 1: null
+Doc 2: null
 
-Doc 2: {
+Doc 3: {
    &quot;matches %&quot; : 20
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Document
----
----
-&quot;matches %&quot;: 20
-</pre>
+<pre><span class="default">Document</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">matches %</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">20</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1673,7 +1673,7 @@ Doc 2: {
 <pre>$doc1 = [&quot;flow in block&quot;, &quot;Block scalar\n&quot;, { foo =&gt; &quot;bar&quot; }]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;flow in block&quot;,
    &quot;Block scalar\n&quot;,
    {
@@ -1683,10 +1683,10 @@ Doc 2: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- &quot;flow in block&quot;
-- &quot;Block scalar\n&quot;
-- foo: bar
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">flow in block</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Block scalar\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">bar</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1715,7 +1715,7 @@ Doc 2: {
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;23&quot; : false,
    &quot;a&quot; : &quot;b&quot;,
    &quot;c&quot; : 42,
@@ -1725,12 +1725,12 @@ Doc 2: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>23: false
-a: b
-c: 42
-e: f
-g: h
-</pre>
+<pre><span class="default">23</span><span class="colon">:</span><span class="default"> </span><span class="default">false</span><span class="comment">
+</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">42</span><span class="comment">
+</span><span class="default">e</span><span class="colon">:</span><span class="default"> </span><span class="default">f</span><span class="comment">
+</span><span class="default">g</span><span class="colon">:</span><span class="default"> </span><span class="default">h</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1753,12 +1753,12 @@ g: h
 <pre>$doc1 = &quot;ab&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;ab&quot;
+<pre>Doc 1: &quot;ab&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>ab
-</pre>
+<pre><span class="default">ab</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1793,7 +1793,7 @@ g: h
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;application specific tag&quot; : &quot;The semantics of the tag\nabove may be different for\ndifferent documents.\n&quot;,
    &quot;not-date&quot; : &quot;2002-04-28&quot;,
    &quot;picture&quot; : &quot;R0lGODlhDAAMAIQAAP//9/X\n17unp5WZmZgAAAOfn515eXv\nPz7Y6OjuDg4J+fn5OTk6enp\n56enmleECcgggoBADs=\n&quot;
@@ -1801,10 +1801,10 @@ g: h
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;application specific tag&quot;: &quot;The semantics of the tag\nabove may be different for\ndifferent documents.\n&quot;
-not-date: 2002-04-28
-picture: &quot;R0lGODlhDAAMAIQAAP//9/X\n17unp5WZmZgAAAOfn515eXv\nPz7Y6OjuDg4J+fn5OTk6enp\n56enmleECcgggoBADs=\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">application specific tag</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">The semantics of the tag\nabove may be different for\ndifferent documents.\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">not-date</span><span class="colon">:</span><span class="default"> </span><span class="default">2002-04-28</span><span class="comment">
+</span><span class="default">picture</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">R0lGODlhDAAMAIQAAP//9/X\n17unp5WZmZgAAAOfn515eXv\nPz7Y6OjuDg4J+fn5OTk6enp\n56enmleECcgggoBADs=\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1826,12 +1826,12 @@ picture: &quot;R0lGODlhDAAMAIQAAP//9/X\n17unp5WZmZgAAAOfn515eXv\nPz7Y6OjuDg4J+fn
 <pre>$doc1 = &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
+<pre>Doc 1: &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty\n2nd non-empty 3rd non-empty </span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1872,7 +1872,7 @@ picture: &quot;R0lGODlhDAAMAIQAAP//9/X\n17unp5WZmZgAAAOfn515eXv\nPz7Y6OjuDg4J+fn
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;top1&quot; : {
       &quot;key1&quot; : &quot;one&quot;
    },
@@ -1894,19 +1894,19 @@ picture: &quot;R0lGODlhDAAMAIQAAP//9/X\n17unp5WZmZgAAAOfn515eXv\nPz7Y6OjuDg4J+fn
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>top1:
-  key1: one
-top2:
-  key2: two
-top3:
-  key3: three
-top4:
-  key4: four
-top5:
-  key5: five
-top6: six
-top7: seven
-</pre>
+<pre><span class="default">top1</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key1</span><span class="colon">:</span><span class="default"> </span><span class="default">one</span><span class="comment">
+</span><span class="default">top2</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key2</span><span class="colon">:</span><span class="default"> </span><span class="default">two</span><span class="comment">
+</span><span class="default">top3</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key3</span><span class="colon">:</span><span class="default"> </span><span class="default">three</span><span class="comment">
+</span><span class="default">top4</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key4</span><span class="colon">:</span><span class="default"> </span><span class="default">four</span><span class="comment">
+</span><span class="default">top5</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key5</span><span class="colon">:</span><span class="default"> </span><span class="default">five</span><span class="comment">
+</span><span class="default">top6</span><span class="colon">:</span><span class="default"> </span><span class="default">six</span><span class="comment">
+</span><span class="default">top7</span><span class="colon">:</span><span class="default"> </span><span class="default">seven</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1935,7 +1935,7 @@ top7: seven
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;hr&quot; : [
       &quot;Mark McGwire&quot;,
       &quot;Sammy Sosa&quot;
@@ -1948,13 +1948,13 @@ top7: seven
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>hr:
-- &quot;Mark McGwire&quot;
-- &quot;Sammy Sosa&quot;
-rbi:
-- &quot;Sammy Sosa&quot;
-- &quot;Ken Griffey&quot;
-</pre>
+<pre><span class="default">hr</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Mark McGwire</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">rbi</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Ken Griffey</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -1974,14 +1974,14 @@ rbi:
 <pre>$doc1 = { foo =&gt; &quot;baz&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;foo&quot; : &quot;baz&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>foo: baz
-</pre>
+<pre><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">baz</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2015,12 +2015,12 @@ rbi:
 <pre>$doc1 = &quot;\nfolded line\nnext line\n  * bullet\n\n  * list\n  * lines\n\nlast line\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;\nfolded line\nnext line\n  * bullet\n\n  * list\n  * lines\n\nlast line\n&quot;
+<pre>Doc 1: &quot;\nfolded line\nnext line\n  * bullet\n\n  * list\n  * lines\n\nlast line\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;\nfolded line\nnext line\n  * bullet\n\n  * list\n  * lines\n\nlast line\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">\nfolded line\nnext line\n  * bullet\n\n  * list\n  * lines\n\nlast line\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2041,7 +2041,7 @@ rbi:
 <pre>$doc1 = { a =&gt; undef, b =&gt; undef, c =&gt; undef }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a&quot; : null,
    &quot;b&quot; : null,
    &quot;c&quot; : null
@@ -2049,10 +2049,10 @@ rbi:
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a:
-b:
-c:
-</pre>
+<pre><span class="default">a</span><span class="colon">:</span><span class="comment">
+</span><span class="default">b</span><span class="colon">:</span><span class="comment">
+</span><span class="default">c</span><span class="colon">:</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2075,18 +2075,18 @@ c:
 $doc2 = { key =&gt; &quot;value&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;scalar1&quot;
+<pre>Doc 1: &quot;scalar1&quot;
 
-Doc 1: {
+Doc 2: {
    &quot;key&quot; : &quot;value&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>scalar1
----
-key: value
-</pre>
+<pre><span class="default">scalar1</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2106,12 +2106,12 @@ key: value
 <pre>$doc1 = &quot;---word1 word2&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;---word1 word2&quot;
+<pre>Doc 1: &quot;---word1 word2&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;---word1 word2&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">---word1 word2</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2184,12 +2184,12 @@ YAML      : &quot;&#39;implicit block key&#39; : &quot;
 <pre>$doc1 = &quot;a&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;a&quot;
+<pre>Doc 1: &quot;a&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a
-</pre>
+<pre><span class="default">a</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2210,7 +2210,7 @@ YAML      : &quot;&#39;implicit block key&#39; : &quot;
 <pre>$doc1 = { key =&gt; [&quot;item1&quot;, &quot;item2&quot;] }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;key&quot; : [
       &quot;item1&quot;,
       &quot;item2&quot;
@@ -2219,10 +2219,10 @@ YAML      : &quot;&#39;implicit block key&#39; : &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>key:
-- item1
-- item2
-</pre>
+<pre><span class="default">key</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">item1</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">item2</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2278,7 +2278,7 @@ YAML      : &quot;&quot;
 <pre>$doc1 = [{ key =&gt; &quot;value&quot;, key2 =&gt; &quot;value2&quot; }, { key3 =&gt; &quot;value3&quot; }]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    {
       &quot;key&quot; : &quot;value&quot;,
       &quot;key2&quot; : &quot;value2&quot;
@@ -2290,10 +2290,10 @@ YAML      : &quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- key: value
-  key2: value2
-- key3: value3
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key2</span><span class="colon">:</span><span class="default"> </span><span class="default">value2</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">key3</span><span class="colon">:</span><span class="default"> </span><span class="default">value3</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2318,12 +2318,12 @@ YAML      : &quot;&quot;
 <pre>$doc1 = &quot;trimmed\n\n\nas space&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;trimmed\n\n\nas space&quot;
+<pre>Doc 1: &quot;trimmed\n\n\nas space&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;trimmed\n\n\nas space&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">trimmed\n\n\nas space</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2345,12 +2345,12 @@ YAML      : &quot;&quot;
 <pre>$doc1 = &quot;Mark McGwire&#39;s year was crippled by a knee injury.\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;Mark McGwire&#39;s year was crippled by a knee injury.\n&quot;
+<pre>Doc 1: &quot;Mark McGwire&#39;s year was crippled by a knee injury.\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;Mark McGwire&#39;s year was crippled by a knee injury.\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">Mark McGwire&#39;s year was crippled by a knee injury.\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2399,23 +2399,23 @@ $doc2 = undef
 $doc3 = { &quot;matches %&quot; =&gt; 20 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;Mapping&quot; : &quot;Document&quot;
 }
 
-Doc 1: null
+Doc 2: null
 
-Doc 2: {
+Doc 3: {
    &quot;matches %&quot; : 20
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Mapping: Document
----
----
-&quot;matches %&quot;: 20
-</pre>
+<pre><span class="default">Mapping</span><span class="colon">:</span><span class="default"> </span><span class="default">Document</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">matches %</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">20</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2439,7 +2439,7 @@ Doc 2: {
 <pre>$doc1 = { a =&gt; { b =&gt; { c =&gt; &quot;d&quot; }, e =&gt; { f =&gt; &quot;g&quot; } }, h =&gt; &quot;i&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a&quot; : {
       &quot;b&quot; : {
          &quot;c&quot; : &quot;d&quot;
@@ -2453,13 +2453,13 @@ Doc 2: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a:
-  b:
-    c: d
-  e:
-    f: g
-h: i
-</pre>
+<pre><span class="default">a</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">b</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">    </span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span><span class="indent">  </span><span class="default">e</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">    </span><span class="default">f</span><span class="colon">:</span><span class="default"> </span><span class="default">g</span><span class="comment">
+</span><span class="default">h</span><span class="colon">:</span><span class="default"> </span><span class="default">i</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2479,7 +2479,7 @@ h: i
 <pre>$doc1 = { foo =&gt; { bar =&gt; &quot;baz&quot; } }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;foo&quot; : {
       &quot;bar&quot; : &quot;baz&quot;
    }
@@ -2487,9 +2487,9 @@ h: i
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>foo:
-  bar: baz
-</pre>
+<pre><span class="default">foo</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">bar</span><span class="colon">:</span><span class="default"> </span><span class="default">baz</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2540,47 +2540,47 @@ $doc7 = { key10 =&gt; &quot;value9&quot; }
 $doc8 = &quot;value11&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;scalar1&quot;
+<pre>Doc 1: &quot;scalar1&quot;
 
-Doc 1: &quot;scalar2&quot;
+Doc 2: &quot;scalar2&quot;
 
-Doc 2: &quot;scalar3&quot;
+Doc 3: &quot;scalar3&quot;
 
-Doc 3: {
+Doc 4: {
    &quot;key5&quot; : &quot;value4&quot;
 }
 
-Doc 4: {
+Doc 5: {
    &quot;a6&quot; : 1,
    &quot;b6&quot; : 2
 }
 
-Doc 5: {
+Doc 6: {
    &quot;key8&quot; : &quot;value7&quot;
 }
 
-Doc 6: {
+Doc 7: {
    &quot;key10&quot; : &quot;value9&quot;
 }
 
-Doc 7: &quot;value11&quot;
+Doc 8: &quot;value11&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>scalar1
---- scalar2
---- scalar3
----
-key5: value4
----
-a6: 1
-b6: 2
----
-key8: value7
----
-key10: value9
---- value11
-</pre>
+<pre><span class="default">scalar1</span><span class="comment">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="default">scalar2</span><span class="comment">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="default">scalar3</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="default">key5</span><span class="colon">:</span><span class="default"> </span><span class="default">value4</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="default">a6</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
+</span><span class="default">b6</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="default">key8</span><span class="colon">:</span><span class="default"> </span><span class="default">value7</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="default">key10</span><span class="colon">:</span><span class="default"> </span><span class="default">value9</span><span class="comment">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="default">value11</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2629,16 +2629,16 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = { double =&gt; &quot;text&quot;, single =&gt; &quot;text&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;double&quot; : &quot;text&quot;,
    &quot;single&quot; : &quot;text&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>double: text
-single: text
-</pre>
+<pre><span class="default">double</span><span class="colon">:</span><span class="default"> </span><span class="default">text</span><span class="comment">
+</span><span class="default">single</span><span class="colon">:</span><span class="default"> </span><span class="default">text</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2661,12 +2661,12 @@ single: text
 <pre>$doc1 = &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
+<pre>Doc 1: &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty\n2nd non-empty 3rd non-empty </span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2696,7 +2696,7 @@ single: text
 ]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    {
       &quot;item&quot; : &quot;Super Hoop&quot;,
       &quot;quantity&quot; : 1
@@ -2713,13 +2713,13 @@ single: text
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- item: &quot;Super Hoop&quot;
-  quantity: 1
-- item: Basketball
-  quantity: 4
-- item: &quot;Big Shoes&quot;
-  quantity: 1
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">item</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Super Hoop</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="indent">  </span><span class="default">quantity</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">item</span><span class="colon">:</span><span class="default"> </span><span class="default">Basketball</span><span class="comment">
+</span><span class="indent">  </span><span class="default">quantity</span><span class="colon">:</span><span class="default"> </span><span class="default">4</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">item</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Big Shoes</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="indent">  </span><span class="default">quantity</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2745,15 +2745,15 @@ single: text
 $doc2 = &quot;bar&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;bar&quot;
+<pre>Doc 1: &quot;bar&quot;
 
-Doc 1: &quot;bar&quot;
+Doc 2: &quot;bar&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>bar
---- bar
-</pre>
+<pre><span class="default">bar</span><span class="comment">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="default">bar</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2777,12 +2777,12 @@ Doc 1: &quot;bar&quot;
 <pre>$doc1 = &quot;a b c d\ne&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;a b c d\ne&quot;
+<pre>Doc 1: &quot;a b c d\ne&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;a b c d\ne&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">a b c d\ne</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2804,7 +2804,7 @@ Doc 1: &quot;bar&quot;
 <pre>$doc1 = { a =&gt; [&quot;b&quot;, [&quot;c&quot;, &quot;d&quot;]] }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a&quot; : [
       &quot;b&quot;,
       [
@@ -2816,11 +2816,11 @@ Doc 1: &quot;bar&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a:
-- b
-- - c
-  - d
-</pre>
+<pre><span class="default">a</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="comment">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2844,7 +2844,7 @@ Doc 1: &quot;bar&quot;
 <pre>$doc1 = { clip =&gt; &quot;text\n&quot;, keep =&gt; &quot;text\n&quot;, strip =&gt; &quot;text&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;clip&quot; : &quot;text\n&quot;,
    &quot;keep&quot; : &quot;text\n&quot;,
    &quot;strip&quot; : &quot;text&quot;
@@ -2852,10 +2852,10 @@ Doc 1: &quot;bar&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>clip: &quot;text\n&quot;
-keep: &quot;text\n&quot;
-strip: text
-</pre>
+<pre><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">text\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">text\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">strip</span><span class="colon">:</span><span class="default"> </span><span class="default">text</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2878,16 +2878,16 @@ strip: text
 <pre>$doc1 = { a =&gt; &quot;b c&quot;, d =&gt; &quot;e f&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a&quot; : &quot;b c&quot;,
    &quot;d&quot; : &quot;e f&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a: &quot;b c&quot;
-d: &quot;e f&quot;
-</pre>
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">b c</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">d</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">e f</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2907,14 +2907,14 @@ d: &quot;e f&quot;
 <pre>$doc1 = [&quot;single multiline - sequence entry&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;single multiline - sequence entry&quot;
 ]
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- &quot;single multiline - sequence entry&quot;
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">single multiline - sequence entry</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2957,7 +2957,7 @@ d: &quot;e f&quot;
 <pre>$doc1 = { 1 =&gt; [2, 3], 4 =&gt; 5 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;1&quot; : [
       2,
       3
@@ -2967,11 +2967,11 @@ d: &quot;e f&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>1:
-- 2
-- 3
-4: 5
-</pre>
+<pre><span class="default">1</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">2</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">3</span><span class="comment">
+</span><span class="default">4</span><span class="colon">:</span><span class="default"> </span><span class="default">5</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2991,7 +2991,7 @@ d: &quot;e f&quot;
 <pre>$doc1 = [{ &quot;bla\&quot;keks&quot; =&gt; &quot;foo&quot; }, { &quot;bla]keks&quot; =&gt; &quot;foo&quot; }]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    {
       &quot;bla\&quot;keks&quot; : &quot;foo&quot;
    },
@@ -3002,9 +3002,9 @@ d: &quot;e f&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- &quot;bla\&quot;keks&quot;: foo
-- &quot;bla]keks&quot;: foo
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">bla\&quot;keks</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">foo</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">bla]keks</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">foo</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3027,12 +3027,12 @@ d: &quot;e f&quot;
 <pre>$doc1 = &quot;folded text\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;folded text\n&quot;
+<pre>Doc 1: &quot;folded text\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;folded text\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">folded text\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3054,12 +3054,12 @@ d: &quot;e f&quot;
 <pre>$doc1 = &quot;foo&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;foo&quot;
+<pre>Doc 1: &quot;foo&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>foo
-</pre>
+<pre><span class="default">foo</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3080,7 +3080,7 @@ d: &quot;e f&quot;
 <pre>$doc1 = { key =&gt; { a =&gt; &quot;b&quot; } }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;key&quot; : {
       &quot;a&quot; : &quot;b&quot;
    }
@@ -3088,9 +3088,9 @@ d: &quot;e f&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>key:
-  a: b
-</pre>
+<pre><span class="default">key</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3182,12 +3182,12 @@ YAML      : &quot;  center: &amp;ORIGIN &quot;
 <pre>$doc1 = &quot;bar&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;bar&quot;
+<pre>Doc 1: &quot;bar&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>bar
-</pre>
+<pre><span class="default">bar</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3237,16 +3237,16 @@ YAML      : &quot;&quot;
 <pre>$doc1 = { alias =&gt; &quot;value&quot;, anchored =&gt; &quot;value&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;alias&quot; : &quot;value&quot;,
    &quot;anchored&quot; : &quot;value&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>alias: value
-anchored: value
-</pre>
+<pre><span class="default">alias</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
+</span><span class="default">anchored</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3268,16 +3268,16 @@ anchored: value
 <pre>$doc1 = [&quot;explicit indent and chomp&quot;, &quot;chomp and explicit indent&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;explicit indent and chomp&quot;,
    &quot;chomp and explicit indent&quot;
 ]
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- &quot;explicit indent and chomp&quot;
-- &quot;chomp and explicit indent&quot;
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">explicit indent and chomp</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">chomp and explicit indent</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3323,14 +3323,14 @@ YAML      : &quot;a: &quot;
 <pre>$doc1 = { foo =&gt; &quot;bar&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;foo&quot; : &quot;bar&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>foo: bar
-</pre>
+<pre><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">bar</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3448,12 +3448,12 @@ YAML      : &quot;&quot;
 <pre>$doc1 = &quot;line1 # no comment line3\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;line1 # no comment line3\n&quot;
+<pre>Doc 1: &quot;line1 # no comment line3\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;line1 # no comment line3\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">line1 # no comment line3\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3480,12 +3480,12 @@ YAML      : &quot;&quot;
 <pre>$doc1 = &quot;\n\nliteral\n \n\ntext\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;\n\nliteral\n \n\ntext\n&quot;
+<pre>Doc 1: &quot;\n\nliteral\n \n\ntext\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;\n\nliteral\n \n\ntext\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">\n\nliteral\n \n\ntext\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3505,14 +3505,14 @@ YAML      : &quot;&quot;
 <pre>$doc1 = { a =&gt; &quot;b&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a&quot; : &quot;b&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a: b
-</pre>
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3567,12 +3567,12 @@ YAML      : &quot;!!map &quot;
 <pre>$doc1 = &quot;a b c d\ne&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;a b c d\ne&quot;
+<pre>Doc 1: &quot;a b c d\ne&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;a b c d\ne&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">a b c d\ne</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3593,12 +3593,12 @@ YAML      : &quot;!!map &quot;
 <pre>$doc1 = &quot;---word1 word2&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;---word1 word2&quot;
+<pre>Doc 1: &quot;---word1 word2&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;---word1 word2&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">---word1 word2</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3620,7 +3620,7 @@ YAML      : &quot;!!map &quot;
 <pre>$doc1 = [&quot;a&quot;, 2, 4, &quot;d&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;a&quot;,
    2,
    4,
@@ -3629,11 +3629,11 @@ YAML      : &quot;!!map &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- a
-- 2
-- 4
-- d
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">2</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">4</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3670,7 +3670,7 @@ YAML      : &quot;!!map &quot;
 <pre>$doc1 = { clip =&gt; &quot;# text\n&quot;, keep =&gt; &quot;# text\n\n&quot;, strip =&gt; &quot;# text&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;clip&quot; : &quot;# text\n&quot;,
    &quot;keep&quot; : &quot;# text\n\n&quot;,
    &quot;strip&quot; : &quot;# text&quot;
@@ -3678,10 +3678,10 @@ YAML      : &quot;!!map &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>clip: &quot;# text\n&quot;
-keep: &quot;# text\n\n&quot;
-strip: &quot;# text&quot;
-</pre>
+<pre><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"># text\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"># text\n\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">strip</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"># text</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3709,7 +3709,7 @@ strip: &quot;# text&quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;safe&quot; : &quot;a!\&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~ !\&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~&quot;,
    &quot;safe colon&quot; : &quot;:foo&quot;,
    &quot;safe dash&quot; : &quot;-foo&quot;,
@@ -3718,11 +3718,11 @@ strip: &quot;# text&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>safe: &quot;a!\&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~ !\&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~&quot;
-&quot;safe colon&quot;: &quot;:foo&quot;
-&quot;safe dash&quot;: -foo
-&quot;safe question mark&quot;: &quot;?foo&quot;
-</pre>
+<pre><span class="default">safe</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a!\&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~ !\&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\\]^_`az{|}~</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">safe colon</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">:foo</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">safe dash</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">-foo</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">safe question mark</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">?foo</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3745,7 +3745,7 @@ strip: &quot;# text&quot;
 <pre>$doc1 = [undef, { &quot;&quot; =&gt; &quot;a&quot;, &quot;b&quot; =&gt; undef }, { &quot;&quot; =&gt; undef }]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    null,
    {
       &quot;&quot; : &quot;a&quot;,
@@ -3758,11 +3758,11 @@ strip: &quot;# text&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>-
-- &quot;&quot;: a
-  b:
-- &quot;&quot;:
-</pre>
+<pre><span class="dash">-</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="indent">  </span><span class="default">b</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3784,12 +3784,12 @@ strip: &quot;# text&quot;
 <pre>$doc1 = &quot;line1 line2 line3\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;line1 line2 line3\n&quot;
+<pre>Doc 1: &quot;line1 line2 line3\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;line1 line2 line3\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">line1 line2 line3\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3810,7 +3810,7 @@ strip: &quot;# text&quot;
 <pre>$doc1 = [&quot;Mark McGwire&quot;, &quot;Sammy Sosa&quot;, &quot;Ken Griffey&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;Mark McGwire&quot;,
    &quot;Sammy Sosa&quot;,
    &quot;Ken Griffey&quot;
@@ -3818,10 +3818,10 @@ strip: &quot;# text&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- &quot;Mark McGwire&quot;
-- &quot;Sammy Sosa&quot;
-- &quot;Ken Griffey&quot;
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Mark McGwire</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Ken Griffey</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3910,7 +3910,7 @@ YAML      : &quot;&quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;control&quot; : &quot;\b1998\t1999\t2000\n&quot;,
    &quot;hex esc&quot; : &quot;\r\n is \r\n&quot;,
    &quot;quoted&quot; : &quot; # Not a &#39;comment&#39;.&quot;,
@@ -3921,13 +3921,13 @@ YAML      : &quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>control: &quot;\b1998\t1999\t2000\n&quot;
-&quot;hex esc&quot;: &quot;\r\n is \r\n&quot;
-quoted: &quot; # Not a &#39;comment&#39;.&quot;
-single: &quot;\&quot;Howdy!\&quot; he cried.&quot;
-tie-fighter: &quot;|\\-*-/|&quot;
-unicode: &quot;Sosa did fine.&#x263A;&quot;
-</pre>
+<pre><span class="default">control</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\b1998\t1999\t2000\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">hex esc</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\r\n is \r\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> # Not a &#39;comment&#39;.</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">single</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\&quot;Howdy!\&quot; he cried.</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">tie-fighter</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">|\\-*-/|</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">unicode</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sosa did fine.&#x263A;</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3950,12 +3950,12 @@ unicode: &quot;Sosa did fine.&#x263A;&quot;
 <pre>$doc1 = &quot;folded text\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;folded text\n&quot;
+<pre>Doc 1: &quot;folded text\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;folded text\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">folded text\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3976,16 +3976,16 @@ unicode: &quot;Sosa did fine.&#x263A;&quot;
 <pre>$doc1 = { &quot;1.5&quot; =&gt; &quot;d&quot;, &quot;a&quot; =&gt; 13 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;1.5&quot; : &quot;d&quot;,
    &quot;a&quot; : 13
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>1.5: d
-a: 13
-</pre>
+<pre><span class="default">1.5</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">13</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4015,7 +4015,7 @@ a: 13
 <pre>$doc1 = { bar =&gt; 2, foo =&gt; 1, text =&gt; &quot;a\n  \nb\n\nc\n\nd\n&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;bar&quot; : 2,
    &quot;foo&quot; : 1,
    &quot;text&quot; : &quot;a\n  \nb\n\nc\n\nd\n&quot;
@@ -4023,10 +4023,10 @@ a: 13
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>bar: 2
-foo: 1
-text: &quot;a\n  \nb\n\nc\n\nd\n&quot;
-</pre>
+<pre><span class="default">bar</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="comment">
+</span><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
+</span><span class="default">text</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a\n  \nb\n\nc\n\nd\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4046,14 +4046,14 @@ text: &quot;a\n  \nb\n\nc\n\nd\n&quot;
 <pre>$doc1 = { wanted =&gt; &quot;love \x{2665} and peace \x{262E}&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;wanted&quot; : &quot;love \u2665 and peace \u262e&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>wanted: &quot;love &hearts; and peace &#x262E;&quot;
-</pre>
+<pre><span class="default">wanted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">love &hearts; and peace &#x262E;</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4082,7 +4082,7 @@ text: &quot;a\n  \nb\n\nc\n\nd\n&quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;accomplishment&quot; : &quot;Mark set a major league home run record in 1998.\n&quot;,
    &quot;name&quot; : &quot;Mark McGwire&quot;,
    &quot;stats&quot; : &quot;65 Home Runs\n0.278 Batting Average\n&quot;
@@ -4090,10 +4090,10 @@ text: &quot;a\n  \nb\n\nc\n\nd\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>accomplishment: &quot;Mark set a major league home run record in 1998.\n&quot;
-name: &quot;Mark McGwire&quot;
-stats: &quot;65 Home Runs\n0.278 Batting Average\n&quot;
-</pre>
+<pre><span class="default">accomplishment</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Mark set a major league home run record in 1998.\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">name</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Mark McGwire</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">stats</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">65 Home Runs\n0.278 Batting Average\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4114,16 +4114,16 @@ stats: &quot;65 Home Runs\n0.278 Batting Average\n&quot;
 <pre>$doc1 = { baz =&gt; &quot;foo&quot;, foo =&gt; &quot;bar&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;baz&quot; : &quot;foo&quot;,
    &quot;foo&quot; : &quot;bar&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>baz: foo
-foo: bar
-</pre>
+<pre><span class="default">baz</span><span class="colon">:</span><span class="default"> </span><span class="default">foo</span><span class="comment">
+</span><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">bar</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4145,12 +4145,12 @@ foo: bar
 <pre>$doc1 = &quot;1st non-empty\n2nd non-empty 3rd non-empty&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;1st non-empty\n2nd non-empty 3rd non-empty&quot;
+<pre>Doc 1: &quot;1st non-empty\n2nd non-empty 3rd non-empty&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;1st non-empty\n2nd non-empty 3rd non-empty&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">1st non-empty\n2nd non-empty 3rd non-empty</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4177,16 +4177,16 @@ foo: bar
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;block&quot; : &quot;void main() {\n\tprintf(\&quot;Hello, world!\\n\&quot;);\n}\n&quot;,
    &quot;quoted&quot; : &quot;Quoted \t&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>block: &quot;void main() {\n\tprintf(\&quot;Hello, world!\\n\&quot;);\n}\n&quot;
-quoted: &quot;Quoted \t&quot;
-</pre>
+<pre><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">void main() {\n\tprintf(\&quot;Hello, world!\\n\&quot;);\n}\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Quoted \t</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4207,7 +4207,7 @@ quoted: &quot;Quoted \t&quot;
 <pre>$doc1 = { bar =&gt; &quot;arrr&quot;, baz =&gt; &quot;jazz&quot;, foo =&gt; &quot;blue&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;bar&quot; : &quot;arrr&quot;,
    &quot;baz&quot; : &quot;jazz&quot;,
    &quot;foo&quot; : &quot;blue&quot;
@@ -4215,10 +4215,10 @@ quoted: &quot;Quoted \t&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>bar: arrr
-baz: jazz
-foo: blue
-</pre>
+<pre><span class="default">bar</span><span class="colon">:</span><span class="default"> </span><span class="default">arrr</span><span class="comment">
+</span><span class="default">baz</span><span class="colon">:</span><span class="default"> </span><span class="default">jazz</span><span class="comment">
+</span><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">blue</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4247,7 +4247,7 @@ foo: blue
 ]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    {
       &quot;Mark McGwire&quot; : 65
    },
@@ -4261,10 +4261,10 @@ foo: blue
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- &quot;Mark McGwire&quot;: 65
-- &quot;Sammy Sosa&quot;: 63
-- &quot;Ken Griffy&quot;: 58
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Mark McGwire</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">65</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">63</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Ken Griffy</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">58</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4286,16 +4286,16 @@ foo: blue
 <pre>$doc1 = { 1 =&gt; 2, 3 =&gt; 4 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;1&quot; : 2,
    &quot;3&quot; : 4
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>1: 2
-3: 4
-</pre>
+<pre><span class="default">1</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="comment">
+</span><span class="default">3</span><span class="colon">:</span><span class="default"> </span><span class="default">4</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4324,7 +4324,7 @@ foo: blue
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;hr&quot; : [
       &quot;Mark McGwire&quot;,
       &quot;Sammy Sosa&quot;
@@ -4337,13 +4337,13 @@ foo: blue
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>hr:
-- &quot;Mark McGwire&quot;
-- &quot;Sammy Sosa&quot;
-rbi:
-- &quot;Sammy Sosa&quot;
-- &quot;Ken Griffey&quot;
-</pre>
+<pre><span class="default">hr</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Mark McGwire</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">rbi</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Ken Griffey</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4364,12 +4364,12 @@ rbi:
 <pre>$doc1 = &quot;k:#foo &amp;a !t s&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;k:#foo &amp;a !t s&quot;
+<pre>Doc 1: &quot;k:#foo &amp;a !t s&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;k:#foo &amp;a !t s&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">k:#foo &amp;a !t s</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4398,26 +4398,26 @@ rbi:
 $doc2 = [&quot;Chicago Cubs&quot;, &quot;St Louis Cardinals&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;Mark McGwire&quot;,
    &quot;Sammy Sosa&quot;,
    &quot;Ken Griffey&quot;
 ]
 
-Doc 1: [
+Doc 2: [
    &quot;Chicago Cubs&quot;,
    &quot;St Louis Cardinals&quot;
 ]
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- &quot;Mark McGwire&quot;
-- &quot;Sammy Sosa&quot;
-- &quot;Ken Griffey&quot;
----
-- &quot;Chicago Cubs&quot;
-- &quot;St Louis Cardinals&quot;
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Mark McGwire</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Ken Griffey</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Chicago Cubs</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">St Louis Cardinals</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4438,7 +4438,7 @@ Doc 1: [
 <pre>$doc1 = { &quot;block sequence&quot; =&gt; [&quot;one&quot;, { two =&gt; &quot;three&quot; }] }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;block sequence&quot; : [
       &quot;one&quot;,
       {
@@ -4449,10 +4449,10 @@ Doc 1: [
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;block sequence&quot;:
-- one
-- two: three
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">block sequence</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="colon">:</span><span class="default"> </span><span class="default">three</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4472,16 +4472,16 @@ Doc 1: [
 <pre>$doc1 = { &quot;First occurrence&quot; =&gt; &quot;Value&quot;, &quot;Second occurrence&quot; =&gt; &quot;Value&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;First occurrence&quot; : &quot;Value&quot;,
    &quot;Second occurrence&quot; : &quot;Value&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;First occurrence&quot;: Value
-&quot;Second occurrence&quot;: Value
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">First occurrence</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">Value</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">Second occurrence</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">Value</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4505,16 +4505,16 @@ Doc 1: [
 <pre>$doc1 = { &quot;a true&quot; =&gt; &quot;null d&quot;, &quot;e 42&quot; =&gt; undef }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a true&quot; : &quot;null d&quot;,
    &quot;e 42&quot; : null
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;a true&quot;: &quot;null d&quot;
-&quot;e 42&quot;:
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">a true</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">null d</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">e 42</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4535,7 +4535,7 @@ Doc 1: [
 <pre>$doc1 = [&quot;foo&quot;, &quot;bar&quot;, 42]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;foo&quot;,
    &quot;bar&quot;,
    42
@@ -4543,10 +4543,10 @@ Doc 1: [
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- foo
-- bar
-- 42
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">foo</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">bar</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">42</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4571,12 +4571,12 @@ Doc 1: [
 <pre>$doc1 = &quot;trimmed\n\n\nas space&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;trimmed\n\n\nas space&quot;
+<pre>Doc 1: &quot;trimmed\n\n\nas space&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;trimmed\n\n\nas space&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">trimmed\n\n\nas space</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4600,7 +4600,7 @@ Doc 1: [
 <pre>$doc1 = { clip =&gt; &quot;&quot;, keep =&gt; &quot;\n&quot;, strip =&gt; &quot;&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;clip&quot; : &quot;&quot;,
    &quot;keep&quot; : &quot;\n&quot;,
    &quot;strip&quot; : &quot;&quot;
@@ -4608,10 +4608,10 @@ Doc 1: [
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>clip: &quot;&quot;
-keep: &quot;\n&quot;
-strip: &quot;&quot;
-</pre>
+<pre><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">strip</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4632,7 +4632,7 @@ strip: &quot;&quot;
 <pre>$doc1 = { baz =&gt; 2, foo =&gt; { bar =&gt; 1 } }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;baz&quot; : 2,
    &quot;foo&quot; : {
       &quot;bar&quot; : 1
@@ -4641,10 +4641,10 @@ strip: &quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>baz: 2
-foo:
-  bar: 1
-</pre>
+<pre><span class="default">baz</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="comment">
+</span><span class="default">foo</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">bar</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4666,15 +4666,15 @@ foo:
 $doc2 = &quot;foo&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;quoted string&quot;
+<pre>Doc 1: &quot;quoted string&quot;
 
-Doc 1: &quot;foo&quot;
+Doc 2: &quot;foo&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;quoted string&quot;
---- foo
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">quoted string</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="default">foo</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4725,16 +4725,16 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = { a =&gt; 47, c =&gt; &quot;d&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a&quot; : 47,
    &quot;c&quot; : &quot;d&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a: 47
-c: d
-</pre>
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">47</span><span class="comment">
+</span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4786,7 +4786,7 @@ YAML      : &quot;implicit block key : &quot;
 <pre>$doc1 = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;c&quot;, undef]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;a&quot;,
    &quot;b&quot;,
    &quot;c&quot;,
@@ -4796,12 +4796,12 @@ YAML      : &quot;implicit block key : &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- a
-- b
-- c
-- c
--
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="comment">
+</span><span class="dash">-</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4915,14 +4915,14 @@ YAML      : &quot;&quot;
 <pre>$doc1 = { a =&gt; &quot;ab\n\ncd\nef\n&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a&quot; : &quot;ab\n\ncd\nef\n&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a: &quot;ab\n\ncd\nef\n&quot;
-</pre>
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">ab\n\ncd\nef\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -4946,16 +4946,16 @@ YAML      : &quot;&quot;
 <pre>$doc1 = { folded =&gt; &quot;value\n&quot;, literal =&gt; &quot;value\n&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;folded&quot; : &quot;value\n&quot;,
    &quot;literal&quot; : &quot;value\n&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>folded: &quot;value\n&quot;
-literal: &quot;value\n&quot;
-</pre>
+<pre><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5017,18 +5017,18 @@ $doc2 = undef
 $doc3 = &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;Bare document&quot;
+<pre>Doc 1: &quot;Bare document&quot;
 
-Doc 1: null
+Doc 2: null
 
-Doc 2: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
+Doc 3: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;Bare document&quot;
----
---- &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">Bare document</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">%!PS-Adobe-2.0 # Not the first line\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5051,12 +5051,12 @@ Doc 2: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 <pre>$doc1 = &quot;literal\n\ttext\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;literal\n\ttext\n&quot;
+<pre>Doc 1: &quot;literal\n\ttext\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;literal\n\ttext\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">literal\n\ttext\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5080,12 +5080,12 @@ Doc 2: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 <pre>$doc1 = &quot;foo \n\n\t bar\n\nbaz\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;foo \n\n\t bar\n\nbaz\n&quot;
+<pre>Doc 1: &quot;foo \n\n\t bar\n\nbaz\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;foo \n\n\t bar\n\nbaz\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">foo \n\n\t bar\n\nbaz\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5135,12 +5135,12 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = &quot;ab&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;ab&quot;
+<pre>Doc 1: &quot;ab&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>ab
-</pre>
+<pre><span class="default">ab</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5170,7 +5170,7 @@ YAML      : &quot;- &quot;
 ]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;plain&quot;,
    &quot;double quoted&quot;,
    &quot;single quoted&quot;,
@@ -5180,12 +5180,12 @@ YAML      : &quot;- &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- plain
-- &quot;double quoted&quot;
-- &quot;single quoted&quot;
-- &quot;block\n&quot;
-- &quot;plain again&quot;
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">plain</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double quoted</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">single quoted</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">block\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">plain again</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5207,14 +5207,14 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = { &quot;&quot; =&gt; undef }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;&quot; : null
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;&quot;:
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5237,12 +5237,12 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = &quot;folded to a space,\nto a line feed, or \t \tnon-content&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;folded to a space,\nto a line feed, or \t \tnon-content&quot;
+<pre>Doc 1: &quot;folded to a space,\nto a line feed, or \t \tnon-content&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;folded to a space,\nto a line feed, or \t \tnon-content&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">folded to a space,\nto a line feed, or \t \tnon-content</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5269,7 +5269,7 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = [&quot;literal\n&quot;, &quot; folded\n&quot;, &quot;keep\n\n&quot;, &quot; strip&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;literal\n&quot;,
    &quot; folded\n&quot;,
    &quot;keep\n\n&quot;,
@@ -5278,11 +5278,11 @@ YAML      : &quot;- &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- &quot;literal\n&quot;
-- &quot; folded\n&quot;
-- &quot;keep\n\n&quot;
-- &quot; strip&quot;
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">literal\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> folded\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">keep\n\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> strip</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5303,12 +5303,12 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = &quot;1 - 3&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;1 - 3&quot;
+<pre>Doc 1: &quot;1 - 3&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;1 - 3&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">1 - 3</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5331,14 +5331,14 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = { key =&gt; &quot;value&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;key&quot; : &quot;value&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>key: value
-</pre>
+<pre><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5367,7 +5367,7 @@ YAML      : &quot;- &quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;american&quot; : [
       &quot;Boston Red Sox&quot;,
       &quot;Detroit Tigers&quot;,
@@ -5382,15 +5382,15 @@ YAML      : &quot;- &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>american:
-- &quot;Boston Red Sox&quot;
-- &quot;Detroit Tigers&quot;
-- &quot;New York Yankees&quot;
-national:
-- &quot;New York Mets&quot;
-- &quot;Chicago Cubs&quot;
-- &quot;Atlanta Braves&quot;
-</pre>
+<pre><span class="default">american</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Boston Red Sox</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Detroit Tigers</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">New York Yankees</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">national</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">New York Mets</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Chicago Cubs</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Atlanta Braves</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5412,12 +5412,12 @@ national:
 <pre>$doc1 = &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
+<pre>Doc 1: &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty\n2nd non-empty 3rd non-empty </span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5445,7 +5445,7 @@ national:
 <pre>$doc1 = [undef, &quot;a&quot;, { &quot;&quot; =&gt; undef, &quot;b&quot; =&gt; undef }, { &quot;&quot; =&gt; undef }]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    null,
    &quot;a&quot;,
    {
@@ -5459,12 +5459,12 @@ national:
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>-
-- a
-- &quot;&quot;:
-  b:
-- &quot;&quot;:
-</pre>
+<pre><span class="dash">-</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">b</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5519,12 +5519,12 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = &quot;folded to a space,\nto a line feed, or \t \tnon-content&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;folded to a space,\nto a line feed, or \t \tnon-content&quot;
+<pre>Doc 1: &quot;folded to a space,\nto a line feed, or \t \tnon-content&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;folded to a space,\nto a line feed, or \t \tnon-content&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">folded to a space,\nto a line feed, or \t \tnon-content</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5614,7 +5614,7 @@ YAML      : &quot;&quot;
 <pre>$doc1 = [&quot;detected\n&quot;, &quot;\n\n# detected\n&quot;, &quot; explicit\n&quot;, &quot;\ndetected\n&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;detected\n&quot;,
    &quot;\n\n# detected\n&quot;,
    &quot; explicit\n&quot;,
@@ -5623,11 +5623,11 @@ YAML      : &quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- &quot;detected\n&quot;
-- &quot;\n\n# detected\n&quot;
-- &quot; explicit\n&quot;
-- &quot;\ndetected\n&quot;
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">detected\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\n\n# detected\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> explicit\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\ndetected\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5649,7 +5649,7 @@ YAML      : &quot;&quot;
 <pre>$doc1 = { bar =&gt; [44], foo =&gt; [42] }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;bar&quot; : [
       44
    ],
@@ -5660,11 +5660,11 @@ YAML      : &quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>bar:
-- 44
-foo:
-- 42
-</pre>
+<pre><span class="default">bar</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">44</span><span class="comment">
+</span><span class="default">foo</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">42</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5685,16 +5685,16 @@ foo:
 <pre>$doc1 = { 23 =&gt; &quot;d&quot;, a =&gt; 4.2 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;23&quot; : &quot;d&quot;,
    &quot;a&quot; : 4.2
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>23: d
-a: 4.2
-</pre>
+<pre><span class="default">23</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">4.2</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5716,12 +5716,12 @@ a: 4.2
 <pre>$doc1 = &quot;Document&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;Document&quot;
+<pre>Doc 1: &quot;Document&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Document
-</pre>
+<pre><span class="default">Document</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5761,7 +5761,7 @@ a: 4.2
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;[&#39;seq1&#39;]&quot; : [
       &quot;seq2&quot;
    ],
@@ -5778,15 +5778,15 @@ a: 4.2
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;[&#39;seq1&#39;]&quot;:
-- seq2
-a: &quot;double quotes&quot;
-b: &quot;plain value&quot;
-block: &quot;abcde\n&quot;
-c: d
-e:
-- x: y
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">[&#39;seq1&#39;]</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">seq2</span><span class="comment">
+</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double quotes</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">plain value</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">abcde\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span><span class="default">e</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">x</span><span class="colon">:</span><span class="default"> </span><span class="default">y</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5852,19 +5852,19 @@ $doc3 = {
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;Time&quot; : &quot;2001-11-23 15:01:42 -5&quot;,
    &quot;User&quot; : &quot;ed&quot;,
    &quot;Warning&quot; : &quot;This is an error message for the log file&quot;
 }
 
-Doc 1: {
+Doc 2: {
    &quot;Time&quot; : &quot;2001-11-23 15:02:31 -5&quot;,
    &quot;User&quot; : &quot;ed&quot;,
    &quot;Warning&quot; : &quot;A slightly different error message.&quot;
 }
 
-Doc 2: {
+Doc 3: {
    &quot;Date&quot; : &quot;2001-11-23 15:03:17 -5&quot;,
    &quot;Fatal&quot; : &quot;Unknown variable \&quot;bar\&quot;&quot;,
    &quot;Stack&quot; : [
@@ -5884,25 +5884,25 @@ Doc 2: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Time: &quot;2001-11-23 15:01:42 -5&quot;
-User: ed
-Warning: &quot;This is an error message for the log file&quot;
----
-Time: &quot;2001-11-23 15:02:31 -5&quot;
-User: ed
-Warning: &quot;A slightly different error message.&quot;
----
-Date: &quot;2001-11-23 15:03:17 -5&quot;
-Fatal: &quot;Unknown variable \&quot;bar\&quot;&quot;
-Stack:
-- code: &quot;x = MoreObject(\&quot;345\\n\&quot;)\n&quot;
-  file: TopClass.py
-  line: 23
-- code: &quot;foo = bar&quot;
-  file: MoreClass.py
-  line: 58
-User: ed
-</pre>
+<pre><span class="default">Time</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">2001-11-23 15:01:42 -5</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">User</span><span class="colon">:</span><span class="default"> </span><span class="default">ed</span><span class="comment">
+</span><span class="default">Warning</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">This is an error message for the log file</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="default">Time</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">2001-11-23 15:02:31 -5</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">User</span><span class="colon">:</span><span class="default"> </span><span class="default">ed</span><span class="comment">
+</span><span class="default">Warning</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">A slightly different error message.</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="default">Date</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">2001-11-23 15:03:17 -5</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">Fatal</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Unknown variable \&quot;bar\&quot;</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">Stack</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">code</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">x = MoreObject(\&quot;345\\n\&quot;)\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="indent">  </span><span class="default">file</span><span class="colon">:</span><span class="default"> </span><span class="default">TopClass.py</span><span class="comment">
+</span><span class="indent">  </span><span class="default">line</span><span class="colon">:</span><span class="default"> </span><span class="default">23</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">code</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">foo = bar</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="indent">  </span><span class="default">file</span><span class="colon">:</span><span class="default"> </span><span class="default">MoreClass.py</span><span class="comment">
+</span><span class="indent">  </span><span class="default">line</span><span class="colon">:</span><span class="default"> </span><span class="default">58</span><span class="comment">
+</span><span class="default">User</span><span class="colon">:</span><span class="default"> </span><span class="default">ed</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5924,7 +5924,7 @@ User: ed
 <pre>$doc1 = { &quot;&quot; =&gt; undef, &quot;plain key&quot; =&gt; &quot;in-line value&quot;, &quot;quoted key&quot; =&gt; [&quot;entry&quot;] }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;&quot; : null,
    &quot;plain key&quot; : &quot;in-line value&quot;,
    &quot;quoted key&quot; : [
@@ -5934,11 +5934,11 @@ User: ed
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;&quot;:
-&quot;plain key&quot;: &quot;in-line value&quot;
-&quot;quoted key&quot;:
-- entry
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">plain key</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">in-line value</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">quoted key</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">entry</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5960,7 +5960,7 @@ User: ed
 <pre>$doc1 = [12, 12, 12]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;12&quot;,
    12,
    12
@@ -5968,10 +5968,10 @@ User: ed
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- 12
-- 12
-- 12
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">12</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">12</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">12</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -5991,14 +5991,14 @@ User: ed
 <pre>$doc1 = { aaa =&gt; &quot;bbb&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;aaa&quot; : &quot;bbb&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>aaa: bbb
-</pre>
+<pre><span class="default">aaa</span><span class="colon">:</span><span class="default"> </span><span class="default">bbb</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6026,7 +6026,7 @@ User: ed
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;mapping&quot; : {
       &quot;sea&quot; : &quot;green&quot;,
       &quot;sky&quot; : &quot;blue&quot;
@@ -6039,13 +6039,13 @@ User: ed
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>mapping:
-  sea: green
-  sky: blue
-sequence:
-- one
-- two
-</pre>
+<pre><span class="default">mapping</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">sea</span><span class="colon">:</span><span class="default"> </span><span class="default">green</span><span class="comment">
+</span><span class="indent">  </span><span class="default">sky</span><span class="colon">:</span><span class="default"> </span><span class="default">blue</span><span class="comment">
+</span><span class="default">sequence</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6092,12 +6092,12 @@ YAML      : &quot;&quot;
 <pre>$doc1 = &quot;here&#39;s to \&quot;quotes\&quot;&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;here&#39;s to \&quot;quotes\&quot;&quot;
+<pre>Doc 1: &quot;here&#39;s to \&quot;quotes\&quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;here&#39;s to \&quot;quotes\&quot;&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">here&#39;s to \&quot;quotes\&quot;</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6118,7 +6118,7 @@ YAML      : &quot;&quot;
 <pre>$doc1 = { avg =&gt; 0.278, hr =&gt; 65, rbi =&gt; 147 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;avg&quot; : 0.278,
    &quot;hr&quot; : 65,
    &quot;rbi&quot; : 147
@@ -6126,10 +6126,10 @@ YAML      : &quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>avg: 0.278
-hr: 65
-rbi: 147
-</pre>
+<pre><span class="default">avg</span><span class="colon">:</span><span class="default"> </span><span class="default">0.278</span><span class="comment">
+</span><span class="default">hr</span><span class="colon">:</span><span class="default"> </span><span class="default">65</span><span class="comment">
+</span><span class="default">rbi</span><span class="colon">:</span><span class="default"> </span><span class="default">147</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6156,12 +6156,12 @@ rbi: 147
 <pre>$doc1 = &quot;\n\nliteral\n \n\ntext\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;\n\nliteral\n \n\ntext\n&quot;
+<pre>Doc 1: &quot;\n\nliteral\n \n\ntext\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;\n\nliteral\n \n\ntext\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">\n\nliteral\n \n\ntext\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6184,12 +6184,12 @@ rbi: 147
 <pre>$doc1 = &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
+<pre>Doc 1: &quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot; 1st non-empty\n2nd non-empty 3rd non-empty &quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty\n2nd non-empty 3rd non-empty </span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6212,12 +6212,12 @@ rbi: 147
 <pre>$doc1 = &quot;literal\n\ttext\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;literal\n\ttext\n&quot;
+<pre>Doc 1: &quot;literal\n\ttext\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;literal\n\ttext\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">literal\n\ttext\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6237,7 +6237,7 @@ rbi: 147
 <pre>$doc1 = { &quot;block mapping&quot; =&gt; { key =&gt; &quot;value&quot; } }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;block mapping&quot; : {
       &quot;key&quot; : &quot;value&quot;
    }
@@ -6245,9 +6245,9 @@ rbi: 147
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;block mapping&quot;:
-  key: value
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">block mapping</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6272,12 +6272,12 @@ rbi: 147
 <pre>$doc1 = &quot; foo\nbar\nbaz &quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot; foo\nbar\nbaz &quot;
+<pre>Doc 1: &quot; foo\nbar\nbaz &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot; foo\nbar\nbaz &quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted"> foo\nbar\nbaz </span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6303,12 +6303,12 @@ rbi: 147
 <pre>$doc1 = &quot;ab cd\nef\n\ngh\n&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;ab cd\nef\n\ngh\n&quot;
+<pre>Doc 1: &quot;ab cd\nef\n\ngh\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;ab cd\nef\n\ngh\n&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">ab cd\nef\n\ngh\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6329,12 +6329,12 @@ rbi: 147
 <pre>$doc1 = &quot;foo&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;foo&quot;
+<pre>Doc 1: &quot;foo&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>foo
-</pre>
+<pre><span class="default">foo</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6377,7 +6377,7 @@ rbi: 147
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;top1&quot; : {
       &quot;key1&quot; : &quot;one&quot;
    },
@@ -6399,19 +6399,19 @@ rbi: 147
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>top1:
-  key1: one
-top2:
-  key2: two
-top3:
-  key3: three
-top4:
-  key4: four
-top5:
-  key5: five
-top6: six
-top7: seven
-</pre>
+<pre><span class="default">top1</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key1</span><span class="colon">:</span><span class="default"> </span><span class="default">one</span><span class="comment">
+</span><span class="default">top2</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key2</span><span class="colon">:</span><span class="default"> </span><span class="default">two</span><span class="comment">
+</span><span class="default">top3</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key3</span><span class="colon">:</span><span class="default"> </span><span class="default">three</span><span class="comment">
+</span><span class="default">top4</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key4</span><span class="colon">:</span><span class="default"> </span><span class="default">four</span><span class="comment">
+</span><span class="default">top5</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">key5</span><span class="colon">:</span><span class="default"> </span><span class="default">five</span><span class="comment">
+</span><span class="default">top6</span><span class="colon">:</span><span class="default"> </span><span class="default">six</span><span class="comment">
+</span><span class="default">top7</span><span class="colon">:</span><span class="default"> </span><span class="default">seven</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6440,13 +6440,13 @@ top7: seven
 $doc2 = { action =&gt; &quot;grand slam&quot;, player =&gt; &quot;Sammy Sosa&quot;, time =&gt; &quot;20:03:47&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;action&quot; : &quot;strike (miss)&quot;,
    &quot;player&quot; : &quot;Sammy Sosa&quot;,
    &quot;time&quot; : &quot;20:03:20&quot;
 }
 
-Doc 1: {
+Doc 2: {
    &quot;action&quot; : &quot;grand slam&quot;,
    &quot;player&quot; : &quot;Sammy Sosa&quot;,
    &quot;time&quot; : &quot;20:03:47&quot;
@@ -6454,14 +6454,14 @@ Doc 1: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>action: &quot;strike (miss)&quot;
-player: &quot;Sammy Sosa&quot;
-time: &quot;20:03:20&quot;
----
-action: &quot;grand slam&quot;
-player: &quot;Sammy Sosa&quot;
-time: &quot;20:03:47&quot;
-</pre>
+<pre><span class="default">action</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">strike (miss)</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">player</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">time</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">20:03:20</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span><span class="default">action</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">grand slam</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">player</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">time</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">20:03:47</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6561,7 +6561,7 @@ YAML      : &quot;sequence: &quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;bill-to&quot; : {
       &quot;address&quot; : {
          &quot;city&quot; : &quot;Royal Oak&quot;,
@@ -6605,30 +6605,30 @@ YAML      : &quot;sequence: &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>bill-to: &amp;1
-  address:
-    city: &quot;Royal Oak&quot;
-    lines: &quot;458 Walkman Dr.\nSuite #292\n&quot;
-    postal: 48046
-    state: MI
-  family: Dumars
-  given: Chris
-comments: &quot;Late afternoon is best. Backup contact is Nancy Billsmer @ 338-4338.&quot;
-date: 2001-01-23
-invoice: 34843
-product:
-- description: Basketball
-  price: 450
-  quantity: 4
-  sku: BL394D
-- description: &quot;Super Hoop&quot;
-  price: 2392
-  quantity: 1
-  sku: BL4438H
-ship-to: *1
-tax: 251.42
-total: 4443.52
-</pre>
+<pre><span class="default">bill-to</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;1</span><span class="comment">
+</span><span class="indent">  </span><span class="default">address</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">    </span><span class="default">city</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Royal Oak</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="indent">    </span><span class="default">lines</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">458 Walkman Dr.\nSuite #292\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="indent">    </span><span class="default">postal</span><span class="colon">:</span><span class="default"> </span><span class="default">48046</span><span class="comment">
+</span><span class="indent">    </span><span class="default">state</span><span class="colon">:</span><span class="default"> </span><span class="default">MI</span><span class="comment">
+</span><span class="indent">  </span><span class="default">family</span><span class="colon">:</span><span class="default"> </span><span class="default">Dumars</span><span class="comment">
+</span><span class="indent">  </span><span class="default">given</span><span class="colon">:</span><span class="default"> </span><span class="default">Chris</span><span class="comment">
+</span><span class="default">comments</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Late afternoon is best. Backup contact is Nancy Billsmer @ 338-4338.</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">date</span><span class="colon">:</span><span class="default"> </span><span class="default">2001-01-23</span><span class="comment">
+</span><span class="default">invoice</span><span class="colon">:</span><span class="default"> </span><span class="default">34843</span><span class="comment">
+</span><span class="default">product</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">description</span><span class="colon">:</span><span class="default"> </span><span class="default">Basketball</span><span class="comment">
+</span><span class="indent">  </span><span class="default">price</span><span class="colon">:</span><span class="default"> </span><span class="default">450</span><span class="comment">
+</span><span class="indent">  </span><span class="default">quantity</span><span class="colon">:</span><span class="default"> </span><span class="default">4</span><span class="comment">
+</span><span class="indent">  </span><span class="default">sku</span><span class="colon">:</span><span class="default"> </span><span class="default">BL394D</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">description</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Super Hoop</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="indent">  </span><span class="default">price</span><span class="colon">:</span><span class="default"> </span><span class="default">2392</span><span class="comment">
+</span><span class="indent">  </span><span class="default">quantity</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
+</span><span class="indent">  </span><span class="default">sku</span><span class="colon">:</span><span class="default"> </span><span class="default">BL4438H</span><span class="comment">
+</span><span class="default">ship-to</span><span class="colon">:</span><span class="default"> </span><span class="alias">*1</span><span class="comment">
+</span><span class="default">tax</span><span class="colon">:</span><span class="default"> </span><span class="default">251.42</span><span class="comment">
+</span><span class="default">total</span><span class="colon">:</span><span class="default"> </span><span class="default">4443.52</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6683,7 +6683,7 @@ YAML      : &quot;&quot;
 <pre>$doc1 = [&quot;a&quot;, &quot;b&quot;, &quot;a&quot;, &quot;b&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;a&quot;,
    &quot;b&quot;,
    &quot;a&quot;,
@@ -6692,11 +6692,11 @@ YAML      : &quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- a
-- b
-- a
-- b
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6720,7 +6720,7 @@ YAML      : &quot;&quot;
 ]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    {
       &quot;sun&quot; : &quot;yellow&quot;
    },
@@ -6733,10 +6733,10 @@ YAML      : &quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- sun: yellow
-- &quot;{earth =&gt; &#39;blue&#39;}&quot;:
-    moon: white
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">sun</span><span class="colon">:</span><span class="default"> </span><span class="default">yellow</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">{earth =&gt; &#39;blue&#39;}</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">    </span><span class="default">moon</span><span class="colon">:</span><span class="default"> </span><span class="default">white</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6760,7 +6760,7 @@ YAML      : &quot;&quot;
 <pre>$doc1 = [undef, &quot;block node\n&quot;, [&quot;one&quot;, &quot;two&quot;], { one =&gt; &quot;two&quot; }]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    null,
    &quot;block node\n&quot;,
    [
@@ -6774,12 +6774,12 @@ YAML      : &quot;&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>-
-- &quot;block node\n&quot;
-- - one
-  - two
-- one: two
-</pre>
+<pre><span class="dash">-</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">block node\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="comment">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="colon">:</span><span class="default"> </span><span class="default">two</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6806,15 +6806,15 @@ YAML      : &quot;&quot;
 $doc2 = undef</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;%!PS-Adobe-2.0\n&quot;
+<pre>Doc 1: &quot;%!PS-Adobe-2.0\n&quot;
 
-Doc 1: null
+Doc 2: null
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;%!PS-Adobe-2.0\n&quot;
----
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">%!PS-Adobe-2.0\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6834,16 +6834,16 @@ Doc 1: null
 <pre>$doc1 = { a =&gt; &quot;scalar a&quot;, b =&gt; &quot;scalar a&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a&quot; : &quot;scalar a&quot;,
    &quot;b&quot; : &quot;scalar a&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a: &quot;scalar a&quot;
-b: &quot;scalar a&quot;
-</pre>
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">scalar a</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">scalar a</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6929,16 +6929,16 @@ YAML      : &quot;&quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;Chomping&quot; : &quot;Clipped empty lines\n&quot;,
    &quot;Folding&quot; : &quot;Empty line\nas a line feed&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Chomping: &quot;Clipped empty lines\n&quot;
-Folding: &quot;Empty line\nas a line feed&quot;
-</pre>
+<pre><span class="default">Chomping</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Clipped empty lines\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">Folding</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Empty line\nas a line feed</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6979,7 +6979,7 @@ Folding: &quot;Empty line\nas a line feed&quot;
 }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;[&#39;seq1&#39;]&quot; : [
       &quot;seq2&quot;
    ],
@@ -6996,15 +6996,15 @@ Folding: &quot;Empty line\nas a line feed&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;[&#39;seq1&#39;]&quot;:
-- seq2
-a: &quot;double quotes&quot;
-b: &quot;plain value&quot;
-block: &quot;abcde\n&quot;
-c: d
-e:
-- x: y
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">[&#39;seq1&#39;]</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">seq2</span><span class="comment">
+</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double quotes</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">plain value</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">abcde\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span><span class="default">e</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">x</span><span class="colon">:</span><span class="default"> </span><span class="default">y</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -7055,16 +7055,16 @@ YAML      : &quot;- &quot;
 <pre>$doc1 = { folded =&gt; &quot;value\n&quot;, literal =&gt; &quot;value\n&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;folded&quot; : &quot;value\n&quot;,
    &quot;literal&quot; : &quot;value\n&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>folded: &quot;value\n&quot;
-literal: &quot;value\n&quot;
-</pre>
+<pre><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -7085,14 +7085,14 @@ literal: &quot;value\n&quot;
 <pre>$doc1 = [&quot;bar&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: [
+<pre>Doc 1: [
    &quot;bar&quot;
 ]
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>- bar
-</pre>
+<pre><span class="dash">-</span><span class="default"> </span><span class="default">bar</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -7143,16 +7143,16 @@ YAML      : &quot;Mark McGwire: &quot;
 <pre>$doc1 = { a =&gt; &quot;b&quot;, c =&gt; &quot;d&quot; }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: {
+<pre>Doc 1: {
    &quot;a&quot; : &quot;b&quot;,
    &quot;c&quot; : &quot;d&quot;
 }
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>a: b
-c: d
-</pre>
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 
@@ -7301,12 +7301,12 @@ YAML      : &quot;&quot;
 <pre>$doc1 = &quot;\\.&quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot;\\.&quot;
+<pre>Doc 1: &quot;\\.&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot;\\.&quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">\\.</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -7328,12 +7328,12 @@ YAML      : &quot;&quot;
 <pre>$doc1 = &quot; --- &quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot; --- &quot;
+<pre>Doc 1: &quot; --- &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot; --- &quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted"> --- </span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -8107,12 +8107,12 @@ e: f
 <pre>$doc1 = &quot; ... &quot;</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 0: &quot; ... &quot;
+<pre>Doc 1: &quot; ... &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>&quot; ... &quot;
-</pre>
+<pre><span class="doublequote">&quot;</span><span class="doublequoted"> ... </span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
