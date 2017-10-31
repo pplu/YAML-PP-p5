@@ -62,9 +62,9 @@ pre.diff {
 </style>
 </head>
 <body>
-Generated with YAML::PP v0.004-32-g2d073be<br>
-<a href="#valid">Valid (204)</a><br>
-<a href="#invalid">Invalid (44)</a><br>
+Generated with YAML::PP v0.004-64-g140255a<br>
+<a href="#valid">Valid (216)</a><br>
+<a href="#invalid">Invalid (55)</a><br>
 <h1><a name="valid">Valid</a></h1>
 <table class="highlight">
 <tr>
@@ -431,7 +431,7 @@ Generated with YAML::PP v0.004-32-g2d073be<br>
 </span><span class="dash">-</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="default">c</span><span class="comment">
 </span><span class="doc_start">---</span><span class="default"> </span><span class="tag">!!str</span><span class="comment">
 </span><span class="default">d</span><span class="comment">
-</span><span class="default">e</span><span class="default">
+</span><span class="default">e</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -458,6 +458,36 @@ Doc 3: &quot;d e&quot;
 </span><span class="doc_start">---</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="comment">
 </span><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">d e</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>36F6 - Multiline plain scalar with empty line
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>scalar<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/36F6.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="indent"> </span><span class="default">b</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent"> </span><span class="default">c</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = { plain =&gt; &quot;a b\nc&quot; }</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: {
+   &quot;plain&quot; : &quot;a b\nc&quot;
+}
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a b\nc</span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
 </td>
 </tr>
@@ -543,7 +573,7 @@ Doc 3: &quot;d e&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/3MYT.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">k:#foo</span><span class="comment">
-</span><span class="default"> </span><span class="default">&amp;a !t s</span><span class="default">
+</span><span class="indent"> </span><span class="default">&amp;a !t s</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -568,16 +598,16 @@ Doc 3: &quot;d e&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/4ABK.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">{
-unquoted : &quot;separate&quot;,
+</span><span class="error">unquoted : &quot;separate&quot;,
 http://foo.com,
 omitted value:,
 : omitted key,
 }
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -601,9 +631,9 @@ YAML      : &quot;&quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">plain</span><span class="colon">:</span><span class="comment">
 </span><span class="indent">  </span><span class="default">This unquoted scalar</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="default">spans many lines.</span><span class="default">
+</span><span class="indent">  </span><span class="default">spans many lines.</span><span class="comment">
 </span><span class="comment">
-</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">So does this</span><span class="default">
+</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">So does this</span><span class="comment">
 </span><span class="doublequoted">  quoted scalar.\n</span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -660,13 +690,13 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/4Q9F.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="default"> </span><span class="block_scalar_content">ab</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">cd</span><span class="default">
-</span><span class="indent"> </span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">ef</span><span class="default">
-</span><span class="default">
-</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">gh</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">ab</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">cd</span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">ef</span><span class="comment">
+</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">gh</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -691,15 +721,15 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/4QFQ.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">detected</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">detected</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="indent"> </span><span class="default">
-</span><span class="indent"> </span><span class="trailing_space"> </span><span class="default">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content"># detected</span><span class="default">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content"># detected</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">1</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">explicit</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content"> explicit</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">detected</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">detected</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -781,12 +811,12 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/4ZYM.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="default">text</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="default">lines</span><span class="default">
-</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">text</span><span class="default">
+</span><span class="indent">  </span><span class="default">lines</span><span class="comment">
+</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">text</span><span class="comment">
 </span><span class="doublequoted">  </span><span class="tab">	</span><span class="doublequoted">lines</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">text</span><span class="default">
-</span><span class="indent">  </span><span class="default"> </span><span class="tab">	</span><span class="block_scalar_content">lines</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content"> </span><span class="tab">	</span><span class="block_scalar_content">lines</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -848,9 +878,9 @@ YAML      : &quot;&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">{foo: you, bar: far}
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{foo: you, bar: far}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -872,16 +902,16 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>jayt<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/565N.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">canonical</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!binary</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\</span><span class="default">
-</span><span class="doublequoted"> R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5\</span><span class="default">
-</span><span class="doublequoted"> OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+\</span><span class="default">
-</span><span class="doublequoted"> +f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC\</span><span class="default">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">canonical</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!binary</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\</span><span class="comment">
+</span><span class="doublequoted"> R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5\</span><span class="comment">
+</span><span class="doublequoted"> OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+\</span><span class="comment">
+</span><span class="doublequoted"> +f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC\</span><span class="comment">
 </span><span class="doublequoted"> AgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="default">generic</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!binary</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">+f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">AgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">+f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">AgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=</span><span class="comment">
 </span><span class="default">description</span><span class="colon">:</span><span class="comment">
 </span><span class="indent"> </span><span class="default">The binary value above is a tiny arrow encoded as a gif image.</span><span class="comment">
 </span></pre>
@@ -961,11 +991,11 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/5BVJ.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">some</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">some</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="comment">
 </span><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">some</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">some</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -993,13 +1023,13 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, mapping, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/5C5M.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">-</span><span class="error"> </span><span class="error">{ one : two , three: four , }
-- {five: six,seven : eight}
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="dash">-</span><span class="default"> </span><span class="error">{ one : two , three: four , }
+</span><span class="error">- {five: six,seven : eight}
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;- &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{ one : two , three: four , }&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -1022,13 +1052,13 @@ YAML      : &quot;- &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/5GBF.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">Folding</span><span class="colon">:</span><span class="comment">
-</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">Empty line</span><span class="default">
-</span><span class="doublequoted">   </span><span class="tab">	</span><span class="default">
+</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">Empty line</span><span class="comment">
+</span><span class="doublequoted">   </span><span class="tab">	</span><span class="comment">
 </span><span class="doublequoted">  as a line feed</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="default">Chomping</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">Clipped empty lines</span><span class="default">
-</span><span class="trailing_space"> </span><span class="default">
-</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">Clipped empty lines</span><span class="comment">
+</span><span class="trailing_space"> 
+</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -1059,13 +1089,13 @@ YAML      : &quot;- &quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, sequence, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/5KJE.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">-</span><span class="error"> </span><span class="error">[ one, two, ]
-- [three ,four]
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="dash">-</span><span class="default"> </span><span class="error">[ one, two, ]
+</span><span class="error">- [three ,four]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;- &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ one, two, ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -1148,11 +1178,11 @@ Doc 2: &quot;green&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>comment, literal, mapping, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/5WE3.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="question">?</span><span class="default"> </span><span class="default">explicit key</span><span class="comment"> # Empty value
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="question">?</span><span class="default"> </span><span class="default">explicit key</span><span class="comment"> # Empty value</span><span class="comment">
 </span><span class="question">?</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">block key</span><span class="default">
-</span><span class="colon">:</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="comment"> # Explicit compact
-</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="comment"> # block value
+</span><span class="indent">  </span><span class="block_scalar_content">block key</span><span class="comment">
+</span><span class="colon">:</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="comment"> # Explicit compact</span><span class="comment">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="comment"> # block value</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -1241,6 +1271,35 @@ Doc 2: &quot;green&quot;
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>6BFJ - Mapping, key and flow sequence item anchors
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>anchor, flow, mapping, sequence<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/6BFJ.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="anchor">&amp;mapping</span><span class="comment">
+</span><span class="anchor">&amp;key</span><span class="default"> </span><span class="error">[ &amp;item a, b, c ]: value
+</span></pre>
+<pre>Line      : 3
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ &amp;item a, b, c ]: value&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>6CK3 - Spec Example 6.26. Tag Shorthands
 </b></td></tr>
 <tr>
@@ -1282,9 +1341,9 @@ Doc 2: &quot;green&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/6FWR.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">+</span><span class="comment">
-</span><span class="default"> </span><span class="block_scalar_content">ab</span><span class="default">
-</span><span class="indent"> </span><span class="default">
-</span><span class="indent"> </span><span class="trailing_space"> </span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">ab</span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content"> </span><span class="comment">
 </span><span class="doc_end">...</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -1340,18 +1399,18 @@ Doc 2: &quot;green&quot;
 </span><span class="trailing_space">    
 </span><span class="default">Not indented</span><span class="colon">:</span><span class="comment">
 </span><span class="indent"> </span><span class="default">By one space</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent">  </span><span class="default">  </span><span class="block_scalar_content">By four</span><span class="default">
-</span><span class="indent">    </span><span class="default">  </span><span class="block_scalar_content">spaces</span><span class="default">
-</span><span class="error"> </span><span class="error">Flow style</span><span class="error">:</span><span class="error"> </span><span class="error">[    # Leading spaces
-   By two,        # in flow style
+</span><span class="indent">    </span><span class="block_scalar_content">By four</span><span class="comment">
+</span><span class="indent">    </span><span class="block_scalar_content">  spaces</span><span class="comment">
+</span><span class="indent"> </span><span class="default">Flow style</span><span class="colon">:</span><span class="default"> </span><span class="error">[    # Leading spaces
+</span><span class="error">   By two,        # in flow style
   Also by two,    # are neither
   </span><span class="tab">	</span><span class="error">Still by two   # content nor
     ]             # indentation.
 </span></pre>
 <pre>Line      : 8
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot; Flow style: &quot;
+Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[    # Leading spaces&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -1375,8 +1434,8 @@ YAML      : &quot; Flow style: &quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="comment"># ASCII Art
 </span><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="default">  </span><span class="block_scalar_content">\//||\/||</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">// ||  ||__</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">\//||\/||</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">// ||  ||__</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -1522,13 +1581,13 @@ YAML      : &quot; Flow style: &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/6VJK.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="folded">&gt;</span><span class="comment">
-</span><span class="default"> </span><span class="block_scalar_content">Sammy Sosa completed another</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">fine season with great stats.</span><span class="default">
-</span><span class="default">
-</span><span class="indent"> </span><span class="default">  </span><span class="block_scalar_content">63 Home Runs</span><span class="default">
-</span><span class="indent"> </span><span class="default">  </span><span class="block_scalar_content">0.288 Batting Average</span><span class="default">
-</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">What a year!</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">Sammy Sosa completed another</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">fine season with great stats.</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">  63 Home Runs</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">  0.288 Batting Average</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">What a year!</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -1588,12 +1647,12 @@ Doc 2: &quot;bar&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/6WPF.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
-</span><span class="doublequote">&quot;</span><span class="default">
-</span><span class="doublequoted">  foo </span><span class="default">
-</span><span class="doublequoted"> </span><span class="default">
-</span><span class="doublequoted">    bar</span><span class="default">
-</span><span class="default">
-</span><span class="doublequoted">  baz</span><span class="default">
+</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequoted">  foo </span><span class="comment">
+</span><span class="trailing_space"> 
+</span><span class="doublequoted">    bar</span><span class="comment">
+</span><span class="comment">
+</span><span class="doublequoted">  baz</span><span class="comment">
 </span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -1662,7 +1721,7 @@ Doc 3: {
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="dash">-</span><span class="comment">
 </span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">flow in block</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">Block scalar</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">Block scalar</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="tag">!!map</span><span class="comment"> # Block collection
 </span><span class="indent">  </span><span class="default">foo</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="default">bar</span><span class="comment">
 </span></pre>
@@ -1741,9 +1800,9 @@ Doc 3: {
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/753E.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="comment">
-</span><span class="default"> </span><span class="block_scalar_content">ab</span><span class="default">
-</span><span class="indent"> </span><span class="default">
-</span><span class="indent"> </span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">ab</span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
 </span><span class="doc_end">...</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -1772,15 +1831,15 @@ Doc 3: {
 </span><span class="default">not-date</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="default">2002-04-28</span><span class="comment">
 </span><span class="comment">
 </span><span class="default">picture</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!binary</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">R0lGODlhDAAMAIQAAP//9/X</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">17unp5WZmZgAAAOfn515eXv</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">Pz7Y6OjuDg4J+fn5OTk6enp</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">56enmleECcgggoBADs=</span><span class="default">
-</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">R0lGODlhDAAMAIQAAP//9/X</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">17unp5WZmZgAAAOfn515eXv</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">Pz7Y6OjuDg4J+fn5OTk6enp</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">56enmleECcgggoBADs=</span><span class="comment">
+</span><span class="comment">
 </span><span class="default">application specific tag</span><span class="colon">:</span><span class="default"> </span><span class="tag">!something</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">The semantics of the tag</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">above may be different for</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">different documents.</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">The semantics of the tag</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">above may be different for</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">different documents.</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -1814,9 +1873,9 @@ Doc 3: {
 <td style="max-width: 15em;" valign="top" >Tags:<br>scalar, spec, upto-1.2<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/7A4E.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty</span><span class="default">
-</span><span class="default">
-</span><span class="doublequoted"> 2nd non-empty </span><span class="default">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty</span><span class="comment">
+</span><span class="comment">
+</span><span class="doublequoted"> 2nd non-empty </span><span class="comment">
 </span><span class="doublequoted"></span><span class="tab">	</span><span class="doublequoted">3rd non-empty </span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -1992,20 +2051,20 @@ Doc 3: {
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/7T8X.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="folded">&gt;</span><span class="comment">
-</span><span class="default">
-</span><span class="default"> </span><span class="block_scalar_content">folded</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">line</span><span class="default">
-</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">next</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">line</span><span class="default">
-</span><span class="indent"> </span><span class="default">  </span><span class="block_scalar_content">* bullet</span><span class="default">
-</span><span class="default">
-</span><span class="indent"> </span><span class="default">  </span><span class="block_scalar_content">* list</span><span class="default">
-</span><span class="indent"> </span><span class="default">  </span><span class="block_scalar_content">* lines</span><span class="default">
-</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">last</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">line</span><span class="default">
-</span><span class="default">
+</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">folded</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">line</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">next</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">line</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">  * bullet</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">  * list</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">  * lines</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">last</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">line</span><span class="comment">
+</span><span class="comment">
 </span><span class="comment"># Comment
 </span></pre>
 <pre></pre>
@@ -2021,6 +2080,36 @@ Doc 3: {
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doublequote">&quot;</span><span class="doublequoted">\nfolded line\nnext line\n  * bullet\n\n  * list\n  * lines\n\nlast line\n</span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>7TMG - Comment in flow sequence before comma
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>comment, flow, mapping<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/7TMG.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="error">[ word1
+</span><span class="error"># comment
+, word2]
+</span></pre>
+<pre>Line      : 2
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ word1&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
 </td>
 </tr>
 <tr>
@@ -2097,7 +2186,7 @@ Doc 2: {
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/82AN.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">---word1</span><span class="comment">
-</span><span class="default">word2</span><span class="default">
+</span><span class="default">word2</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -2121,14 +2210,14 @@ Doc 2: {
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, mapping, sequence, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/87E4.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">&#39;</span><span class="error">implicit block key</span><span class="error">&#39;</span><span class="error"> </span><span class="error">:</span><span class="error"> </span><span class="error">[
-  &#39;implicit flow key&#39; : value,
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="singlequote">&#39;</span><span class="singlequoted">implicit block key</span><span class="singlequote">&#39;</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="error">[
+</span><span class="error">  &#39;implicit flow key&#39; : value,
  ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&#39;implicit block key&#39; : &quot;
+Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -2151,12 +2240,12 @@ YAML      : &quot;&#39;implicit block key&#39; : &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/8CWC.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
-</span><span class="error">key ends with two colons</span><span class="error">::: value
+</span><span class="default">key ends with two colons</span><span class="error">::: value
 </span></pre>
 <pre>Line      : 2
-Message   : Invalid plain scalar
-Where     : YAML/PP/Lexer.pm line 623
-YAML      : &quot;key ends with two colons&quot;
+Message   : Expected (COLON COMMENT EOL WS), but got Invalid plain scalar
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;::: value&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -2261,7 +2350,7 @@ YAML      : &quot;key ends with two colons&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/8UDB.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">[
-&quot;double
+</span><span class="error">&quot;double
  quoted&quot;, &#39;single
            quoted&#39;,
 plain
@@ -2270,9 +2359,9 @@ single: pair,
 ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -2332,12 +2421,12 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/93WF.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="folded">&gt;</span><span class="default">-</span><span class="comment">
-</span><span class="default">  </span><span class="block_scalar_content">trimmed</span><span class="default">
-</span><span class="indent">  </span><span class="default">
-</span><span class="trailing_space"> </span><span class="default">
-</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">as</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">space</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">trimmed</span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
+</span><span class="trailing_space"> 
+</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">as</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">space</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -2362,9 +2451,9 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/96L6.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="default">  </span><span class="block_scalar_content">Mark McGwire&#39;s</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">year was crippled</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">by a knee injury.</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">Mark McGwire&#39;s</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">year was crippled</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">by a knee injury.</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -2618,14 +2707,14 @@ Doc 8: &quot;value11&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>1.3-mod, flow, mapping, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/9MMW.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">-</span><span class="error"> </span><span class="error">[ YAML : separate ]
-- [ : empty key entry ]
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="dash">-</span><span class="default"> </span><span class="error">[ YAML : separate ]
+</span><span class="error">- [ : empty key entry ]
 - [ &quot;JSON like&quot;:adjacent ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;- &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ YAML : separate ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -2677,9 +2766,9 @@ YAML      : &quot;- &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/9TFX.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
-</span><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty</span><span class="default">
-</span><span class="default">
-</span><span class="doublequoted"> 2nd non-empty </span><span class="default">
+</span><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty</span><span class="comment">
+</span><span class="comment">
+</span><span class="doublequoted"> 2nd non-empty </span><span class="comment">
 </span><span class="doublequoted"> 3rd non-empty </span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -2792,11 +2881,11 @@ Doc 2: &quot;bar&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/9YRD.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">a</span><span class="comment">
-</span><span class="default">b</span><span class="trailing_space">  </span><span class="default">
-</span><span class="default">  </span><span class="default">c</span><span class="default">
-</span><span class="default">d</span><span class="default">
-</span><span class="default">
-</span><span class="default">e</span><span class="default">
+</span><span class="default">b</span><span class="trailing_space">  </span><span class="comment">
+</span><span class="indent">  </span><span class="default">c</span><span class="comment">
+</span><span class="default">d</span><span class="comment">
+</span><span class="comment">
+</span><span class="default">e</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -2859,11 +2948,11 @@ Doc 2: &quot;bar&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/A6F9.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">strip</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">text</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="comment">
 </span><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">text</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="comment">
 </span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">+</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">text</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -2894,10 +2983,10 @@ Doc 2: &quot;bar&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/A984.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
-</span><span class="indent"> </span><span class="default">c</span><span class="default">
+</span><span class="indent"> </span><span class="default">c</span><span class="comment">
 </span><span class="default">d</span><span class="colon">:</span><span class="comment">
 </span><span class="indent"> </span><span class="default">e</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="default">f</span><span class="default">
+</span><span class="indent">  </span><span class="default">f</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -2926,7 +3015,7 @@ Doc 2: &quot;bar&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/AB8U.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="dash">-</span><span class="default"> </span><span class="default">single multiline</span><span class="comment">
-</span><span class="indent"> </span><span class="default">- sequence entry</span><span class="default">
+</span><span class="indent"> </span><span class="default">- sequence entry</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -3043,10 +3132,10 @@ Doc 2: &quot;bar&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/B3HG.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="default"> </span><span class="block_scalar_content">folded</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">text</span><span class="default">
-</span><span class="default">
-</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">folded</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">text</span><span class="comment">
+</span><span class="comment">
+</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -3129,15 +3218,15 @@ Doc 2: &quot;bar&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/C2DT.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">{
-&quot;adjacent&quot;:value,
+</span><span class="error">&quot;adjacent&quot;:value,
 &quot;readable&quot;: value,
 &quot;empty&quot;:
 }
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -3164,8 +3253,8 @@ YAML      : &quot;&quot;
 </span><span class="comment">  # Use the ! handle for presenting
 </span><span class="comment">  # tag:clarkevans.com,2002:circle
 </span><span class="dash">-</span><span class="default"> </span><span class="tag">!circle</span><span class="comment">
-</span><span class="error">  </span><span class="error">center</span><span class="error">:</span><span class="error"> </span><span class="error">&amp;ORIGIN</span><span class="error"> </span><span class="error">{x: 73, y: 129}
-  radius: 7
+</span><span class="indent">  </span><span class="default">center</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;ORIGIN</span><span class="default"> </span><span class="error">{x: 73, y: 129}
+</span><span class="error">  radius: 7
 - !line
   start: *ORIGIN
   finish: { x: 89, y: 102 }
@@ -3175,9 +3264,9 @@ YAML      : &quot;&quot;
   text: Pretty vector drawing.
 </span></pre>
 <pre>Line      : 6
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;  center: &amp;ORIGIN &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{x: 73, y: 129}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -3219,6 +3308,38 @@ YAML      : &quot;  center: &amp;ORIGIN &quot;
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>CN3R - Various location of anchors in flow sequence
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>anchor, flow<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/CN3R.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="anchor">&amp;flowseq</span><span class="default"> </span><span class="error">[
+</span><span class="error"> a: b,
+ &amp;c c: d,
+ { &amp;e e: f },
+ &amp;g { g: h }
+]
+</span></pre>
+<pre>Line      : 1
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>CT4Q - Spec Example 7.20. Single Pair Explicit Entry
 </b></td></tr>
 <tr>
@@ -3226,14 +3347,14 @@ YAML      : &quot;  center: &amp;ORIGIN &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/CT4Q.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">[
-? foo
+</span><span class="error">? foo
  bar : baz
 ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -3278,6 +3399,32 @@ YAML      : &quot;&quot;
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>CXX2 - Mapping with anchor on document start line
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>anchor, header, mapping<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/CXX2.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="anchor">&amp;anchor</span><span class="default"> </span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = { a =&gt; &quot;b&quot; }</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: {
+   &quot;a&quot; : &quot;b&quot;
+}
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>D83L - Block scalar indicator order
 </b></td></tr>
 <tr>
@@ -3285,9 +3432,9 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/D83L.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="default">-</span><span class="comment">
-</span><span class="indent">  </span><span class="block_scalar_content">explicit indent and chomp</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">explicit indent and chomp</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="default">2</span><span class="comment">
-</span><span class="indent">  </span><span class="block_scalar_content">chomp and explicit indent</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">chomp and explicit indent</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -3315,12 +3462,12 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, mapping, sequence<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/D88J.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">a</span><span class="error">:</span><span class="error"> </span><span class="error">[b, c]
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="error">[b, c]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;a: &quot;
+Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[b, c]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -3375,16 +3522,16 @@ YAML      : &quot;a: &quot;
 </span><span class="dash">-</span><span class="default"> </span><span class="default">-123</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">http://example.com/foo#bar</span><span class="comment">
 </span><span class="comment"># Inside flow collection:
-</span><span class="error">-</span><span class="error"> </span><span class="error">[ ::vector,
-  &quot;: - ()&quot;,
+</span><span class="dash">-</span><span class="default"> </span><span class="error">[ ::vector,
+</span><span class="error">  &quot;: - ()&quot;,
   &quot;Up, up and away!&quot;,
   -123,
   http://example.com/foo#bar ]
 </span></pre>
 <pre>Line      : 8
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;- &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ ::vector,&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -3407,15 +3554,15 @@ YAML      : &quot;- &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/DFF7.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">{
-? explicit: entry,
+</span><span class="error">? explicit: entry,
 implicit: entry,
 ?
 }
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -3440,9 +3587,9 @@ YAML      : &quot;&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">[foo, bar, 42]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[foo, bar, 42]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -3465,9 +3612,9 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/DK3J.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="block_scalar_content">line1</span><span class="default">
-</span><span class="block_scalar_content"># no comment</span><span class="default">
-</span><span class="block_scalar_content">line3</span><span class="default">
+</span><span class="block_scalar_content">line1</span><span class="comment">
+</span><span class="block_scalar_content"># no comment</span><span class="comment">
+</span><span class="block_scalar_content">line3</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -3492,13 +3639,13 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/DWX9.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="literal">|</span><span class="comment">
-</span><span class="trailing_space"> </span><span class="default">
-</span><span class="trailing_space">  </span><span class="default">
-</span><span class="default">  </span><span class="block_scalar_content">literal</span><span class="default">
-</span><span class="indent">  </span><span class="trailing_space"> </span><span class="default">
-</span><span class="indent">  </span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="default">
-</span><span class="default">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">literal</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content"> </span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="comment">
+</span><span class="comment">
 </span><span class="comment"> # Comment
 </span></pre>
 <pre></pre>
@@ -3550,15 +3697,15 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, tag<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/EHF6.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">!!map</span><span class="error"> </span><span class="error">{
-  k: !!seq
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="tag">!!map</span><span class="default"> </span><span class="error">{
+</span><span class="error">  k: !!seq
   [ a, !!str b]
 }
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;!!map &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -3582,11 +3729,11 @@ YAML      : &quot;!!map &quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
 </span><span class="default">a</span><span class="comment">
-</span><span class="default">b</span><span class="trailing_space">  </span><span class="default">
-</span><span class="default">  </span><span class="default">c</span><span class="default">
-</span><span class="default">d</span><span class="default">
-</span><span class="default">
-</span><span class="default">e</span><span class="default">
+</span><span class="default">b</span><span class="trailing_space">  </span><span class="comment">
+</span><span class="indent">  </span><span class="default">c</span><span class="comment">
+</span><span class="default">d</span><span class="comment">
+</span><span class="comment">
+</span><span class="default">e</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -3612,7 +3759,7 @@ YAML      : &quot;!!map &quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
 </span><span class="default">---word1</span><span class="comment">
-</span><span class="default">word2</span><span class="default">
+</span><span class="default">word2</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -3665,6 +3812,34 @@ YAML      : &quot;!!map &quot;
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>F3CP - Nested flow collections on one line
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>flow, mapping, sequence<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/F3CP.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="error">{ a: [b, c, { d: [e, f] } ] }
+</span></pre>
+<pre>Line      : 2
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{ a: [b, c, { d: [e, f] } ] }&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>F8F9 - Spec Example 8.5. Chomping Trailing Lines
 </b></td></tr>
 <tr>
@@ -3674,20 +3849,20 @@ YAML      : &quot;!!map &quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="comment"> # Strip
 </span><span class="comment">  # Comments:
 </span><span class="default">strip</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content"># text</span><span class="default">
-</span><span class="indent">  </span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content"># text</span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
 </span><span class="comment"> # Clip
 </span><span class="comment">  # comments:
 </span><span class="comment">
 </span><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content"># text</span><span class="default">
-</span><span class="trailing_space"> </span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content"># text</span><span class="comment">
+</span><span class="trailing_space"> 
 </span><span class="comment"> # Keep
 </span><span class="comment">  # comments:
 </span><span class="comment">
 </span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">+</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content"># text</span><span class="default">
-</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content"># text</span><span class="comment">
+</span><span class="comment">
 </span><span class="comment"> # Trail
 </span><span class="comment">  # comments.
 </span></pre>
@@ -3720,7 +3895,7 @@ YAML      : &quot;!!map &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/FBC9.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">safe</span><span class="colon">:</span><span class="default"> </span><span class="default">a!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~</span><span class="comment">
-</span><span class="indent"> </span><span class="default">    </span><span class="default">!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~</span><span class="default">
+</span><span class="indent">     </span><span class="default">!&quot;#$%&amp;&#39;()*+,-./09:;&lt;=&gt;?@AZ[\]^_`az{|}~</span><span class="comment">
 </span><span class="default">safe question mark</span><span class="colon">:</span><span class="default"> </span><span class="default">?foo</span><span class="comment">
 </span><span class="default">safe colon</span><span class="colon">:</span><span class="default"> </span><span class="default">:foo</span><span class="comment">
 </span><span class="default">safe dash</span><span class="colon">:</span><span class="default"> </span><span class="default">-foo</span><span class="comment">
@@ -3801,9 +3976,9 @@ YAML      : &quot;!!map &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/FP8R.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="block_scalar_content">line1</span><span class="default">
-</span><span class="block_scalar_content">line2</span><span class="default">
-</span><span class="block_scalar_content">line3</span><span class="default">
+</span><span class="block_scalar_content">line1</span><span class="comment">
+</span><span class="block_scalar_content">line2</span><span class="comment">
+</span><span class="block_scalar_content">line3</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -3860,14 +4035,14 @@ YAML      : &quot;!!map &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/FRK4.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">{
-  ? foo :,
+</span><span class="error">  ? foo :,
   : bar,
 }
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -3892,9 +4067,9 @@ YAML      : &quot;&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">[a, [b, c]]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[a, [b, c]]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -3966,10 +4141,10 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/G992.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="folded">&gt;</span><span class="comment">
-</span><span class="default"> </span><span class="block_scalar_content">folded</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">text</span><span class="default">
-</span><span class="default">
-</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">folded</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">text</span><span class="comment">
+</span><span class="comment">
+</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -4026,15 +4201,15 @@ YAML      : &quot;&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
 </span><span class="comment">
 </span><span class="default">bar</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="comment">
-</span><span class="indent"> </span><span class="trailing_space">   </span><span class="default">
+</span><span class="indent">    </span><span class="comment">
 </span><span class="default">text</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">a</span><span class="default">
-</span><span class="indent">  </span><span class="trailing_space">  </span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">b</span><span class="default">
-</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">c</span><span class="default">
-</span><span class="trailing_space"> </span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">d</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">a</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">  </span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">b</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">c</span><span class="comment">
+</span><span class="trailing_space"> 
+</span><span class="indent">  </span><span class="block_scalar_content">d</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -4093,11 +4268,11 @@ YAML      : &quot;&quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">name</span><span class="colon">:</span><span class="default"> </span><span class="default">Mark McGwire</span><span class="comment">
 </span><span class="default">accomplishment</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">Mark set a major league</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">home run record in 1998.</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">Mark set a major league</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">home run record in 1998.</span><span class="comment">
 </span><span class="default">stats</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">65 Home Runs</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">0.278 Batting Average</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">65 Home Runs</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">0.278 Batting Average</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -4162,9 +4337,9 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/HS5T.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">1st non-empty</span><span class="comment">
-</span><span class="default">
-</span><span class="default"> </span><span class="default">2nd non-empty</span><span class="trailing_space"> </span><span class="default">
-</span><span class="default"></span><span class="tab">	</span><span class="default">3rd non-empty</span><span class="default">
+</span><span class="comment">
+</span><span class="indent"> </span><span class="default">2nd non-empty</span><span class="trailing_space"> </span><span class="comment">
+</span><span class="default"></span><span class="tab">	</span><span class="default">3rd non-empty</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -4191,9 +4366,9 @@ YAML      : &quot;&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="comment"># Tabs and spaces
 </span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Quoted </span><span class="tab">	</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="default">block</span><span class="colon">:</span><span class="default"></span><span class="tab">	</span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">void main() {</span><span class="default">
-</span><span class="indent">  </span><span class="default"></span><span class="tab">	</span><span class="block_scalar_content">printf(&quot;Hello, world!\n&quot;);</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">}</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">void main() {</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content"></span><span class="tab">	</span><span class="block_scalar_content">printf(&quot;Hello, world!\n&quot;);</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">}</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -4383,7 +4558,7 @@ YAML      : &quot;&quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
 </span><span class="default">k:#foo</span><span class="comment">
-</span><span class="default"> </span><span class="default">&amp;a !t s</span><span class="default">
+</span><span class="indent"> </span><span class="default">&amp;a !t s</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -4520,11 +4695,11 @@ Doc 2: [
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/JTV5.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="question">?</span><span class="default"> </span><span class="default">a</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="default">true</span><span class="default">
+</span><span class="indent">  </span><span class="default">true</span><span class="comment">
 </span><span class="colon">:</span><span class="default"> </span><span class="default">null</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="default">d</span><span class="default">
+</span><span class="indent">  </span><span class="default">d</span><span class="comment">
 </span><span class="question">?</span><span class="default"> </span><span class="default">e</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="default">42</span><span class="default">
+</span><span class="indent">  </span><span class="default">42</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -4585,12 +4760,12 @@ Doc 2: [
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/K527.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="folded">&gt;</span><span class="default">-</span><span class="comment">
-</span><span class="default">  </span><span class="block_scalar_content">trimmed</span><span class="default">
-</span><span class="indent">  </span><span class="default">
-</span><span class="trailing_space"> </span><span class="default">
-</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">as</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">space</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">trimmed</span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
+</span><span class="trailing_space"> 
+</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">as</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">space</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -4608,6 +4783,30 @@ Doc 2: [
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>K54U - Tab after document header
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>header, whitespace<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/K54U.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"></span><span class="tab">	</span><span class="default">scalar</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = &quot;scalar&quot;</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: &quot;scalar&quot;
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="default">scalar</span><span class="comment">
+</span></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>K858 - Spec Example 8.6. Empty Scalar Chomping
 </b></td></tr>
 <tr>
@@ -4615,11 +4814,11 @@ Doc 2: [
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/K858.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">strip</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="default">-</span><span class="comment">
-</span><span class="default">
+</span><span class="comment">
 </span><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="default">
+</span><span class="comment">
 </span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">+</span><span class="comment">
-</span><span class="default">
+</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -4682,7 +4881,7 @@ Doc 2: [
 <td style="max-width: 15em;" valign="top" >Tags:<br>1.3-err, anchor, header, scalar<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/KSS4.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">quoted</span><span class="default">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">quoted</span><span class="comment">
 </span><span class="doublequoted">string</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="doc_start">---</span><span class="default"> </span><span class="anchor">&amp;node</span><span class="default"> </span><span class="default">foo</span><span class="comment">
 </span></pre>
@@ -4712,14 +4911,14 @@ Doc 2: &quot;foo&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>1.3-err, flow, mapping, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/KZN9.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">-</span><span class="error"> </span><span class="error">[ YAML : separate ]
-- [ : empty key entry ]
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="dash">-</span><span class="default"> </span><span class="error">[ YAML : separate ]
+</span><span class="error">- [ : empty key entry ]
 - [ {JSON: like}:adjacent ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;- &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ YAML : separate ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -4772,14 +4971,14 @@ YAML      : &quot;- &quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, mapping, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/L9U5.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">implicit block key</span><span class="error"> </span><span class="error">:</span><span class="error"> </span><span class="error">[
-  implicit flow key : value,
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">implicit block key</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="error">[
+</span><span class="error">  implicit flow key : value,
  ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;implicit block key : &quot;
+Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -4839,17 +5038,17 @@ YAML      : &quot;implicit block key : &quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, scalar, whitespace<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/LP6E.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">-</span><span class="error"> </span><span class="error">[a, b , c ]
-- { &quot;a&quot;  : b
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="dash">-</span><span class="default"> </span><span class="error">[a, b , c ]
+</span><span class="error">- { &quot;a&quot;  : b
    , c : &#39;d&#39; ,
    e   : &quot;f&quot;
   }
 - [      ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;- &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[a, b , c ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -4871,14 +5070,14 @@ YAML      : &quot;- &quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, scalar, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/LQZ7.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">&quot;</span><span class="error">implicit block key</span><span class="error">&quot;</span><span class="error"> </span><span class="error">:</span><span class="error"> </span><span class="error">[
-  &quot;implicit flow key&quot; : value,
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doublequote">&quot;</span><span class="doublequoted">implicit block key</span><span class="doublequote">&quot;</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="error">[
+</span><span class="error">  &quot;implicit flow key&quot; : value,
  ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;\&quot;implicit block key\&quot; : &quot;
+Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -4903,9 +5102,9 @@ YAML      : &quot;\&quot;implicit block key\&quot; : &quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">[flow]: block
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[flow]: block&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -4928,12 +5127,12 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/M29M.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">ab</span><span class="default">
-</span><span class="indent"> </span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">cd</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">ef</span><span class="default">
-</span><span class="indent"> </span><span class="default">
-</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">ab</span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">cd</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">ef</span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="comment">
 </span><span class="doc_end">...</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -4961,11 +5160,11 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/M5C3.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="comment">
-</span><span class="indent">  </span><span class="block_scalar_content">value</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">value</span><span class="comment">
 </span><span class="default">folded</span><span class="colon">:</span><span class="comment">
 </span><span class="indent">   </span><span class="tag">!foo</span><span class="comment">
 </span><span class="indent">  </span><span class="folded">&gt;</span><span class="default">1</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">value</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">value</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -4998,15 +5197,15 @@ YAML      : &quot;&quot;
 </span><span class="colon">:</span><span class="comment">
 </span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">2001-07-23</span><span class="comment">
 </span><span class="comment">
-</span><span class="error">?</span><span class="error"> </span><span class="error">[ New York Yankees,
-    Atlanta Braves ]
+</span><span class="question">?</span><span class="default"> </span><span class="error">[ New York Yankees,
+</span><span class="error">    Atlanta Braves ]
 : [ 2001-07-02, 2001-08-12,
     2001-08-14 ]
 </span></pre>
 <pre>Line      : 6
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;? &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ New York Yankees,&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -5029,12 +5228,12 @@ YAML      : &quot;? &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/M7A3.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">Bare</span><span class="comment">
-</span><span class="default">document</span><span class="default">
+</span><span class="default">document</span><span class="comment">
 </span><span class="doc_end">...</span><span class="comment">
 </span><span class="comment"># No document
 </span><span class="doc_end">...</span><span class="comment">
 </span><span class="literal">|</span><span class="comment">
-</span><span class="block_scalar_content">%!PS-Adobe-2.0 # Not the first line</span><span class="default">
+</span><span class="block_scalar_content">%!PS-Adobe-2.0 # Not the first line</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -5060,6 +5259,40 @@ Doc 3: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>M7NX - Nested flow collections
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>flow, mapping, sequence<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/M7NX.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="error">{
+</span><span class="error"> a: [
+  b, c, {
+   d: [e, f]
+  }
+ ]
+}
+</span></pre>
+<pre>Line      : 2
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>M9B4 - Spec Example 8.7. Literal Scalar
 </b></td></tr>
 <tr>
@@ -5067,10 +5300,10 @@ Doc 3: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/M9B4.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="literal">|</span><span class="comment">
-</span><span class="default"> </span><span class="block_scalar_content">literal</span><span class="default">
-</span><span class="indent"> </span><span class="default"></span><span class="tab">	</span><span class="block_scalar_content">text</span><span class="default">
-</span><span class="default">
-</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">literal</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content"></span><span class="tab">	</span><span class="block_scalar_content">text</span><span class="comment">
+</span><span class="comment">
+</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -5095,11 +5328,11 @@ Doc 3: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/MJS9.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="folded">&gt;</span><span class="comment">
-</span><span class="default">  </span><span class="block_scalar_content">foo </span><span class="default">
-</span><span class="trailing_space"> </span><span class="default">
-</span><span class="indent">  </span><span class="default"></span><span class="tab">	</span><span class="default"> </span><span class="block_scalar_content">bar</span><span class="default">
-</span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">baz</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">foo </span><span class="comment">
+</span><span class="trailing_space"> 
+</span><span class="indent">  </span><span class="block_scalar_content"></span><span class="tab">	</span><span class="block_scalar_content"> bar</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">baz</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -5123,12 +5356,12 @@ Doc 3: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, mapping, sequence<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/MXS3.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">-</span><span class="error"> </span><span class="error">{a: b}
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="dash">-</span><span class="default"> </span><span class="error">{a: b}
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;- &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{a: b}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -5151,9 +5384,9 @@ YAML      : &quot;- &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/MYW6.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="literal">|</span><span class="default">-</span><span class="comment">
-</span><span class="default"> </span><span class="block_scalar_content">ab</span><span class="default">
-</span><span class="indent"> </span><span class="default">
-</span><span class="indent"> </span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">ab</span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
 </span><span class="doc_end">...</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -5182,7 +5415,7 @@ YAML      : &quot;- &quot;
 </span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double quoted</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="singlequote">&#39;</span><span class="singlequoted">single quoted</span><span class="singlequote">&#39;</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">block</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">block</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">plain again</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -5252,10 +5485,10 @@ YAML      : &quot;- &quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>scalar, spec, upto-1.2<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/NP9H.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doublequote">&quot;</span><span class="doublequoted">folded </span><span class="default">
-</span><span class="doublequoted">to a space,</span><span class="tab">	</span><span class="default">
-</span><span class="doublequoted"> </span><span class="default">
-</span><span class="doublequoted">to a line feed, or </span><span class="tab">	</span><span class="doublequoted">\</span><span class="default">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doublequote">&quot;</span><span class="doublequoted">folded </span><span class="comment">
+</span><span class="doublequoted">to a space,</span><span class="tab">	</span><span class="comment">
+</span><span class="trailing_space"> 
+</span><span class="doublequoted">to a line feed, or </span><span class="tab">	</span><span class="doublequoted">\</span><span class="comment">
 </span><span class="doublequoted"> \ </span><span class="tab">	</span><span class="doublequoted">non-content</span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -5281,14 +5514,14 @@ YAML      : &quot;- &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/P2AD.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="comment"> # Empty header&darr;
-</span><span class="indent"> </span><span class="block_scalar_content">literal</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">literal</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="default">1</span><span class="comment"> # Indentation indicator&darr;
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">folded</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content"> folded</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">+</span><span class="comment"> # Chomping indicator&darr;
-</span><span class="indent"> </span><span class="block_scalar_content">keep</span><span class="default">
-</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">keep</span><span class="comment">
+</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="default">1</span><span class="default">-</span><span class="comment"> # Both indicators&darr;
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">strip</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content"> strip</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -5322,7 +5555,7 @@ YAML      : &quot;- &quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="tag_directive">%TAG !! tag:example.com,2000:app/</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
-</span><span class="tag">!!int</span><span class="default"> </span><span class="default">1 - 3</span><span class="comment"> # Interval, not integer
+</span><span class="tag">!!int</span><span class="default"> </span><span class="default">1 - 3</span><span class="comment"> # Interval, not integer</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -5428,9 +5661,9 @@ YAML      : &quot;- &quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>scalar, spec, upto-1.2<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/PRH3.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="singlequote">&#39;</span><span class="singlequoted"> 1st non-empty</span><span class="default">
-</span><span class="default">
-</span><span class="singlequoted"> 2nd non-empty </span><span class="default">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="singlequote">&#39;</span><span class="singlequoted"> 1st non-empty</span><span class="comment">
+</span><span class="comment">
+</span><span class="singlequoted"> 2nd non-empty </span><span class="comment">
 </span><span class="singlequoted"></span><span class="tab">	</span><span class="singlequoted">3rd non-empty </span><span class="singlequote">&#39;</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -5445,6 +5678,34 @@ YAML      : &quot;- &quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty\n2nd non-empty 3rd non-empty </span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>PUW8 - Document start on last line
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>header<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/PUW8.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = { a =&gt; &quot;b&quot; }</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: {
+   &quot;a&quot; : &quot;b&quot;
+}
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
 </span></pre>
 </td>
 </tr>
@@ -5502,16 +5763,16 @@ YAML      : &quot;- &quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, mapping, sequence, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/Q88A.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">-</span><span class="error"> </span><span class="error">[ a, b ]
-- { a: b }
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="dash">-</span><span class="default"> </span><span class="error">[ a, b ]
+</span><span class="error">- { a: b }
 - &quot;a&quot;
 - &#39;b&#39;
 - c
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;- &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ a, b ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -5534,10 +5795,10 @@ YAML      : &quot;- &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/Q8AD.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
-</span><span class="doublequote">&quot;</span><span class="doublequoted">folded </span><span class="default">
-</span><span class="doublequoted">to a space,</span><span class="default">
-</span><span class="doublequoted"> </span><span class="default">
-</span><span class="doublequoted">to a line feed, or </span><span class="tab">	</span><span class="doublequoted">\</span><span class="default">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">folded </span><span class="comment">
+</span><span class="doublequoted">to a space,</span><span class="comment">
+</span><span class="trailing_space"> 
+</span><span class="doublequoted">to a line feed, or </span><span class="tab">	</span><span class="doublequoted">\</span><span class="comment">
 </span><span class="doublequoted"> \ </span><span class="tab">	</span><span class="doublequoted">non-content</span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -5563,16 +5824,16 @@ YAML      : &quot;- &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/Q9WF.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">{ first: Sammy, last: Sosa }:
-# Statistics:
+</span><span class="error"># Statistics:
   hr:  # Home runs
      65
   avg: # Average
    0.278
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{ first: Sammy, last: Sosa }:&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -5595,13 +5856,13 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/QF4Y.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">[
-foo: bar
+</span><span class="error">foo: bar
 ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -5624,29 +5885,34 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/R4YG.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">detected</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">detected</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="indent"> </span><span class="default">
-</span><span class="indent"> </span><span class="trailing_space"> </span><span class="default">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content"># detected</span><span class="default">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content"># detected</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">1</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">explicit</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content"> explicit</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
-</span><span class="indent"> </span><span class="default"></span><span class="tab">	</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">detected</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content"></span><span class="tab">	</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">detected</span><span class="comment">
 </span></pre>
 <pre></pre>
 
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>$doc1 = [&quot;detected\n&quot;, &quot;\n\n# detected\n&quot;, &quot; explicit\n&quot;, &quot;\ndetected\n&quot;]</pre>
+<pre>$doc1 = [
+  &quot;detected\n&quot;,
+  &quot;\n\n# detected\n&quot;,
+  &quot; explicit\n&quot;,
+  &quot;\t\ndetected\n&quot;,
+]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre>Doc 1: [
    &quot;detected\n&quot;,
    &quot;\n\n# detected\n&quot;,
    &quot; explicit\n&quot;,
-   &quot;\ndetected\n&quot;
+   &quot;\t\ndetected\n&quot;
 ]
 </pre>
 </td>
@@ -5654,7 +5920,7 @@ YAML      : &quot;&quot;
 <pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">detected\n</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\n\n# detected\n</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> explicit\n</span><span class="doublequote">&quot;</span><span class="comment">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\ndetected\n</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\t\ndetected\n</span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
 </td>
 </tr>
@@ -5759,10 +6025,10 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>1.3-mod, comment<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/RZP5.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double</span><span class="default">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double</span><span class="comment">
 </span><span class="doublequoted">quotes</span><span class="doublequote">&quot;</span><span class="comment"> # lala
 </span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="default">plain</span><span class="comment">
-</span><span class="indent"> </span><span class="default">value</span><span class="default">  </span><span class="comment"># lala</span><span class="default">
+</span><span class="indent"> </span><span class="default">value</span><span class="default">  </span><span class="comment"># lala</span><span class="comment">
 </span><span class="default">c</span><span class="default">  </span><span class="colon">:</span><span class="comment"> #lala
 </span><span class="indent">  </span><span class="default">d</span><span class="comment">
 </span><span class="question">?</span><span class="comment"> # lala
@@ -5773,7 +6039,7 @@ YAML      : &quot;&quot;
 </span><span class="default">e</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;node</span><span class="comment"> # lala
 </span><span class="indent"> </span><span class="dash">-</span><span class="default"> </span><span class="default">x</span><span class="colon">:</span><span class="default"> </span><span class="default">y</span><span class="comment">
 </span><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment"> # lala
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">abcde</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">abcde</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -5829,13 +6095,13 @@ YAML      : &quot;&quot;
 </span><span class="default">User</span><span class="colon">:</span><span class="default"> </span><span class="default">ed</span><span class="comment">
 </span><span class="default">Warning</span><span class="colon">:</span><span class="comment">
 </span><span class="indent">  </span><span class="default">This is an error message</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="default">for the log file</span><span class="default">
+</span><span class="indent">  </span><span class="default">for the log file</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
 </span><span class="default">Time</span><span class="colon">:</span><span class="default"> </span><span class="default">2001-11-23 15:02:31 -5</span><span class="comment">
 </span><span class="default">User</span><span class="colon">:</span><span class="default"> </span><span class="default">ed</span><span class="comment">
 </span><span class="default">Warning</span><span class="colon">:</span><span class="comment">
 </span><span class="indent">  </span><span class="default">A slightly different error</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="default">message.</span><span class="default">
+</span><span class="indent">  </span><span class="default">message.</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
 </span><span class="default">Date</span><span class="colon">:</span><span class="default"> </span><span class="default">2001-11-23 15:03:17 -5</span><span class="comment">
 </span><span class="default">User</span><span class="colon">:</span><span class="default"> </span><span class="default">ed</span><span class="comment">
@@ -5845,11 +6111,11 @@ YAML      : &quot;&quot;
 </span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">file</span><span class="colon">:</span><span class="default"> </span><span class="default">TopClass.py</span><span class="comment">
 </span><span class="indent">    </span><span class="default">line</span><span class="colon">:</span><span class="default"> </span><span class="default">23</span><span class="comment">
 </span><span class="indent">    </span><span class="default">code</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent">     </span><span class="default"> </span><span class="block_scalar_content">x = MoreObject(&quot;345\n&quot;)</span><span class="default">
+</span><span class="indent">      </span><span class="block_scalar_content">x = MoreObject(&quot;345\n&quot;)</span><span class="comment">
 </span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">file</span><span class="colon">:</span><span class="default"> </span><span class="default">MoreClass.py</span><span class="comment">
 </span><span class="indent">    </span><span class="default">line</span><span class="colon">:</span><span class="default"> </span><span class="default">58</span><span class="comment">
 </span><span class="indent">    </span><span class="default">code</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="comment">
-</span><span class="indent">     </span><span class="default"> </span><span class="block_scalar_content">foo = bar</span><span class="default">
+</span><span class="indent">      </span><span class="block_scalar_content">foo = bar</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -6030,6 +6296,36 @@ Doc 3: {
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>S98Z - Block scalar with spaces only
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>comment, folded, scalar, whitespace<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/S98Z.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">empty block scalar</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
+</span><span class="indent">   </span><span class="comment">
+</span><span class="comment"> # comment
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = { &quot;empty block scalar&quot; =&gt; &quot;&quot; }</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: {
+   &quot;empty block scalar&quot; : &quot;&quot;
+}
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">empty block scalar</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>S9E8 - Spec Example 5.3. Block Structure Indicators
 </b></td></tr>
 <tr>
@@ -6086,9 +6382,9 @@ Doc 3: {
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">{a: [b, c], [d, e]: f}
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{a: [b, c], [d, e]: f}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -6101,6 +6397,41 @@ YAML      : &quot;&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>SKE5 - Anchor before zero indented sequence
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>anchor, sequence<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/SKE5.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">seq</span><span class="colon">:</span><span class="comment">
+</span><span class="indent"> </span><span class="anchor">&amp;anchor</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = { seq =&gt; [&quot;a&quot;, &quot;b&quot;] }</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: {
+   &quot;seq&quot; : [
+      &quot;a&quot;,
+      &quot;b&quot;
+   ]
+}
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="default">seq</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -6135,9 +6466,9 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>comment, literal, scalar, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/SYW4.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">hr</span><span class="colon">:</span><span class="default">  </span><span class="default">65</span><span class="comment">    # Home runs
-</span><span class="default">avg</span><span class="colon">:</span><span class="default"> </span><span class="default">0.278</span><span class="comment"> # Batting average
-</span><span class="default">rbi</span><span class="colon">:</span><span class="default"> </span><span class="default">147</span><span class="comment">   # Runs Batted In
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">hr</span><span class="colon">:</span><span class="default">  </span><span class="default">65</span><span class="comment">    # Home runs</span><span class="comment">
+</span><span class="default">avg</span><span class="colon">:</span><span class="default"> </span><span class="default">0.278</span><span class="comment"> # Batting average</span><span class="comment">
+</span><span class="default">rbi</span><span class="colon">:</span><span class="default"> </span><span class="default">147</span><span class="comment">   # Runs Batted In</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -6168,13 +6499,13 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/T26H.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="trailing_space"> </span><span class="default">
-</span><span class="trailing_space">  </span><span class="default">
-</span><span class="default">  </span><span class="block_scalar_content">literal</span><span class="default">
-</span><span class="indent">  </span><span class="trailing_space"> </span><span class="default">
-</span><span class="indent">  </span><span class="default">
-</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="default">
-</span><span class="default">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">literal</span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content"> </span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="comment">
+</span><span class="comment">
 </span><span class="comment"> # Comment
 </span></pre>
 <pre></pre>
@@ -6200,9 +6531,9 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/T4YY.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
-</span><span class="singlequote">&#39;</span><span class="singlequoted"> 1st non-empty</span><span class="default">
-</span><span class="default">
-</span><span class="singlequoted"> 2nd non-empty </span><span class="default">
+</span><span class="singlequote">&#39;</span><span class="singlequoted"> 1st non-empty</span><span class="comment">
+</span><span class="comment">
+</span><span class="singlequoted"> 2nd non-empty </span><span class="comment">
 </span><span class="singlequoted"> 3rd non-empty </span><span class="singlequote">&#39;</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -6228,10 +6559,10 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/T5N4.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="default"> </span><span class="block_scalar_content">literal</span><span class="default">
-</span><span class="indent"> </span><span class="default"></span><span class="tab">	</span><span class="block_scalar_content">text</span><span class="default">
-</span><span class="default">
-</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">literal</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content"></span><span class="tab">	</span><span class="block_scalar_content">text</span><span class="comment">
+</span><span class="comment">
+</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -6285,12 +6616,12 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>scalar, spec, upto-1.2, whitespace<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/TL85.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doublequote">&quot;</span><span class="default">
-</span><span class="doublequoted">  foo </span><span class="default">
-</span><span class="doublequoted"> </span><span class="default">
-</span><span class="doublequoted">  </span><span class="tab">	</span><span class="doublequoted"> bar</span><span class="default">
-</span><span class="default">
-</span><span class="doublequoted">  baz</span><span class="default">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequoted">  foo </span><span class="comment">
+</span><span class="trailing_space"> 
+</span><span class="doublequoted">  </span><span class="tab">	</span><span class="doublequoted"> bar</span><span class="comment">
+</span><span class="comment">
+</span><span class="doublequoted">  baz</span><span class="comment">
 </span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -6316,13 +6647,13 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/TS54.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="folded">&gt;</span><span class="comment">
-</span><span class="default"> </span><span class="block_scalar_content">ab</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">cd</span><span class="default">
-</span><span class="indent"> </span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">ef</span><span class="default">
-</span><span class="default">
-</span><span class="default">
-</span><span class="indent"> </span><span class="block_scalar_content">gh</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">ab</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">cd</span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">ef</span><span class="comment">
+</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent"> </span><span class="block_scalar_content">gh</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -6499,13 +6830,13 @@ Doc 2: {
 <td style="max-width: 15em;" valign="top" >Tags:<br>flow, mapping, sequence, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/UDR7.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">sequence</span><span class="error">:</span><span class="error"> </span><span class="error">[ one, two, ]
-mapping: { sky: blue, sea: green }
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">sequence</span><span class="colon">:</span><span class="default"> </span><span class="error">[ one, two, ]
+</span><span class="error">mapping: { sky: blue, sea: green }
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;sequence: &quot;
+Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ one, two, ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -6535,8 +6866,8 @@ YAML      : &quot;sequence: &quot;
 </span><span class="indent">    </span><span class="default">family</span><span class="default"> </span><span class="colon">:</span><span class="default"> </span><span class="default">Dumars</span><span class="comment">
 </span><span class="indent">    </span><span class="default">address</span><span class="colon">:</span><span class="comment">
 </span><span class="indent">        </span><span class="default">lines</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent">         </span><span class="default">   </span><span class="block_scalar_content">458 Walkman Dr.</span><span class="default">
-</span><span class="indent">            </span><span class="block_scalar_content">Suite #292</span><span class="default">
+</span><span class="indent">            </span><span class="block_scalar_content">458 Walkman Dr.</span><span class="comment">
+</span><span class="indent">            </span><span class="block_scalar_content">Suite #292</span><span class="comment">
 </span><span class="indent">        </span><span class="default">city</span><span class="default">    </span><span class="colon">:</span><span class="default"> </span><span class="default">Royal Oak</span><span class="comment">
 </span><span class="indent">        </span><span class="default">state</span><span class="default">   </span><span class="colon">:</span><span class="default"> </span><span class="default">MI</span><span class="comment">
 </span><span class="indent">        </span><span class="default">postal</span><span class="default">  </span><span class="colon">:</span><span class="default"> </span><span class="default">48046</span><span class="comment">
@@ -6554,8 +6885,8 @@ YAML      : &quot;sequence: &quot;
 </span><span class="default">total</span><span class="colon">:</span><span class="default"> </span><span class="default">4443.52</span><span class="comment">
 </span><span class="default">comments</span><span class="colon">:</span><span class="comment">
 </span><span class="indent">    </span><span class="default">Late afternoon is best.</span><span class="comment">
-</span><span class="indent"> </span><span class="default">   </span><span class="default">Backup contact is Nancy</span><span class="default">
-</span><span class="indent"> </span><span class="default">   </span><span class="default">Billsmer @ 338-4338.</span><span class="default">
+</span><span class="indent">    </span><span class="default">Backup contact is Nancy</span><span class="comment">
+</span><span class="indent">    </span><span class="default">Billsmer @ 338-4338.</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -6668,16 +6999,16 @@ YAML      : &quot;sequence: &quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
 </span><span class="error">{ matches
-% : 20 }
+</span><span class="error">% : 20 }
 ...
 ---
 # Empty
 ...
 </span></pre>
 <pre>Line      : 2
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{ matches&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -6776,10 +7107,10 @@ YAML      : &quot;&quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="dash">-</span><span class="comment"> # Empty
 </span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">block node</span><span class="default">
-</span><span class="dash">-</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="comment"> # Compact
-</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="comment"> # sequence
-</span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="colon">:</span><span class="default"> </span><span class="default">two</span><span class="comment"> # Compact mapping
+</span><span class="indent"> </span><span class="block_scalar_content">block node</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="comment"> # Compact</span><span class="comment">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="comment"> # sequence</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="colon">:</span><span class="default"> </span><span class="default">two</span><span class="comment"> # Compact mapping</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -6819,7 +7150,7 @@ YAML      : &quot;&quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="yaml_directive">%YAML 1.2</span><span class="comment">
 </span><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="block_scalar_content">%!PS-Adobe-2.0</span><span class="default">
+</span><span class="block_scalar_content">%!PS-Adobe-2.0</span><span class="comment">
 </span><span class="doc_end">...</span><span class="comment">
 </span><span class="yaml_directive">%YAML1.2</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
@@ -6882,14 +7213,14 @@ Doc 2: null
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/WZ62.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">{
-  foo : !!str,
+</span><span class="error">  foo : !!str,
   !!str : bar,
 }
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -6914,9 +7245,9 @@ YAML      : &quot;&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">{ &amp;a [a, &amp;b b]: *b, *a : [c, *b, d]}
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{ &amp;a [a, &amp;b b]: *b, *a : [c, *b, d]}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -6939,13 +7270,13 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/XV9V.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">Folding</span><span class="colon">:</span><span class="comment">
-</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">Empty line</span><span class="default">
-</span><span class="default">
+</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">Empty line</span><span class="comment">
+</span><span class="comment">
 </span><span class="doublequoted">  as a line feed</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="default">Chomping</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">Clipped empty lines</span><span class="default">
-</span><span class="trailing_space"> </span><span class="default">
-</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">Clipped empty lines</span><span class="comment">
+</span><span class="trailing_space"> 
+</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -6976,10 +7307,10 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>1.3-err, comment<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/XW4D.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double</span><span class="default">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">double</span><span class="comment">
 </span><span class="doublequoted">quotes</span><span class="doublequote">&quot;</span><span class="comment"> # lala
 </span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="default">plain</span><span class="comment">
-</span><span class="indent"> </span><span class="default">value</span><span class="default">  </span><span class="comment"># lala</span><span class="default">
+</span><span class="indent"> </span><span class="default">value</span><span class="default">  </span><span class="comment"># lala</span><span class="comment">
 </span><span class="default">c</span><span class="default">  </span><span class="colon">:</span><span class="comment"> #lala
 </span><span class="indent">  </span><span class="default">d</span><span class="comment">
 </span><span class="question">?</span><span class="comment"> # lala
@@ -6991,7 +7322,7 @@ YAML      : &quot;&quot;
 </span><span class="indent"> </span><span class="anchor">&amp;node</span><span class="comment"> # lala
 </span><span class="indent"> </span><span class="dash">-</span><span class="default"> </span><span class="default">x</span><span class="colon">:</span><span class="default"> </span><span class="default">y</span><span class="comment">
 </span><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment"> # lala
-</span><span class="indent"> </span><span class="default"> </span><span class="block_scalar_content">abcde</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">abcde</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -7042,14 +7373,14 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>sequence, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/YD5X.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">-</span><span class="error"> </span><span class="error">[name        , hr, avg  ]
-- [Mark McGwire, 65, 0.278]
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="dash">-</span><span class="default"> </span><span class="error">[name        , hr, avg  ]
+</span><span class="error">- [Mark McGwire, 65, 0.278]
 - [Sammy Sosa  , 63, 0.288]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;- &quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[name        , hr, avg  ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7072,9 +7403,9 @@ YAML      : &quot;- &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/Z67P.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="comment">
-</span><span class="indent">  </span><span class="block_scalar_content">value</span><span class="default">
+</span><span class="indent">  </span><span class="block_scalar_content">value</span><span class="comment">
 </span><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="tag">!foo</span><span class="default"> </span><span class="folded">&gt;</span><span class="default">1</span><span class="comment">
-</span><span class="indent"> </span><span class="block_scalar_content">value</span><span class="default">
+</span><span class="indent"> </span><span class="block_scalar_content">value</span><span class="comment">
 </span></pre>
 <pre></pre>
 
@@ -7130,16 +7461,16 @@ YAML      : &quot;- &quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>mapping, spec<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/ZF4X.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">Mark McGwire</span><span class="error">:</span><span class="error"> </span><span class="error">{hr: 65, avg: 0.278}
-Sammy Sosa: {
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">Mark McGwire</span><span class="colon">:</span><span class="default"> </span><span class="error">{hr: 65, avg: 0.278}
+</span><span class="error">Sammy Sosa: {
     hr: 63,
     avg: 0.288
   }
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;Mark McGwire: &quot;
+Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;{hr: 65, avg: 0.278}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7183,6 +7514,39 @@ YAML      : &quot;Mark McGwire: &quot;
 </span></pre>
 </td>
 </tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>ZWK4 - Key with anchor after missing explicit mapping value
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>anchor, mapping<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/ZWK4.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
+</span><span class="question">?</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="anchor">&amp;anchor</span><span class="default"> </span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">3</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = { a =&gt; 1, b =&gt; undef, c =&gt; 3 }</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: {
+   &quot;a&quot; : 1,
+   &quot;b&quot; : null,
+   &quot;c&quot; : 3
+}
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
+</span><span class="default">b</span><span class="colon">:</span><span class="comment">
+</span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">3</span><span class="comment">
+</span></pre>
+</td>
+</tr>
 
 </table>
 <h1><a name="invalid">Invalid</a></h1>
@@ -7206,8 +7570,8 @@ YAML      : &quot;Mark McGwire: &quot;
 </span><span class="default">invalid</span><span class="error">
 </span></pre>
 <pre>Line      : 3
-Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 449
+Message   : Expected (COLON WS), but got EOL
+Where     : YAML/PP/Parser.pm line 495
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7231,13 +7595,13 @@ YAML      : &quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/2CMS.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">this</span><span class="comment">
-</span><span class="default"> </span><span class="default">is</span><span class="default">
-</span><span class="default">  </span><span class="default">invalid</span><span class="error">: x
+</span><span class="indent"> </span><span class="default">is</span><span class="comment">
+</span><span class="indent">  </span><span class="default">invalid</span><span class="error">: x
 </span></pre>
 <pre>Line      : 3
 Message   : Unexpected content
-Where     : YAML/PP/Lexer.pm line 333
-YAML      : &quot;: x&quot;
+Where     : YAML/PP/Lexer.pm line 231
+YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7261,12 +7625,40 @@ YAML      : &quot;: x&quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
 </span><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
-</span><span class="error">...</span><span class="error"> invalid
+</span><span class="doc_end">...</span><span class="error"> invalid
 </span></pre>
 <pre>Line      : 3
 Message   : Expected EOL
-Where     : YAML/PP/Lexer.pm line 481
-YAML      : &quot;...&quot;
+Where     : YAML/PP/Parser.pm line 142
+YAML      : &quot; invalid&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>4H7K - Flow sequence with invalid extra closing bracket
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>error, flow<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/4H7K.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="error">[ a, b, c ] ]
+</span></pre>
+<pre>Line      : 2
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ a, b, c ] ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7295,7 +7687,7 @@ YAML      : &quot;...&quot;
 </span></pre>
 <pre>Line      : 4
 Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 346
+Where     : YAML/PP/Parser.pm line 340
 YAML      : &quot;- wrong&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7321,11 +7713,11 @@ YAML      : &quot;- wrong&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">top1</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;node1</span><span class="comment">
 </span><span class="indent">  </span><span class="anchor">&amp;k1</span><span class="default"> </span><span class="default">key1</span><span class="colon">:</span><span class="default"> </span><span class="default">val1</span><span class="comment">
 </span><span class="default">top2</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;node2</span><span class="comment">
-</span><span class="indent">  </span><span class="anchor">&amp;v2</span><span class="default"> </span><span class="default">val2</span><span class="error">
+</span><span class="indent">  </span><span class="anchor">&amp;v2</span><span class="default"> </span><span class="default">val2</span><span class="comment">
 </span></pre>
 <pre>Line      : 4
-Message   : Expected new node (FULLMAPVALUE)
-Where     : YAML/PP/Parser.pm line 449
+Message   : A node can only have one anchor
+Where     : YAML/PP/Parser.pm line 415
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7367,30 +7759,64 @@ YAML      : &quot;&quot;
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>5LLU - Block scalar with wrong indented line after spaces only
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>error, folded, whitespace<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/5LLU.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">block scalar</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
+</span><span class="indent"> </span><span class="comment">
+</span><span class="indent">  </span><span class="comment">
+</span><span class="indent">   </span><span class="comment">
+</span><span class="indent"> </span><span class="error">invalid</span><span class="error">
+</span></pre>
+<pre>Line      : 5
+Message   : Bad indendation in MAP
+Where     : YAML/PP/Parser.pm line 296
+YAML      : &quot;invalid&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>5TRB - Invalid document-start marker in doublequoted tring
 </b></td></tr>
 <tr>
 <td style="max-width: 15em;" valign="top" >Tags:<br>double, error, header<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/5TRB.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
-</span><span class="doublequote">&quot;</span><span class="default">
-</span><span class="doublequoted">---</span><span class="default">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
 </span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="error">---</span><span class="error">
+</span><span class="error">&quot;
 </span></pre>
-<pre></pre>
+<pre>Line      : 3
+Message   : Expected (DOUBLEQUOTED_LINE EOL), but got DOC_START
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;---&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
 
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>$doc1 = &quot; --- &quot;</pre>
+<pre></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 1: &quot; --- &quot;
-</pre>
+<pre></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doublequote">&quot;</span><span class="doublequoted"> --- </span><span class="doublequote">&quot;</span><span class="comment">
-</span></pre>
+<pre></pre>
 </td>
 </tr>
 <tr>
@@ -7404,9 +7830,37 @@ YAML      : &quot;&quot;
 </span><span class="error">     - b
 </span></pre>
 <pre>Line      : 1
-Message   : Expected new node (FULLMAPVALUE)
-Where     : YAML/PP/Parser.pm line 449
+Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got DASH
+Where     : YAML/PP/Parser.pm line 495
 YAML      : &quot;- a&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>6JTT - Flow sequence without closing bracket
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>error, flow<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/6JTT.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="error">[ [ a, b, c ]
+</span></pre>
+<pre>Line      : 2
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ [ a, b, c ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7435,7 +7889,7 @@ YAML      : &quot;- a&quot;
 </span></pre>
 <pre>Line      : 4
 Message   : Expected sequence item
-Where     : YAML/PP/Parser.pm line 341
+Where     : YAML/PP/Parser.pm line 335
 YAML      : &quot;invalid&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7460,11 +7914,11 @@ YAML      : &quot;invalid&quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doublequote">&quot;</span><span class="doublequoted">a\nb</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
 </span><span class="doublequote">&quot;</span><span class="error">c</span><span class="error">
-</span><span class="error"> d</span><span class="error">&quot;</span><span class="error">:</span><span class="error"> </span><span class="error">1</span><span class="error">
+</span><span class="error"> d&quot;: 1
 </span></pre>
 <pre>Line      : 2
-Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 449
+Message   : Expected (DOUBLEQUOTED), but got DOUBLEQUOTED_LINE
+Where     : YAML/PP/Parser.pm line 495
 YAML      : &quot;c&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7492,8 +7946,8 @@ YAML      : &quot;c&quot;
 </span><span class="default">top2</span><span class="error">
 </span></pre>
 <pre>Line      : 3
-Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 449
+Message   : Expected (COLON WS), but got EOL
+Where     : YAML/PP/Parser.pm line 495
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7522,8 +7976,38 @@ YAML      : &quot;&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Bad indendation in MAP
-Where     : YAML/PP/Parser.pm line 302
+Where     : YAML/PP/Parser.pm line 296
 YAML      : &quot;word2&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>9C9N - Wrong indented flow sequence
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>error, flow, indent, sequence<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/9C9N.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">flow</span><span class="colon">:</span><span class="default"> </span><span class="error">[a,
+</span><span class="error">b,
+c]
+</span></pre>
+<pre>Line      : 2
+Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[a,&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7551,8 +8035,8 @@ YAML      : &quot;word2&quot;
 </span><span class="default">invalid</span><span class="error">
 </span></pre>
 <pre>Line      : 4
-Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 449
+Message   : Expected (COLON WS), but got EOL
+Where     : YAML/PP/Parser.pm line 495
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7579,9 +8063,37 @@ YAML      : &quot;&quot;
 </span><span class="error">    key2: value2
 </span></pre>
 <pre>Line      : 1
-Message   : Expected new node (FULLSTARTNODE)
-Where     : YAML/PP/Parser.pm line 449
+Message   : Expected (COMMENT EOL), but got COLON
+Where     : YAML/PP/Parser.pm line 495
 YAML      : &quot;: value1&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>9MAG - Flow sequence with invalid comma at the beginning
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>error, flow<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/9MAG.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="error">[ , a, b, c ]
+</span></pre>
+<pre>Line      : 2
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ , a, b, c ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7608,7 +8120,7 @@ YAML      : &quot;: value1&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected ---
-Where     : YAML/PP/Parser.pm line 197
+Where     : YAML/PP/Parser.pm line 211
 YAML      : &quot;...&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7637,8 +8149,38 @@ YAML      : &quot;...&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected sequence item
-Where     : YAML/PP/Parser.pm line 341
+Where     : YAML/PP/Parser.pm line 335
 YAML      : &quot;invalid: x&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>BF9H - Trailing comment in multiline plain scalar
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>comment, error, scalar<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/BF9H.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="indent">       </span><span class="default">b</span><span class="default"> </span><span class="comment"># end of scalar</span><span class="comment">
+</span><span class="indent">       </span><span class="error">c</span><span class="error">
+</span></pre>
+<pre>Line      : 4
+Message   : Bad indendation in MAP
+Where     : YAML/PP/Parser.pm line 296
+YAML      : &quot;c&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7660,12 +8202,12 @@ YAML      : &quot;invalid: x&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>error<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/BS4K.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">word1</span><span class="comment">  # comment
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">word1</span><span class="comment">  # comment</span><span class="comment">
 </span><span class="error">word2</span><span class="error">
 </span></pre>
 <pre>Line      : 2
 Message   : Expected ---
-Where     : YAML/PP/Parser.pm line 197
+Where     : YAML/PP/Parser.pm line 211
 YAML      : &quot;word2&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7689,12 +8231,12 @@ YAML      : &quot;word2&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/C2SP.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">[23
-]: 42
+</span><span class="error">]: 42
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[23&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7716,14 +8258,14 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>comment, error, flow<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/CML9.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">key</span><span class="error">:</span><span class="error"> </span><span class="error">[ word1
-#  xxx
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="error">[ word1
+</span><span class="error">#  xxx
   word2 ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;key: &quot;
+Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ word1&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7746,12 +8288,40 @@ YAML      : &quot;key: &quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/CQ3W.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
-</span><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">missing closing quote</span><span class="default">
+</span><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">missing closing quote</span><span class="comment">
 </span></pre>
 <pre>Line      : 2
-Message   : Expected new node (FULLMAPVALUE)
-Where     : YAML/PP/Parser.pm line 449
+Message   : No more tokens
+Where     : YAML/PP/Parser.pm line 473
 YAML      : &quot;&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>CTN5 - Flow sequence with invalid extra comma
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>error, flow<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/CTN5.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="error">[ a, b, c, , ]
+</span></pre>
+<pre>Line      : 2
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[ a, b, c, , ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7775,11 +8345,11 @@ YAML      : &quot;&quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="singlequote">&#39;</span><span class="singlequoted">a\nb</span><span class="singlequote">&#39;</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
 </span><span class="singlequote">&#39;</span><span class="error">c</span><span class="error">
-</span><span class="error"> d</span><span class="error">&#39;</span><span class="error">:</span><span class="error"> </span><span class="error">1</span><span class="error">
+</span><span class="error"> d&#39;: 1
 </span></pre>
 <pre>Line      : 2
-Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 449
+Message   : Expected (SINGLEQUOTED), but got SINGLEQUOTED_LINE
+Where     : YAML/PP/Parser.pm line 495
 YAML      : &quot;c&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7808,7 +8378,7 @@ YAML      : &quot;c&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 346
+Where     : YAML/PP/Parser.pm line 340
 YAML      : &quot;wrong: 2&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7832,14 +8402,14 @@ YAML      : &quot;wrong: 2&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/EB22.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
-</span><span class="default">scalar1</span><span class="comment"> # comment
+</span><span class="default">scalar1</span><span class="comment"> # comment</span><span class="comment">
 </span><span class="error">%YAML 1.2</span><span class="error">
 </span><span class="error">---
 scalar2
 </span></pre>
 <pre>Line      : 3
 Message   : Expected ---
-Where     : YAML/PP/Parser.pm line 188
+Where     : YAML/PP/Parser.pm line 202
 YAML      : &quot;%YAML 1.2&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7867,8 +8437,8 @@ YAML      : &quot;%YAML 1.2&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Unexpected content
-Where     : YAML/PP/Lexer.pm line 333
-YAML      : &quot;: v2&quot;
+Where     : YAML/PP/Lexer.pm line 231
+YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -7895,8 +8465,39 @@ YAML      : &quot;: v2&quot;
 </span><span class="error"> d: 1
 </span></pre>
 <pre>Line      : 2
-Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 449
+Message   : Expected (COLON WS), but got EOL
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>G9HC - Invalid anchor in zero indented sequence
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>anchor, error, sequence<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/G9HC.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">seq</span><span class="colon">:</span><span class="comment">
+</span><span class="anchor">&amp;anchor</span><span class="error">
+</span><span class="error">- a
+- b
+</span></pre>
+<pre>Line      : 3
+Message   : Expected (WS), but got EOL
+Where     : YAML/PP/Parser.pm line 495
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7925,7 +8526,7 @@ YAML      : &quot;&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected sequence item
-Where     : YAML/PP/Parser.pm line 341
+Where     : YAML/PP/Parser.pm line 335
 YAML      : &quot;&amp;node&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7953,8 +8554,8 @@ YAML      : &quot;&amp;node&quot;
 </span><span class="error">  a: b
 </span></pre>
 <pre>Line      : 2
-Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 449
+Message   : Expected (WS), but got EOL
+Where     : YAML/PP/Parser.pm line 495
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7979,12 +8580,12 @@ YAML      : &quot;&quot;
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">key</span><span class="colon">:</span><span class="comment">
 </span><span class="indent">  </span><span class="default">word1 word2</span><span class="comment">
-</span><span class="indent"> </span><span class="default"> </span><span class="default">no</span><span class="error">: key
+</span><span class="indent">  </span><span class="default">no</span><span class="error">: key
 </span></pre>
 <pre>Line      : 3
 Message   : Unexpected content
-Where     : YAML/PP/Lexer.pm line 333
-YAML      : &quot;: key&quot;
+Where     : YAML/PP/Lexer.pm line 231
+YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -8011,8 +8612,8 @@ YAML      : &quot;: key&quot;
 </span><span class="error">key3: &quot;quoted3&quot;
 </span></pre>
 <pre>Line      : 2
-Message   : Expected new node (FULLMAPVALUE)
-Where     : YAML/PP/Parser.pm line 449
+Message   : Got unexpected SCALAR
+Where     : YAML/PP/Parser.pm line 515
 YAML      : &quot;no key: nor value&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8041,7 +8642,7 @@ YAML      : &quot;no key: nor value&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 346
+Where     : YAML/PP/Parser.pm line 340
 YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8065,14 +8666,14 @@ YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/N782.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">[
---- ,
+</span><span class="error">--- ,
 ...
 ]
 </span></pre>
 <pre>Line      : 1
-Message   : Not Implemented: Flow Style
-Where     : YAML/PP/Lexer.pm line 492
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -8099,8 +8700,8 @@ YAML      : &quot;&quot;
 </span><span class="error">key3: &quot;quoted3&quot;
 </span></pre>
 <pre>Line      : 2
-Message   : Expected new node (FULLMAPVALUE)
-Where     : YAML/PP/Parser.pm line 449
+Message   : Got unexpected SCALAR
+Where     : YAML/PP/Parser.pm line 515
 YAML      : &quot;trailing content&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8126,9 +8727,9 @@ YAML      : &quot;trailing content&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error"></span><span class="tab">	</span><span class="error">{}
 </span></pre>
 <pre>Line      : 1
-Message   : Invalid plain scalar
-Where     : YAML/PP/Lexer.pm line 623
-YAML      : &quot;&quot;
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Invalid plain scalar
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;\t{}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -8144,6 +8745,35 @@ YAML      : &quot;&quot;
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>QB6E - Wrong indented multiline quoted scalar
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>double, error, indent<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/QB6E.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a</span><span class="comment">
+</span><span class="doublequoted">b</span><span class="comment">
+</span><span class="doublequoted">c</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = { quoted =&gt; &quot;a b c&quot; }</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: {
+   &quot;quoted&quot; : &quot;a b c&quot;
+}
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a b c</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>QLJ7 - Tag shorthand used in documents but only defined in the first
 </b></td></tr>
 <tr>
@@ -8153,9 +8783,9 @@ YAML      : &quot;&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="tag_directive">%TAG !prefix! tag:example.com,2011:</span><span class="comment">
 </span><span class="doc_start">---</span><span class="default"> </span><span class="tag">!prefix!A</span><span class="comment">
 </span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
-</span><span class="doc_start">---</span><span class="default"> </span><span class="tag">!prefix!B</span><span class="comment">
-</span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="error">d</span><span class="error">
-</span><span class="error">--- !prefix!C
+</span><span class="doc_start">---</span><span class="default"> </span><span class="tag">!prefix!B</span><span class="error">
+</span><span class="error">c: d
+--- !prefix!C
 e: f
 </span></pre>
 <pre>Found undefined tag handle &#39;!prefix!&#39; at YAML/PP/Render.pm line 28.
@@ -8180,24 +8810,27 @@ e: f
 <td style="max-width: 15em;" valign="top" >Tags:<br>error, footer, single<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/RXY3.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
-</span><span class="singlequote">&#39;</span><span class="default">
-</span><span class="singlequoted">...</span><span class="default">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
 </span><span class="singlequote">&#39;</span><span class="comment">
+</span><span class="error">...</span><span class="error">
+</span><span class="error">&#39;
 </span></pre>
-<pre></pre>
+<pre>Line      : 3
+Message   : Expected (EOL SINGLEQUOTED_LINE), but got DOC_END
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;...&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
 
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>$doc1 = &quot; ... &quot;</pre>
+<pre></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 1: &quot; ... &quot;
-</pre>
+<pre></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doublequote">&quot;</span><span class="doublequoted"> ... </span><span class="doublequote">&quot;</span><span class="comment">
-</span></pre>
+<pre></pre>
 </td>
 </tr>
 <tr>
@@ -8212,7 +8845,7 @@ e: f
 </span></pre>
 <pre>Line      : 2
 Message   : Parse error: Alias not allowed in this context
-Where     : YAML/PP/Parser.pm line 382
+Where     : YAML/PP/Parser.pm line 443
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8235,12 +8868,12 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>comment, double, error, whitespace<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/SU5Z.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">key</span><span class="error">:</span><span class="error"> </span><span class="error">&quot;</span><span class="error">value</span><span class="error">&quot;</span><span class="error"># invalid comment
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value</span><span class="doublequote">&quot;</span><span class="error"># invalid comment
 </span></pre>
 <pre>Line      : 1
-Message   : Invalid plain scalar
-Where     : YAML/PP/Lexer.pm line 623
-YAML      : &quot;key: \&quot;value\&quot;&quot;
+Message   : Got unexpected Invalid plain scalar
+Where     : YAML/PP/Parser.pm line 515
+YAML      : &quot;# invalid comment&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -8267,7 +8900,7 @@ YAML      : &quot;key: \&quot;value\&quot;&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Parse error: Alias not allowed in this context
-Where     : YAML/PP/Parser.pm line 382
+Where     : YAML/PP/Parser.pm line 443
 YAML      : &quot;value2&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8322,7 +8955,7 @@ YAML      : &quot;value2&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected sequence item
-Where     : YAML/PP/Parser.pm line 341
+Where     : YAML/PP/Parser.pm line 335
 YAML      : &quot;invalid&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8351,8 +8984,39 @@ YAML      : &quot;invalid&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Bad indendation in MAP
-Where     : YAML/PP/Parser.pm line 302
+Where     : YAML/PP/Parser.pm line 296
 YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>W9L4 - Literal block scalar with more spaces in first line
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>error, literal, whitespace<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/W9L4.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">block scalar</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
+</span><span class="indent">     </span><span class="comment">
+</span><span class="indent">  </span><span class="error">more spaces at the beginning</span><span class="error">
+</span><span class="error">  are invalid
+</span></pre>
+<pre>Line      : 4
+Message   : Bad indendation in MAP
+Where     : YAML/PP/Parser.pm line 296
+YAML      : &quot;more spaces at the beginning&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -8374,13 +9038,13 @@ YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>block, comment, error, whitespace<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/X4QW.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">block</span><span class="error">:</span><span class="error"> </span><span class="error">&gt;</span><span class="error"># comment
-  scalar
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="error"># comment
+</span><span class="error">  scalar
 </span></pre>
 <pre>Line      : 1
-Message   : Invalid plain scalar
-Where     : YAML/PP/Lexer.pm line 623
-YAML      : &quot;block: &gt;&quot;
+Message   : Expected (BLOCK_SCALAR_CHOMP BLOCK_SCALAR_INDENT EOL), but got Invalid plain scalar
+Where     : YAML/PP/Parser.pm line 495
+YAML      : &quot;# comment&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -8405,8 +9069,8 @@ YAML      : &quot;block: &gt;&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="error">:</span><span class="error"> </span><span class="error">c</span><span class="error">:</span><span class="error"> </span><span class="error">d</span><span class="error">
 </span></pre>
 <pre>Line      : 1
-Message   : Expected new node (FULLMAPVALUE)
-Where     : YAML/PP/Parser.pm line 449
+Message   : Expected (COMMENT EOL), but got COLON
+Where     : YAML/PP/Parser.pm line 495
 YAML      : &quot;: c: d&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8423,6 +9087,36 @@ YAML      : &quot;: c: d&quot;
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>ZL4Z - Invalid nested mapping
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>error, mapping<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/ZL4Z.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="singlequote">&#39;</span><span class="singlequoted">b</span><span class="singlequote">&#39;</span><span class="colon">:</span><span class="default"> </span><span class="default">c</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = { a =&gt; { b =&gt; &quot;c&quot; } }</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: {
+   &quot;a&quot; : {
+      &quot;b&quot; : &quot;c&quot;
+   }
+}
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="default">a</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="default">c</span><span class="comment">
+</span></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>ZVH3 - Wrong indented sequence item
 </b></td></tr>
 <tr>
@@ -8434,7 +9128,7 @@ YAML      : &quot;: c: d&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected SEQ
-Where     : YAML/PP/Parser.pm line 346
+Where     : YAML/PP/Parser.pm line 340
 YAML      : &quot;- item1&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
