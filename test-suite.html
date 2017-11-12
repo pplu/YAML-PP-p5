@@ -62,9 +62,9 @@ pre.diff {
 </style>
 </head>
 <body>
-Generated with YAML::PP v0.004_001<br>
-<a href="#valid">Valid (216)</a><br>
-<a href="#invalid">Invalid (55)</a><br>
+Generated with YAML::PP v0.004_001-10-g846ba19<br>
+<a href="#valid">Valid (221)</a><br>
+<a href="#invalid">Invalid (56)</a><br>
 <h1><a name="valid">Valid</a></h1>
 <table class="highlight">
 <tr>
@@ -591,6 +591,32 @@ Doc 3: &quot;d e&quot;
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>3UYS - Escaped slash in double quotes
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>double<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/3UYS.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">escaped slash</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a\/b</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = { &quot;escaped slash&quot; =&gt; &quot;a/b&quot; }</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: {
+   &quot;escaped slash&quot; : &quot;a/b&quot;
+}
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">escaped slash</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a/b</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>4ABK - Spec Example 7.17. Flow Mapping Separate Values
 </b></td></tr>
 <tr>
@@ -606,7 +632,7 @@ omitted value:,
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -879,7 +905,7 @@ YAML      : &quot;{&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{foo: you, bar: far}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -1028,7 +1054,7 @@ YAML      : &quot;{foo: you, bar: far}&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{ one : two , three: four , }&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -1094,7 +1120,7 @@ YAML      : &quot;{ one : two , three: four , }&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ one, two, ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -1283,7 +1309,7 @@ Doc 2: &quot;green&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ &amp;item a, b, c ]: value&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -1409,7 +1435,7 @@ YAML      : &quot;[ &amp;item a, b, c ]: value&quot;
 </span></pre>
 <pre>Line      : 8
 Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[    # Leading spaces&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -2096,7 +2122,7 @@ Doc 3: {
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ word1&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -2216,7 +2242,7 @@ Doc 2: {
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -2244,7 +2270,7 @@ YAML      : &quot;[&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (COLON COMMENT EOL WS), but got Invalid plain scalar
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;::: value&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -2360,7 +2386,7 @@ single: pair,
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -2374,6 +2400,33 @@ YAML      : &quot;[&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>8XYN - Anchor with unicode character
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>anchor<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/8XYN.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="anchor">&amp;&#x1F601;</span><span class="default"> </span><span class="default">unicode anchor</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = [&quot;unicode anchor&quot;]</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: [
+   &quot;unicode anchor&quot;
+]
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">unicode anchor</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -2713,7 +2766,7 @@ Doc 8: &quot;value11&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ YAML : separate ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -3225,7 +3278,7 @@ Doc 2: &quot;bar&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -3265,7 +3318,7 @@ YAML      : &quot;{&quot;
 </span></pre>
 <pre>Line      : 6
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{x: 73, y: 129}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -3323,7 +3376,7 @@ YAML      : &quot;{x: 73, y: 129}&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -3353,7 +3406,7 @@ YAML      : &quot;[&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -3466,7 +3519,7 @@ YAML      : &quot;[&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[b, c]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -3530,7 +3583,7 @@ YAML      : &quot;[b, c]&quot;
 </span></pre>
 <pre>Line      : 8
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ ::vector,&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -3544,6 +3597,42 @@ YAML      : &quot;[ ::vector,&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>DC7X - Various trailing tabs
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>comment, whitespace<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/DC7X.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment"></span><span class="tab">	</span><span class="comment">
+</span><span class="default">seq</span><span class="colon">:</span><span class="comment"></span><span class="tab">	</span><span class="comment">
+</span><span class="indent"> </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment"></span><span class="tab">	</span><span class="comment">
+</span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="comment"></span><span class="tab">	</span><span class="comment">#X</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = { a =&gt; &quot;b&quot;, c =&gt; &quot;d&quot;, seq =&gt; [&quot;a&quot;] }</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: {
+   &quot;a&quot; : &quot;b&quot;,
+   &quot;c&quot; : &quot;d&quot;,
+   &quot;seq&quot; : [
+      &quot;a&quot;
+   ]
+}
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="comment">
+</span><span class="default">seq</span><span class="colon">:</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -3561,7 +3650,7 @@ implicit: entry,
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -3588,7 +3677,7 @@ YAML      : &quot;{&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[foo, bar, 42]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -3704,7 +3793,7 @@ YAML      : &quot;[foo, bar, 42]&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -3823,7 +3912,7 @@ YAML      : &quot;{&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{ a: [b, c, { d: [e, f] } ] }&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -4041,7 +4130,7 @@ YAML      : &quot;{ a: [b, c, { d: [e, f] } ] }&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -4068,7 +4157,7 @@ YAML      : &quot;{&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[a, [b, c]]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -4917,7 +5006,7 @@ Doc 2: &quot;foo&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ YAML : separate ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -4977,7 +5066,7 @@ YAML      : &quot;[ YAML : separate ]&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -5047,7 +5136,7 @@ YAML      : &quot;[&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[a, b , c ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -5076,7 +5165,7 @@ YAML      : &quot;[a, b , c ]&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -5103,7 +5192,7 @@ YAML      : &quot;[&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[flow]: block&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -5204,7 +5293,7 @@ YAML      : &quot;[flow]: block&quot;
 </span></pre>
 <pre>Line      : 6
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ New York Yankees,&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -5276,7 +5365,7 @@ Doc 3: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -5360,7 +5449,7 @@ YAML      : &quot;{&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{a: b}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -5696,16 +5785,20 @@ YAML      : &quot;{a: b}&quot;
 
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>$doc1 = { a =&gt; &quot;b&quot; }</pre>
+<pre>$doc1 = { a =&gt; &quot;b&quot; }
+$doc2 = undef</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre>Doc 1: {
    &quot;a&quot; : &quot;b&quot;
 }
+
+Doc 2: null
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="doc_start">---</span><span class="comment">
 </span></pre>
 </td>
 </tr>
@@ -5757,6 +5850,33 @@ YAML      : &quot;{a: b}&quot;
 </td>
 </tr>
 <tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>Q5MG - Tab at beginning of line followed by a flow mapping
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>flow, whitespace<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/Q5MG.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error"></span><span class="tab">	</span><span class="error">{}
+</span></pre>
+<pre>Line      : 1
+Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Invalid plain scalar
+Where     : YAML/PP/Parser.pm line 488
+YAML      : &quot;\t{}&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
 <td colspan="5" valign="top" style="background-color: #dddddd"><b>Q88A - Spec Example 7.23. Flow Content
 </b></td></tr>
 <tr>
@@ -5771,7 +5891,7 @@ YAML      : &quot;{a: b}&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ a, b ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -5832,7 +5952,7 @@ YAML      : &quot;[ a, b ]&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{ first: Sammy, last: Sosa }:&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -5861,7 +5981,7 @@ YAML      : &quot;{ first: Sammy, last: Sosa }:&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -6383,7 +6503,7 @@ Doc 3: {
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{a: [b, c], [d, e]: f}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -6835,7 +6955,7 @@ Doc 2: {
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ one, two, ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7007,7 +7127,7 @@ YAML      : &quot;[ one, two, ]&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{ matches&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7219,7 +7339,7 @@ Doc 2: null
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7246,7 +7366,7 @@ YAML      : &quot;{&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{ &amp;a [a, &amp;b b]: *b, *a : [c, *b, d]}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7260,6 +7380,32 @@ YAML      : &quot;{ &amp;a [a, &amp;b b]: *b, *a : [c, *b, d]}&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>XLQ9 - Multiline scalar that looks like a YAML directive
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>directive, scalar<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/XLQ9.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">scalar</span><span class="comment">
+</span><span class="default">%YAML 1.2</span><span class="comment">
+</span></pre>
+<pre></pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>$doc1 = &quot;scalar %YAML 1.2&quot;</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre>Doc 1: &quot;scalar %YAML 1.2&quot;
+</pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">scalar %YAML 1.2</span><span class="doublequote">&quot;</span><span class="comment">
+</span></pre>
 </td>
 </tr>
 <tr>
@@ -7379,7 +7525,7 @@ YAML      : &quot;{ &amp;a [a, &amp;b b]: *b, *a : [c, *b, d]}&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[name        , hr, avg  ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7469,7 +7615,7 @@ YAML      : &quot;[name        , hr, avg  ]&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;{hr: 65, avg: 0.278}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7571,7 +7717,7 @@ YAML      : &quot;{hr: 65, avg: 0.278}&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected (COLON WS), but got EOL
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7629,7 +7775,7 @@ YAML      : &quot;&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected EOL
-Where     : YAML/PP/Parser.pm line 142
+Where     : YAML/PP/Parser.pm line 144
 YAML      : &quot; invalid&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7657,7 +7803,7 @@ YAML      : &quot; invalid&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ a, b, c ] ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7687,7 +7833,7 @@ YAML      : &quot;[ a, b, c ] ]&quot;
 </span></pre>
 <pre>Line      : 4
 Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 340
+Where     : YAML/PP/Parser.pm line 342
 YAML      : &quot;- wrong&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7717,7 +7863,7 @@ YAML      : &quot;- wrong&quot;
 </span></pre>
 <pre>Line      : 4
 Message   : A node can only have one anchor
-Where     : YAML/PP/Parser.pm line 415
+Where     : YAML/PP/Parser.pm line 400
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7740,22 +7886,25 @@ YAML      : &quot;&quot;
 <td style="max-width: 15em;" valign="top" >Tags:<br>double, error<br>
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/55WF.tml">View source</a><br>
 </td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
-</span><span class="doublequote">&quot;</span><span class="doublequoted">\.</span><span class="doublequote">&quot;</span><span class="comment">
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="error">\.&quot;
 </span></pre>
-<pre></pre>
+<pre>Line      : 2
+Message   : Expected (DOUBLEQUOTED DOUBLEQUOTED_LINE), but got Invalid quoted string
+Where     : YAML/PP/Parser.pm line 488
+YAML      : &quot;\\.\&quot;&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
 
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>$doc1 = &quot;\\.&quot;</pre>
+<pre></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>Doc 1: &quot;\\.&quot;
-</pre>
+<pre></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doublequote">&quot;</span><span class="doublequoted">\\.</span><span class="doublequote">&quot;</span><span class="comment">
-</span></pre>
+<pre></pre>
 </td>
 </tr>
 <tr>
@@ -7773,7 +7922,7 @@ YAML      : &quot;&quot;
 </span></pre>
 <pre>Line      : 5
 Message   : Bad indendation in MAP
-Where     : YAML/PP/Parser.pm line 296
+Where     : YAML/PP/Parser.pm line 301
 YAML      : &quot;invalid&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7803,7 +7952,7 @@ YAML      : &quot;invalid&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected (DOUBLEQUOTED_LINE EOL), but got DOC_START
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;---&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7831,7 +7980,7 @@ YAML      : &quot;---&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got DASH
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;- a&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7859,7 +8008,7 @@ YAML      : &quot;- a&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ [ a, b, c ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7889,7 +8038,7 @@ YAML      : &quot;[ [ a, b, c ]&quot;
 </span></pre>
 <pre>Line      : 4
 Message   : Expected sequence item
-Where     : YAML/PP/Parser.pm line 335
+Where     : YAML/PP/Parser.pm line 338
 YAML      : &quot;invalid&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7918,7 +8067,7 @@ YAML      : &quot;invalid&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (DOUBLEQUOTED), but got DOUBLEQUOTED_LINE
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;c&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7947,7 +8096,7 @@ YAML      : &quot;c&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected (COLON WS), but got EOL
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -7976,7 +8125,7 @@ YAML      : &quot;&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Bad indendation in MAP
-Where     : YAML/PP/Parser.pm line 296
+Where     : YAML/PP/Parser.pm line 301
 YAML      : &quot;word2&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8006,7 +8155,7 @@ c]
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[a,&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8036,7 +8185,7 @@ YAML      : &quot;[a,&quot;
 </span></pre>
 <pre>Line      : 4
 Message   : Expected (COLON WS), but got EOL
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8064,7 +8213,7 @@ YAML      : &quot;&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (COMMENT EOL), but got COLON
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;: value1&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8092,7 +8241,7 @@ YAML      : &quot;: value1&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ , a, b, c ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8120,7 +8269,7 @@ YAML      : &quot;[ , a, b, c ]&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected ---
-Where     : YAML/PP/Parser.pm line 211
+Where     : YAML/PP/Parser.pm line 213
 YAML      : &quot;...&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8149,7 +8298,7 @@ YAML      : &quot;...&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected sequence item
-Where     : YAML/PP/Parser.pm line 335
+Where     : YAML/PP/Parser.pm line 338
 YAML      : &quot;invalid: x&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8179,7 +8328,7 @@ YAML      : &quot;invalid: x&quot;
 </span></pre>
 <pre>Line      : 4
 Message   : Bad indendation in MAP
-Where     : YAML/PP/Parser.pm line 296
+Where     : YAML/PP/Parser.pm line 301
 YAML      : &quot;c&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8207,7 +8356,7 @@ YAML      : &quot;c&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected ---
-Where     : YAML/PP/Parser.pm line 211
+Where     : YAML/PP/Parser.pm line 213
 YAML      : &quot;word2&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8235,7 +8384,7 @@ YAML      : &quot;word2&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[23&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8264,7 +8413,7 @@ YAML      : &quot;[23&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS DOUBLEQUOTE FOLDED LITERAL SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ word1&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8292,7 +8441,7 @@ YAML      : &quot;[ word1&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : No more tokens
-Where     : YAML/PP/Parser.pm line 473
+Where     : YAML/PP/Parser.pm line 467
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8320,7 +8469,7 @@ YAML      : &quot;&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[ a, b, c, , ]&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8349,7 +8498,7 @@ YAML      : &quot;[ a, b, c, , ]&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (SINGLEQUOTED), but got SINGLEQUOTED_LINE
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;c&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8378,7 +8527,7 @@ YAML      : &quot;c&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 340
+Where     : YAML/PP/Parser.pm line 342
 YAML      : &quot;wrong: 2&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8409,7 +8558,7 @@ scalar2
 </span></pre>
 <pre>Line      : 3
 Message   : Expected ---
-Where     : YAML/PP/Parser.pm line 202
+Where     : YAML/PP/Parser.pm line 204
 YAML      : &quot;%YAML 1.2&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8466,7 +8615,7 @@ YAML      : &quot;&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (COLON WS), but got EOL
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8497,8 +8646,36 @@ YAML      : &quot;&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected (WS), but got EOL
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>GDY7 - Comment that looks like a mapping key
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>comment, error, mapping<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/GDY7.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="default">value</span><span class="comment">
+</span><span class="default">this is</span><span class="error"> #not a: key</span><span class="error">
+</span></pre>
+<pre>Line      : 2
+Message   : Expected (COLON WS), but got COMMENT
+Where     : YAML/PP/Parser.pm line 488
+YAML      : &quot; #not a: key&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -8526,7 +8703,7 @@ YAML      : &quot;&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected sequence item
-Where     : YAML/PP/Parser.pm line 335
+Where     : YAML/PP/Parser.pm line 338
 YAML      : &quot;&amp;node&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8555,7 +8732,7 @@ YAML      : &quot;&amp;node&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected (WS), but got EOL
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8612,9 +8789,37 @@ YAML      : &quot;&quot;
 </span><span class="error">key3: &quot;quoted3&quot;
 </span></pre>
 <pre>Line      : 2
-Message   : Got unexpected SCALAR
-Where     : YAML/PP/Parser.pm line 515
+Message   : Expected (COLON), but got SCALAR
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;no key: nor value&quot;
+  at YAML/PP/Loader.pm line 52.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top" style="background-color: #dddddd"><b>LHL4 - Invalid tag
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>error, tag<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/LHL4.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="doc_start">---</span><span class="comment">
+</span><span class="tag">!invalid</span><span class="error">{}tag scalar
+</span></pre>
+<pre>Line      : 2
+Message   : Expected (EOL WS), but got Not Implemented: Flow Style
+Where     : YAML/PP/Parser.pm line 488
+YAML      : &quot;{}tag scalar&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -8642,7 +8847,7 @@ YAML      : &quot;no key: nor value&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected MAP
-Where     : YAML/PP/Parser.pm line 340
+Where     : YAML/PP/Parser.pm line 342
 YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8672,7 +8877,7 @@ YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Not Implemented: Flow Style
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;[&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8700,36 +8905,9 @@ YAML      : &quot;[&quot;
 </span><span class="error">key3: &quot;quoted3&quot;
 </span></pre>
 <pre>Line      : 2
-Message   : Got unexpected SCALAR
-Where     : YAML/PP/Parser.pm line 515
+Message   : Expected (COLON), but got SCALAR
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;trailing content&quot;
-  at YAML/PP/Loader.pm line 52.
-</pre>
-
-</td>
-<td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre></pre>
-</td>
-<td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre></pre>
-</td>
-<td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre></pre>
-</td>
-</tr>
-<tr>
-<td colspan="5" valign="top" style="background-color: #dddddd"><b>Q5MG - Tab at beginning of line followed by a flow mapping
-</b></td></tr>
-<tr>
-<td style="max-width: 15em;" valign="top" >Tags:<br>error, flow, whitespace<br>
-<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/Q5MG.tml">View source</a><br>
-</td>
-<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error"></span><span class="tab">	</span><span class="error">{}
-</span></pre>
-<pre>Line      : 1
-Message   : Expected (ALIAS COLON DASH DOUBLEQUOTE FOLDED LITERAL QUESTION SCALAR SINGLEQUOTE), but got Invalid plain scalar
-Where     : YAML/PP/Parser.pm line 495
-YAML      : &quot;\t{}&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
 
@@ -8817,7 +8995,7 @@ e: f
 </span></pre>
 <pre>Line      : 3
 Message   : Expected (EOL SINGLEQUOTED_LINE), but got DOC_END
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;...&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8845,7 +9023,7 @@ YAML      : &quot;...&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Parse error: Alias not allowed in this context
-Where     : YAML/PP/Parser.pm line 443
+Where     : YAML/PP/Parser.pm line 436
 YAML      : &quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8871,8 +9049,8 @@ YAML      : &quot;&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value</span><span class="doublequote">&quot;</span><span class="error"># invalid comment
 </span></pre>
 <pre>Line      : 1
-Message   : Got unexpected Invalid plain scalar
-Where     : YAML/PP/Parser.pm line 515
+Message   : Expected (COLON EOL WS), but got Invalid plain scalar
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;# invalid comment&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8900,7 +9078,7 @@ YAML      : &quot;# invalid comment&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Parse error: Alias not allowed in this context
-Where     : YAML/PP/Parser.pm line 443
+Where     : YAML/PP/Parser.pm line 436
 YAML      : &quot;value2&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8955,7 +9133,7 @@ YAML      : &quot;value2&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Expected sequence item
-Where     : YAML/PP/Parser.pm line 335
+Where     : YAML/PP/Parser.pm line 338
 YAML      : &quot;invalid&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -8984,7 +9162,7 @@ YAML      : &quot;invalid&quot;
 </span></pre>
 <pre>Line      : 3
 Message   : Bad indendation in MAP
-Where     : YAML/PP/Parser.pm line 296
+Where     : YAML/PP/Parser.pm line 301
 YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -9015,7 +9193,7 @@ YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
 </span></pre>
 <pre>Line      : 4
 Message   : Bad indendation in MAP
-Where     : YAML/PP/Parser.pm line 296
+Where     : YAML/PP/Parser.pm line 301
 YAML      : &quot;more spaces at the beginning&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -9043,7 +9221,7 @@ YAML      : &quot;more spaces at the beginning&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (BLOCK_SCALAR_CHOMP BLOCK_SCALAR_INDENT EOL), but got Invalid plain scalar
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;# comment&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -9070,7 +9248,7 @@ YAML      : &quot;# comment&quot;
 </span></pre>
 <pre>Line      : 1
 Message   : Expected (COMMENT EOL), but got COLON
-Where     : YAML/PP/Parser.pm line 495
+Where     : YAML/PP/Parser.pm line 488
 YAML      : &quot;: c: d&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
@@ -9128,7 +9306,7 @@ YAML      : &quot;: c: d&quot;
 </span></pre>
 <pre>Line      : 2
 Message   : Expected SEQ
-Where     : YAML/PP/Parser.pm line 340
+Where     : YAML/PP/Parser.pm line 342
 YAML      : &quot;- item1&quot;
   at YAML/PP/Loader.pm line 52.
 </pre>
