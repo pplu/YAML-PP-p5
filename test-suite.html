@@ -67,7 +67,7 @@ pre.diff {
 </style>
 </head>
 <body>
-Generated with YAML::PP v0.004_001-36-ge12e7b5c<br>
+Generated with YAML::PP v0.005<br>
 <a href="#valid">Valid (221)</a><br>
 <a href="#invalid">Invalid (56)</a><br>
 <h1><a name="valid">Valid</a></h1>
@@ -2715,29 +2715,29 @@ Doc 3: {
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="doc_start">---</span><span class="comment">
 </span><span class="anchor">&amp;a1</span><span class="comment">
-</span><span class="tag">!t1</span><span class="comment">
+</span><span class="tag">!!str</span><span class="comment">
 </span><span class="default">scalar1</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
-</span><span class="tag">!t2</span><span class="comment">
+</span><span class="tag">!!str</span><span class="comment">
 </span><span class="anchor">&amp;a2</span><span class="comment">
 </span><span class="default">scalar2</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
 </span><span class="anchor">&amp;a3</span><span class="comment">
-</span><span class="tag">!t3</span><span class="default"> </span><span class="default">scalar3</span><span class="comment">
+</span><span class="tag">!!str</span><span class="default"> </span><span class="default">scalar3</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
-</span><span class="anchor">&amp;a4</span><span class="default"> </span><span class="tag">!t4</span><span class="comment">
-</span><span class="anchor">&amp;a5</span><span class="default"> </span><span class="tag">!t5</span><span class="default"> </span><span class="default">key5</span><span class="colon">:</span><span class="default"> </span><span class="default">value4</span><span class="comment">
+</span><span class="anchor">&amp;a4</span><span class="default"> </span><span class="tag">!!map</span><span class="comment">
+</span><span class="anchor">&amp;a5</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="default">key5</span><span class="colon">:</span><span class="default"> </span><span class="default">value4</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
 </span><span class="default">a6</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
 </span><span class="anchor">&amp;anchor6</span><span class="default"> </span><span class="default">b6</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
-</span><span class="tag">!t7</span><span class="comment">
-</span><span class="anchor">&amp;a8</span><span class="default"> </span><span class="tag">!t8</span><span class="default"> </span><span class="default">key8</span><span class="colon">:</span><span class="default"> </span><span class="default">value7</span><span class="comment">
+</span><span class="tag">!!map</span><span class="comment">
+</span><span class="anchor">&amp;a8</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="default">key8</span><span class="colon">:</span><span class="default"> </span><span class="default">value7</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
-</span><span class="tag">!t9</span><span class="comment">
-</span><span class="tag">!t10</span><span class="default"> </span><span class="anchor">&amp;a10</span><span class="default"> </span><span class="default">key10</span><span class="colon">:</span><span class="default"> </span><span class="default">value9</span><span class="comment">
+</span><span class="tag">!!map</span><span class="comment">
+</span><span class="tag">!!str</span><span class="default"> </span><span class="anchor">&amp;a10</span><span class="default"> </span><span class="default">key10</span><span class="colon">:</span><span class="default"> </span><span class="default">value9</span><span class="comment">
 </span><span class="doc_start">---</span><span class="comment">
-</span><span class="tag">!t11</span><span class="default"> </span><span class="anchor">&amp;a11</span><span class="comment">
+</span><span class="tag">!!str</span><span class="default"> </span><span class="anchor">&amp;a11</span><span class="comment">
 </span><span class="default">value11</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -3284,7 +3284,7 @@ Doc 2: &quot;bar&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/BU8L.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="ok"><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;anchor</span><span class="comment">
-</span><span class="indent"> </span><span class="tag">!tag</span><span class="comment">
+</span><span class="indent"> </span><span class="tag">!!map</span><span class="comment">
 </span><span class="indent">  </span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="comment">
 </span></pre>
 <pre></pre>
@@ -7584,11 +7584,11 @@ YAML      : &quot;,&quot;
 
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>$doc1 = { &quot;[&#39;a&#39;,&#39;b&#39;]&quot; =&gt; &quot;b&quot;, &quot;ARRAY(0x55da6694e6d8)&quot; =&gt; [&quot;c&quot;, &quot;b&quot;, &quot;d&quot;] }</pre>
+<pre>$doc1 = { &quot;[&#39;a&#39;,&#39;b&#39;]&quot; =&gt; &quot;b&quot;, &quot;ARRAY(0x559f54db23a0)&quot; =&gt; [&quot;c&quot;, &quot;b&quot;, &quot;d&quot;] }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre>Doc 1: {
-   &quot;ARRAY(0x55da6694e6d8)&quot; : [
+   &quot;ARRAY(0x559f54db23a0)&quot; : [
       &quot;c&quot;,
       &quot;b&quot;,
       &quot;d&quot;
@@ -7598,7 +7598,7 @@ YAML      : &quot;,&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doublequote">&quot;</span><span class="doublequoted">ARRAY(0x55da6694e6d8)</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+<pre><span class="doublequote">&quot;</span><span class="doublequoted">ARRAY(0x559f54db23a0)</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">d</span><span class="comment">
@@ -8987,7 +8987,7 @@ YAML      : &quot;&amp;node&quot;
 <a href="https://github.com/yaml/yaml-test-suite/blob/master/test/H7J7.tml">View source</a><br>
 </td>
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;x</span><span class="comment">
-</span><span class="tag">!y</span><span class="error">
+</span><span class="tag">!!map</span><span class="error">
 </span><span class="error">  a: b
 </span></pre>
 <pre>Line      : 2
