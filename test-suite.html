@@ -67,7 +67,7 @@ pre.diff {
 </style>
 </head>
 <body>
-Generated with YAML::PP v0.005-9-gf85f82ff-dirty<br>
+Generated with YAML::PP v0.005_001<br>
 <a href="#valid">Valid (221)</a><br>
 <a href="#invalid">Invalid (57)</a><br>
 <h1><a name="valid">Valid</a></h1>
@@ -648,10 +648,12 @@ Doc 3: &quot;d e&quot;
 }
 </span></pre>
 <pre>Line      : 4
-Message   : Expected (ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE), but got Invalid plain scalar
+Column    : 13
+Expected  : ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE
+Got       : Invalid plain scalar
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;:,&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;:,\n&quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -1361,10 +1363,11 @@ Doc 2: &quot;green&quot;
 </span><span class="anchor">&amp;key</span><span class="default"> </span><span class="flowseq_start">[</span><span class="default"> </span><span class="anchor">&amp;item</span><span class="default"> </span><span class="default">a</span><span class="error">,</span><span class="error"> </span><span class="error">b</span><span class="error">,</span><span class="error"> </span><span class="error">c</span><span class="error"> </span><span class="error">]</span><span class="error">:</span><span class="error"> </span><span class="error">value</span><span class="error">
 </span></pre>
 <pre>Line      : 3
+Column    : 14
 Message   : A node can only have one anchor
 Where     : YAML/PP/Parser.pm line 717
 YAML      : &quot;, b, c ]: value&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -2325,10 +2328,12 @@ Doc 2: {
 </span><span class="error"> ]
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got COLON
+Column    : 22
+Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;: value,&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;: value,  &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -2353,10 +2358,12 @@ YAML      : &quot;: value,&quot;
 </span><span class="default">key ends with two colons</span><span class="error">::: value
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (COLON COMMENT EOL WS), but got Invalid plain scalar
+Column    : 24
+Expected  : COLON COMMENT EOL WS
+Got       : Invalid plain scalar
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;::: value&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;::: value\n&quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -2470,10 +2477,12 @@ YAML      : &quot;::: value&quot;
 </span><span class="error">]
 </span></pre>
 <pre>Line      : 7
-Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got COLON
+Column    : 6
+Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;: pair,&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -2855,10 +2864,12 @@ Doc 8: &quot;value11&quot;
 - [ &quot;JSON like&quot;:adjacent ]
 </span></pre>
 <pre>Line      : 1
-Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got COLON
+Column    : 9
+Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;: separate ]&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -3376,10 +3387,12 @@ Doc 2: &quot;bar&quot;
 </span><span class="error">}</span><span class="error">
 </span></pre>
 <pre>Line      : 5
-Message   : Expected (ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE), but got FLOWMAP_END
+Column    : 0
+Expected  : ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE
+Got       : FLOWMAP_END
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;}&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -3517,10 +3530,12 @@ YAML      : &quot;}&quot;
 ]
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got COLON
+Column    : 2
+Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;: b,&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;: b, &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -3547,10 +3562,12 @@ YAML      : &quot;: b,&quot;
 ]
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE), but got QUESTION
+Column    : 0
+Expected  : ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE
+Got       : QUESTION
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;? foo&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -3834,10 +3851,12 @@ YAML      : &quot;? foo&quot;
 }
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE), but got QUESTION
+Column    : 0
+Expected  : ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE
+Got       : QUESTION
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;? explicit: entry,&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -4246,14 +4265,14 @@ YAML      : &quot;? explicit: entry,&quot;
 
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>$doc1 = [undef, { &quot;&quot; =&gt; &quot;a&quot;, &quot;b&quot; =&gt; undef }, { &quot;&quot; =&gt; undef }]</pre>
+<pre>$doc1 = [&quot;&quot;, { &quot;&quot; =&gt; &quot;a&quot;, &quot;b&quot; =&gt; &quot;&quot; }, { &quot;&quot; =&gt; undef }]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre>Doc 1: [
-   null,
+   &quot;&quot;,
    {
       &quot;&quot; : &quot;a&quot;,
-      &quot;b&quot; : null
+      &quot;b&quot; : &quot;&quot;
    },
    {
       &quot;&quot; : null
@@ -4263,9 +4282,9 @@ YAML      : &quot;? explicit: entry,&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="comment">
-</span><span class="dash">-</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">a</span><span class="comment">
-</span><span class="indent">  </span><span class="default">b</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
 </span></pre>
 </td>
@@ -4343,10 +4362,12 @@ YAML      : &quot;? explicit: entry,&quot;
 }
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE), but got QUESTION
+Column    : 2
+Expected  : ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE
+Got       : QUESTION
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;? foo :,&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;? foo :,\n  &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -5243,10 +5264,12 @@ Doc 2: &quot;foo&quot;
 - [ {JSON: like}:adjacent ]
 </span></pre>
 <pre>Line      : 1
-Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got COLON
+Column    : 9
+Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;: separate ]&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -5304,10 +5327,12 @@ YAML      : &quot;: separate ]&quot;
 </span><span class="error"> ]
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got COLON
+Column    : 20
+Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;: value,&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;: value,  &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -5338,7 +5363,7 @@ YAML      : &quot;: value,&quot;
 
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>$doc1 = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;c&quot;, undef]</pre>
+<pre>$doc1 = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;c&quot;, &quot;&quot;]</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre>Doc 1: [
@@ -5346,7 +5371,7 @@ YAML      : &quot;: value,&quot;
    &quot;b&quot;,
    &quot;c&quot;,
    &quot;c&quot;,
-   null
+   &quot;&quot;
 ]
 </pre>
 </td>
@@ -5356,7 +5381,7 @@ YAML      : &quot;: value,&quot;
 </span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="comment">
-</span><span class="dash">-</span><span class="comment">
+</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="comment">
 </span></pre>
 </td>
 </tr>
@@ -5419,10 +5444,12 @@ YAML      : &quot;: value,&quot;
 </span><span class="error"> ]
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got COLON
+Column    : 22
+Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;: value,&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;: value,  &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -5446,7 +5473,7 @@ YAML      : &quot;: value,&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="flowseq_start">[</span><span class="default">flow</span><span class="flowseq_end">]</span><span class="error">:</span><span class="error"> </span><span class="error">block</span><span class="error">
 </span></pre>
 <pre>Unexpected at YAML/PP/Parser.pm line 525.
- at YAML/PP/Loader.pm line 52.
+ at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -6151,10 +6178,12 @@ Doc 2: null
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error"></span><span class="tab">	</span><span class="error">{</span><span class="error">}</span><span class="error">
 </span></pre>
 <pre>Line      : 1
-Message   : Expected (ALIAS COLON DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START FOLDED LITERAL PLAIN QUESTION SINGLEQUOTE), but got WS
+Column    : 0
+Expected  : ALIAS COLON DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START FOLDED LITERAL PLAIN QUESTION SINGLEQUOTE
+Got       : WS
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;\t{}&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -6257,7 +6286,7 @@ YAML      : &quot;\t{}&quot;
    0.278
 </span></pre>
 <pre>Unexpected at YAML/PP/Parser.pm line 525.
- at YAML/PP/Loader.pm line 52.
+ at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -6283,10 +6312,12 @@ YAML      : &quot;\t{}&quot;
 </span><span class="error">]
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got COLON
+Column    : 3
+Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;: bar&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -6686,7 +6717,7 @@ Doc 3: {
 <pre>Doc 1: [
    &quot;12&quot;,
    12,
-   12
+   &quot;12&quot;
 ]
 </pre>
 </td>
@@ -7467,10 +7498,12 @@ Doc 2: {
 ...
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE), but got Invalid directive
+Column    : 0
+Expected  : ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE
+Got       : Invalid directive
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;% : 20 }&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;% : 20 }\n&quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -7683,10 +7716,12 @@ Doc 2: null
 }
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE), but got FLOW_COMMA
+Column    : 13
+Expected  : ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE
+Got       : FLOW_COMMA
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;,&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;,  &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -7713,11 +7748,11 @@ YAML      : &quot;,&quot;
 
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre>$doc1 = { &quot;[&#39;a&#39;,&#39;b&#39;]&quot; =&gt; &quot;b&quot;, &quot;ARRAY(0x5643df72ad08)&quot; =&gt; [&quot;c&quot;, &quot;b&quot;, &quot;d&quot;] }</pre>
+<pre>$doc1 = { &quot;[&#39;a&#39;,&#39;b&#39;]&quot; =&gt; &quot;b&quot;, &quot;ARRAY(0x55dd03167c10)&quot; =&gt; [&quot;c&quot;, &quot;b&quot;, &quot;d&quot;] }</pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre>Doc 1: {
-   &quot;ARRAY(0x5643df72ad08)&quot; : [
+   &quot;ARRAY(0x55dd03167c10)&quot; : [
       &quot;c&quot;,
       &quot;b&quot;,
       &quot;d&quot;
@@ -7728,7 +7763,7 @@ YAML      : &quot;,&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="comment">
-</span><span class="doublequote">&quot;</span><span class="doublequoted">ARRAY(0x5643df72ad08)</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
+</span><span class="doublequote">&quot;</span><span class="doublequoted">ARRAY(0x55dd03167c10)</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">d</span><span class="comment">
@@ -8117,10 +8152,12 @@ YAML      : &quot;,&quot;
 </span><span class="default">invalid</span><span class="error">
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (COLON WS), but got EOL
+Column    : 7
+Expected  : COLON WS
+Got       : EOL
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8146,10 +8183,12 @@ YAML      : &quot;&quot;
 </span><span class="indent">  </span><span class="default">invalid</span><span class="error">:</span><span class="error"> </span><span class="error">x</span><span class="error">
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (COMMENT EOL), but got COLON
+Column    : 0
+Expected  : COMMENT EOL
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;: x&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8175,10 +8214,11 @@ YAML      : &quot;: x&quot;
 </span><span class="doc_end">...</span><span class="error"> </span><span class="error">invalid</span><span class="error">
 </span></pre>
 <pre>Line      : 3
+Column    : 0
 Message   : Expected EOL
 Where     : YAML/PP/Parser.pm line 144
 YAML      : &quot; invalid&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8203,7 +8243,7 @@ YAML      : &quot; invalid&quot;
 </span><span class="flowseq_start">[</span><span class="default"> </span><span class="default">a</span><span class="flow_comma">,</span><span class="default"> </span><span class="default">b</span><span class="flow_comma">,</span><span class="default"> </span><span class="default">c</span><span class="default"> </span><span class="flowseq_end">]</span><span class="error"> </span><span class="error">]</span><span class="error">
 </span></pre>
 <pre>Unexpected at YAML/PP/Parser.pm line 525.
- at YAML/PP/Loader.pm line 52.
+ at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8230,10 +8270,11 @@ YAML      : &quot; invalid&quot;
 </span><span class="indent">  </span><span class="error">-</span><span class="error"> </span><span class="error">wrong</span><span class="error">
 </span></pre>
 <pre>Line      : 4
+Column    : 2
 Message   : Expected MAP
 Where     : YAML/PP/Parser.pm line 345
-YAML      : &quot;- wrong&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;- wrong  &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8260,10 +8301,11 @@ YAML      : &quot;- wrong&quot;
 </span><span class="indent">  </span><span class="anchor">&amp;v2</span><span class="default"> </span><span class="default">val2</span><span class="comment">
 </span></pre>
 <pre>Line      : 4
+Column    : ???
 Message   : A node can only have one anchor
 Where     : YAML/PP/Parser.pm line 717
 YAML      : &quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8288,10 +8330,12 @@ YAML      : &quot;&quot;
 </span><span class="doublequote">&quot;</span><span class="error">\.&quot;
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (DOUBLEQUOTE), but got Invalid quoted string
+Column    : 1
+Expected  : DOUBLEQUOTE
+Got       : Invalid quoted string
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;\\.\&quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;\\.\&quot;\n&quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8319,10 +8363,11 @@ YAML      : &quot;\\.\&quot;&quot;
 </span><span class="indent"> </span><span class="error">invalid</span><span class="error">
 </span></pre>
 <pre>Line      : 5
+Column    : 1
 Message   : Bad indendation in MAP
 Where     : YAML/PP/Parser.pm line 315
-YAML      : &quot;invalid&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;invalid &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8349,10 +8394,12 @@ YAML      : &quot;invalid&quot;
 </span><span class="error">&quot;
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (DOUBLEQUOTED_LINE EOL), but got END
+Column    : 0
+Expected  : DOUBLEQUOTED_LINE EOL
+Got       : END
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;---&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8377,10 +8424,12 @@ YAML      : &quot;---&quot;
 </span><span class="error">     - b
 </span></pre>
 <pre>Line      : 1
-Message   : Expected (ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START FOLDED LITERAL PLAIN SINGLEQUOTE), but got DASH
+Column    : 5
+Expected  : ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START FOLDED LITERAL PLAIN SINGLEQUOTE
+Got       : DASH
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;- a&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8405,7 +8454,7 @@ YAML      : &quot;- a&quot;
 </span><span class="flowseq_start">[</span><span class="default"> </span><span class="flowseq_start">[</span><span class="default"> </span><span class="default">a</span><span class="flow_comma">,</span><span class="default"> </span><span class="default">b</span><span class="flow_comma">,</span><span class="default"> </span><span class="default">c</span><span class="default"> </span><span class="flowseq_end">]</span><span class="comment">
 </span></pre>
 <pre>Unexpected end of flow context at YAML/PP/Parser.pm line 355.
- at YAML/PP/Loader.pm line 52.
+ at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8432,10 +8481,12 @@ YAML      : &quot;- a&quot;
 </span><span class="indent"> </span><span class="error">invalid</span><span class="error">
 </span></pre>
 <pre>Line      : 4
-Message   : Expected (DASH), but got PLAIN
+Column    : 1
+Expected  : DASH
+Got       : PLAIN
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;invalid&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;invalid &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8461,10 +8512,12 @@ YAML      : &quot;invalid&quot;
 </span><span class="error"> d&quot;: 1
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (DOUBLEQUOTED), but got DOUBLEQUOTED_LINE
+Column    : 1
+Expected  : DOUBLEQUOTED
+Got       : DOUBLEQUOTED_LINE
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;c&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8490,10 +8543,12 @@ YAML      : &quot;c&quot;
 </span><span class="default">top2</span><span class="error">
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (COLON WS), but got EOL
+Column    : 4
+Expected  : COLON WS
+Got       : EOL
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8519,10 +8574,11 @@ YAML      : &quot;&quot;
 </span><span class="indent">  </span><span class="error">word2</span><span class="error">
 </span></pre>
 <pre>Line      : 3
+Column    : 2
 Message   : Bad indendation in MAP
 Where     : YAML/PP/Parser.pm line 315
-YAML      : &quot;word2&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;word2  &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8586,10 +8642,12 @@ YAML      : &quot;word2&quot;
 </span><span class="default">invalid</span><span class="error">
 </span></pre>
 <pre>Line      : 4
-Message   : Expected (COLON WS), but got EOL
+Column    : 7
+Expected  : COLON WS
+Got       : EOL
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8614,10 +8672,12 @@ YAML      : &quot;&quot;
 </span><span class="indent">    </span><span class="default">key2</span><span class="error">:</span><span class="error"> </span><span class="error">value2</span><span class="error">
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (COMMENT EOL), but got COLON
+Column    : 0
+Expected  : COMMENT EOL
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;: value2&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8642,10 +8702,12 @@ YAML      : &quot;: value2&quot;
 </span><span class="flowseq_start">[</span><span class="default"> </span><span class="error">,</span><span class="error"> </span><span class="error">a</span><span class="error">,</span><span class="error"> </span><span class="error">b</span><span class="error">,</span><span class="error"> </span><span class="error">c</span><span class="error"> </span><span class="error">]</span><span class="error">
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE), but got FLOW_COMMA
+Column    : 2
+Expected  : ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE
+Got       : FLOW_COMMA
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;, a, b, c ]&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8670,10 +8732,11 @@ YAML      : &quot;, a, b, c ]&quot;
 </span><span class="error">...</span><span class="error">
 </span></pre>
 <pre>Line      : 2
+Column    : 0
 Message   : Expected ---
 Where     : YAML/PP/Parser.pm line 213
 YAML      : &quot;...&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8699,10 +8762,12 @@ YAML      : &quot;...&quot;
 </span><span class="error">invalid</span><span class="error">:</span><span class="error"> </span><span class="error">x</span><span class="error">
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (DASH), but got PLAIN
+Column    : 0
+Expected  : DASH
+Got       : PLAIN
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;invalid: x&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8729,10 +8794,11 @@ YAML      : &quot;invalid: x&quot;
 </span><span class="indent">       </span><span class="error">c</span><span class="error">
 </span></pre>
 <pre>Line      : 4
+Column    : 7
 Message   : Bad indendation in MAP
 Where     : YAML/PP/Parser.pm line 315
-YAML      : &quot;c&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;c       &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8757,10 +8823,11 @@ YAML      : &quot;c&quot;
 </span><span class="error">word2</span><span class="error">
 </span></pre>
 <pre>Line      : 2
+Column    : 0
 Message   : Expected ---
 Where     : YAML/PP/Parser.pm line 213
 YAML      : &quot;word2&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8785,7 +8852,7 @@ YAML      : &quot;word2&quot;
 </span><span class="flowseq_end">]</span><span class="error">:</span><span class="error"> </span><span class="error">42</span><span class="error">
 </span></pre>
 <pre>Unexpected at YAML/PP/Parser.pm line 525.
- at YAML/PP/Loader.pm line 52.
+ at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8811,10 +8878,12 @@ YAML      : &quot;word2&quot;
 </span><span class="indent">  </span><span class="error">word2</span><span class="error"> </span><span class="error">]</span><span class="error">
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got PLAIN
+Column    : 2
+Expected  : EOL FLOWSEQ_END FLOW_COMMA WS
+Got       : PLAIN
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;word2 ]&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;word2 ]  &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8839,10 +8908,12 @@ YAML      : &quot;word2 ]&quot;
 </span><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">missing closing quote</span><span class="comment">
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (DOUBLEQUOTED_LINE EOL), but got END
+Column    : 0
+Expected  : DOUBLEQUOTED_LINE EOL
+Got       : END
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8867,10 +8938,12 @@ YAML      : &quot;&quot;
 </span><span class="flowseq_start">[</span><span class="default"> </span><span class="default">a</span><span class="flow_comma">,</span><span class="default"> </span><span class="default">b</span><span class="flow_comma">,</span><span class="default"> </span><span class="default">c</span><span class="flow_comma">,</span><span class="default"> </span><span class="error">,</span><span class="error"> </span><span class="error">]</span><span class="error">
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE), but got FLOW_COMMA
+Column    : 11
+Expected  : ALIAS DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START PLAIN SINGLEQUOTE
+Got       : FLOW_COMMA
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;, ]&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8896,10 +8969,12 @@ YAML      : &quot;, ]&quot;
 </span><span class="error"> d&#39;: 1
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (SINGLEQUOTED), but got SINGLEQUOTED_LINE
+Column    : 1
+Expected  : SINGLEQUOTED
+Got       : SINGLEQUOTED_LINE
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;c&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8925,10 +9000,11 @@ YAML      : &quot;c&quot;
 </span><span class="indent"> </span><span class="error">wrong</span><span class="error">:</span><span class="error"> </span><span class="error">2</span><span class="error">
 </span></pre>
 <pre>Line      : 3
+Column    : 1
 Message   : Expected MAP
 Where     : YAML/PP/Parser.pm line 345
-YAML      : &quot;wrong: 2&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;wrong: 2 &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8956,10 +9032,11 @@ YAML      : &quot;wrong: 2&quot;
 scalar2
 </span></pre>
 <pre>Line      : 3
+Column    : 0
 Message   : Expected ---
 Where     : YAML/PP/Parser.pm line 204
 YAML      : &quot;%YAML 1.2&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -8984,10 +9061,12 @@ YAML      : &quot;%YAML 1.2&quot;
 </span><span class="indent"> </span><span class="default">k2</span><span class="error">:</span><span class="error"> </span><span class="error">v2</span><span class="error">
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (COMMENT EOL), but got COLON
+Column    : 0
+Expected  : COMMENT EOL
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;: v2&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9013,10 +9092,12 @@ YAML      : &quot;: v2&quot;
 </span><span class="error"> d: 1
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (COLON WS), but got EOL
+Column    : 1
+Expected  : COLON WS
+Got       : EOL
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9044,10 +9125,12 @@ YAML      : &quot;&quot;
 - b
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (WS), but got EOL
+Column    : 7
+Expected  : WS
+Got       : EOL
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9072,10 +9155,12 @@ YAML      : &quot;&quot;
 </span><span class="default">this is</span><span class="error"> #not a: key</span><span class="error">
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (COLON WS), but got COMMENT
+Column    : 7
+Expected  : COLON WS
+Got       : COMMENT
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot; #not a: key&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9101,10 +9186,12 @@ YAML      : &quot; #not a: key&quot;
 </span><span class="error">- item2
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (DASH), but got ANCHOR
+Column    : 0
+Expected  : DASH
+Got       : ANCHOR
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;&amp;node&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9130,10 +9217,12 @@ YAML      : &quot;&amp;node&quot;
 </span><span class="error">  a: b
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (WS), but got EOL
+Column    : 5
+Expected  : WS
+Got       : EOL
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9158,10 +9247,12 @@ YAML      : &quot;&quot;
 </span><span class="default">double</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">quoted </span><span class="error">\&#39; scalar&quot;
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (DOUBLEQUOTE), but got Invalid quoted string
+Column    : 16
+Expected  : DOUBLEQUOTE
+Got       : Invalid quoted string
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;\\&#39; scalar\&quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;\\&#39; scalar\&quot;\n&quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9187,10 +9278,12 @@ YAML      : &quot;\\&#39; scalar\&quot;&quot;
 </span><span class="indent">  </span><span class="default">no</span><span class="error">:</span><span class="error"> </span><span class="error">key</span><span class="error">
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (COMMENT EOL), but got COLON
+Column    : 0
+Expected  : COMMENT EOL
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;: key&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9216,10 +9309,12 @@ YAML      : &quot;: key&quot;
 </span><span class="error">key3: &quot;quoted3&quot;
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (EOL), but got WS
+Column    : 15
+Expected  : EOL
+Got       : WS
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot; no key: nor value&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9244,10 +9339,12 @@ YAML      : &quot; no key: nor value&quot;
 </span><span class="tag">!invalid</span><span class="error">{</span><span class="error">}</span><span class="error">tag scalar</span><span class="error">
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (EOL WS), but got FLOWMAP_START
+Column    : 8
+Expected  : EOL WS
+Got       : FLOWMAP_START
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;{}tag scalar&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9273,10 +9370,11 @@ YAML      : &quot;{}tag scalar&quot;
 </span><span class="indent"> </span><span class="error">key2</span><span class="error">:</span><span class="error"> </span><span class="error">&quot;</span><span class="error">bad indentation</span><span class="error">&quot;</span><span class="error">
 </span></pre>
 <pre>Line      : 3
+Column    : 1
 Message   : Expected MAP
 Where     : YAML/PP/Parser.pm line 345
-YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;key2: \&quot;bad indentation\&quot; &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9303,7 +9401,7 @@ YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
 ]
 </span></pre>
 <pre>Unexpected end of flow context at YAML/PP/Parser.pm line 355.
- at YAML/PP/Loader.pm line 52.
+ at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9329,10 +9427,12 @@ YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
 </span><span class="error">key3: &quot;quoted3&quot;
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (EOL), but got WS
+Column    : 15
+Expected  : EOL
+Got       : WS
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot; trailing content&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9359,10 +9459,12 @@ YAML      : &quot; trailing content&quot;
 </span><span class="error">c&quot;
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (DOUBLEQUOTED_LINE EOL), but got END
+Column    : 0
+Expected  : DOUBLEQUOTED_LINE EOL
+Got       : END
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;b&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9392,7 +9494,7 @@ YAML      : &quot;b&quot;
 e: f
 </span></pre>
 <pre>Found undefined tag handle &#39;!prefix!&#39; at YAML/PP/Render.pm line 28.
- at YAML/PP/Loader.pm line 52.
+ at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9419,10 +9521,12 @@ e: f
 </span><span class="error">&#39;
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (EOL SINGLEQUOTED_LINE), but got END
+Column    : 0
+Expected  : EOL SINGLEQUOTED_LINE
+Got       : END
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;...&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9447,10 +9551,11 @@ YAML      : &quot;...&quot;
 </span><span class="default">key2</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;b</span><span class="default"> </span><span class="alias">*a</span><span class="error">
 </span></pre>
 <pre>Line      : 2
+Column    : ???
 Message   : Parse error: Alias not allowed in this context
 Where     : YAML/PP/Parser.pm line 745
 YAML      : &quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9474,10 +9579,12 @@ YAML      : &quot;&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">key</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value</span><span class="doublequote">&quot;</span><span class="error"># invalid comment
 </span></pre>
 <pre>Line      : 1
-Message   : Expected (EOL), but got Invalid plain scalar
+Column    : 12
+Expected  : EOL
+Got       : Invalid plain scalar
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;# invalid comment&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;# invalid comment\n&quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9502,10 +9609,11 @@ YAML      : &quot;# invalid comment&quot;
 </span><span class="anchor">&amp;b</span><span class="default"> </span><span class="alias">*alias</span><span class="error"> </span><span class="error">:</span><span class="error"> </span><span class="error">value2</span><span class="error">
 </span></pre>
 <pre>Line      : 2
+Column    : 9
 Message   : Parse error: Alias not allowed in this context
 Where     : YAML/PP/Parser.pm line 745
 YAML      : &quot; : value2&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9529,10 +9637,12 @@ YAML      : &quot; : value2&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="anchor">&amp;anchor</span><span class="default"> </span><span class="error">-</span><span class="error"> </span><span class="error">sequence entry</span><span class="error">
 </span></pre>
 <pre>Line      : 1
-Message   : Expected (ALIAS COLON DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START FOLDED LITERAL PLAIN QUESTION SINGLEQUOTE), but got DASH
+Column    : 8
+Expected  : ALIAS COLON DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START FOLDED LITERAL PLAIN QUESTION SINGLEQUOTE
+Got       : DASH
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;- sequence entry&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9558,10 +9668,12 @@ YAML      : &quot;- sequence entry&quot;
 </span><span class="error">invalid</span><span class="error">
 </span></pre>
 <pre>Line      : 3
-Message   : Expected (DASH), but got PLAIN
+Column    : 0
+Expected  : DASH
+Got       : PLAIN
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;invalid&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9587,10 +9699,11 @@ YAML      : &quot;invalid&quot;
 </span><span class="indent">   </span><span class="error">key2</span><span class="error">:</span><span class="error"> </span><span class="error">&quot;</span><span class="error">bad indentation</span><span class="error">&quot;</span><span class="error">
 </span></pre>
 <pre>Line      : 3
+Column    : 3
 Message   : Bad indendation in MAP
 Where     : YAML/PP/Parser.pm line 315
-YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;key2: \&quot;bad indentation\&quot;   &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9618,10 +9731,11 @@ YAML      : &quot;key2: \&quot;bad indentation\&quot;&quot;
 </span><span class="error">  are invalid
 </span></pre>
 <pre>Line      : 4
+Column    : 2
 Message   : Bad indendation in MAP
 Where     : YAML/PP/Parser.pm line 315
-YAML      : &quot;more spaces at the beginning&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;more spaces at the beginning  &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9646,10 +9760,12 @@ YAML      : &quot;more spaces at the beginning&quot;
 </span><span class="error">  scalar
 </span></pre>
 <pre>Line      : 1
-Message   : Expected (BLOCK_SCALAR_CHOMP BLOCK_SCALAR_INDENT EOL), but got Invalid plain scalar
+Column    : 8
+Expected  : BLOCK_SCALAR_CHOMP BLOCK_SCALAR_INDENT EOL
+Got       : Invalid plain scalar
 Where     : YAML/PP/Parser.pm line 487
-YAML      : &quot;# comment&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;# comment\n&quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9673,10 +9789,12 @@ YAML      : &quot;# comment&quot;
 <td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="error">:</span><span class="error"> </span><span class="error">c</span><span class="error">:</span><span class="error"> </span><span class="error">d</span><span class="error">
 </span></pre>
 <pre>Line      : 1
-Message   : Expected (COMMENT EOL), but got COLON
+Column    : 4
+Expected  : COMMENT EOL
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;: c: d&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9701,10 +9819,12 @@ YAML      : &quot;: c: d&quot;
 </span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="singlequote">&#39;</span><span class="singlequoted">b</span><span class="singlequote">&#39;</span><span class="error">:</span><span class="error"> </span><span class="error">c</span><span class="error">
 </span></pre>
 <pre>Line      : 2
-Message   : Expected (EOL), but got COLON
+Column    : 6
+Expected  : EOL
+Got       : COLON
 Where     : YAML/PP/Parser.pm line 487
 YAML      : &quot;: c&quot;
-  at YAML/PP/Loader.pm line 52.
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
@@ -9729,10 +9849,11 @@ YAML      : &quot;: c&quot;
 </span><span class="indent"> </span><span class="error">-</span><span class="error"> </span><span class="error">item1</span><span class="error">
 </span></pre>
 <pre>Line      : 2
+Column    : 1
 Message   : Expected SEQ
 Where     : YAML/PP/Parser.pm line 345
-YAML      : &quot;- item1&quot;
-  at YAML/PP/Loader.pm line 52.
+YAML      : &quot;- item1 &quot;
+  at YAML/PP/Loader.pm line 58.
 </pre>
 
 </td>
