@@ -68,9 +68,9 @@ pre.diff {
 </style>
 </head>
 <body>
-Generated with YAML::PP v0.006-8-g33b2e26e<br>
+Generated with YAML::PP v0.006_002<br>
 <a href="#valid">Valid (227)</a><br>
-<a href="#invalid">Invalid (57)</a><br>
+<a href="#invalid">Invalid (58)</a><br>
 <h1><a name="valid">Valid</a></h1>
 <table class="highlight">
 <tr>
@@ -574,12 +574,16 @@ Doc 3: &quot;d e&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a b\nc</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">a b</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">c</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a b\nc</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">a b</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">c</span><span class="eol">
 </span></pre>
 </td>
 </tr>
@@ -835,7 +839,8 @@ YAML      : &quot;:,\n&quot;
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
 </span><span class="default">plain</span><span class="colon">:</span><span class="default"> </span><span class="default">This unquoted scalar spans many lines.</span><span class="eol">
-</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">So does this quoted scalar.\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">quoted</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">So does this quoted scalar.</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -931,7 +936,11 @@ YAML      : &quot;:,\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">ab cd\nef\n\ngh\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">ab cd</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">ef</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">gh</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -980,10 +989,16 @@ YAML      : &quot;:,\n&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">detected\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\n\n# detected\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> explicit\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">detected\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">detected</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"># detected</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> explicit</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">detected</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -993,8 +1008,8 @@ YAML      : &quot;:,\n&quot;
 </span><span class="eol">
 </span><span class="eol">
 </span><span class="indent">  </span><span class="block_scalar_content"># detected</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
-</span><span class="indent">   </span><span class="block_scalar_content">explicit</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> explicit</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
 </span><span class="indent">  </span><span class="block_scalar_content">detected</span><span class="eol">
 </span></pre>
@@ -1211,7 +1226,11 @@ YAML      : &quot;:,\n&quot;
 <pre><span class="doc_start">---</span><span class="eol">
 </span><span class="default">canonical</span><span class="colon">:</span><span class="default"> </span><span class="default">R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLCAgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=</span><span class="eol">
 </span><span class="default">description</span><span class="colon">:</span><span class="default"> </span><span class="default">The binary value above is a tiny arrow encoded as a gif image.</span><span class="eol">
-</span><span class="default">generic</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5\nOTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+\n+f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC\nAgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">generic</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">+f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">AgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -1307,8 +1326,11 @@ YAML      : &quot;:,\n&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">some text\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">some\ntext\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">some text</span><span class="eol">
+</span><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">some</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -1402,8 +1424,11 @@ YAML      : &quot;:,\n&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">Chomping</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Clipped empty lines\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="default">Folding</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Empty line\nas a line feed</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">Chomping</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Clipped empty lines</span><span class="eol">
+</span><span class="default">Folding</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Empty line</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">as a line feed</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -1561,9 +1586,10 @@ Doc 2: &quot;green&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="doublequote">&quot;</span><span class="doublequoted">block key\n</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="eol">
+</span><span class="question">?</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">block key</span><span class="eol">
+</span><span class="colon">:</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="eol">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="eol">
 </span><span class="default">explicit key</span><span class="colon">:</span><span class="default"> </span><span class="default">null</span><span class="eol">
 </span></pre>
 </td>
@@ -1749,7 +1775,10 @@ YAML      : &quot;, b, c ]: value&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">ab\n\n \n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">ab</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="trailing_space"> </span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -1839,7 +1868,9 @@ YAML      : &quot;, b, c ]: value&quot;
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
 </span><span class="default">Not indented</span><span class="colon">:</span><span class="eol">
-</span><span class="indent">  </span><span class="default">By one space</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">By four\n  spaces\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="indent">  </span><span class="default">By one space</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">    </span><span class="block_scalar_content">By four</span><span class="eol">
+</span><span class="indent">    </span><span class="block_scalar_content">  spaces</span><span class="eol">
 </span><span class="indent">  </span><span class="default">Flow style</span><span class="colon">:</span><span class="eol">
 </span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">By two</span><span class="eol">
 </span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">Also by two</span><span class="eol">
@@ -1881,7 +1912,9 @@ YAML      : &quot;, b, c ]: value&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\\//||\\/||\n// ||  ||__\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">\//||\/||</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">// ||  ||__</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -2063,7 +2096,13 @@ YAML      : &quot;, b, c ]: value&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Sammy Sosa completed another fine season with great stats.\n\n  63 Home Runs\n  0.288 Batting Average\n\nWhat a year!\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Sammy Sosa completed another fine season with great stats.</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">  63 Home Runs</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">  0.288 Batting Average</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">What a year!</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -2148,7 +2187,10 @@ Doc 2: &quot;bar&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> foo\nbar\nbaz </span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> foo</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">bar</span><span class="eol">
+</span><span class="indent">  </span><span class="trailing_space">baz </span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -2238,7 +2280,8 @@ Doc 3: {
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">flow in block</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Block scalar\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Block scalar</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">bar</span><span class="eol">
 </span></pre>
 </td>
@@ -2379,9 +2422,16 @@ Doc 3: {
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">application specific tag</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">The semantics of the tag\nabove may be different for\ndifferent documents.\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">application specific tag</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">The semantics of the tag</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">above may be different for</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">different documents.</span><span class="eol">
 </span><span class="default">not-date</span><span class="colon">:</span><span class="default"> </span><span class="default">2002-04-28</span><span class="eol">
-</span><span class="default">picture</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">R0lGODlhDAAMAIQAAP//9/X\n17unp5WZmZgAAAOfn515eXv\nPz7Y6OjuDg4J+fn5OTk6enp\n56enmleECcgggoBADs=\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">picture</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">R0lGODlhDAAMAIQAAP//9/X</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">17unp5WZmZgAAAOfn515eXv</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Pz7Y6OjuDg4J+fn5OTk6enp</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">56enmleECcgggoBADs=</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -2422,7 +2472,9 @@ Doc 3: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty\n2nd non-empty 3rd non-empty </span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> 1st non-empty</span><span class="eol">
+</span><span class="indent">  </span><span class="trailing_space">2nd non-empty 3rd non-empty </span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -2648,7 +2700,16 @@ Doc 3: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\nfolded line\nnext line\n  * bullet\n\n  * list\n  * lines\n\nlast line\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">folded line</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">next line</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">  * bullet</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">  * list</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">  * lines</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">last line</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -3183,7 +3244,11 @@ YAML      : &quot;: pair,&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">trimmed\n\n\nas space</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">trimmed</span><span class="eol">
+</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">as space</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -3219,7 +3284,8 @@ YAML      : &quot;: pair,&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Mark McGwire&#39;s year was crippled by a knee injury.\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Mark McGwire&#39;s year was crippled by a knee injury.</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -3595,7 +3661,9 @@ YAML      : &quot;: separate ]&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty\n2nd non-empty 3rd non-empty </span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> 1st non-empty</span><span class="eol">
+</span><span class="indent">  </span><span class="trailing_space">2nd non-empty 3rd non-empty </span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -3732,11 +3800,15 @@ Doc 2: &quot;bar&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a b c d\ne</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">a b c d</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">e</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doublequote">&quot;</span><span class="doublequoted">a b c d\ne</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">a b c d</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">e</span><span class="eol">
 </span></pre>
 </td>
 </tr>
@@ -3816,8 +3888,10 @@ Doc 2: &quot;bar&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">text\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">text\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="eol">
+</span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="eol">
 </span><span class="default">strip</span><span class="colon">:</span><span class="default"> </span><span class="default">text</span><span class="eol">
 </span></pre>
 </td>
@@ -4032,7 +4106,8 @@ Doc 2: &quot;bar&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">folded text\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">folded text</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -4747,7 +4822,8 @@ YAML      : &quot;? explicit: entry,&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">line1 # no comment line3\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">line1 # no comment line3</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -4784,7 +4860,13 @@ YAML      : &quot;? explicit: entry,&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\n\nliteral\n \n\ntext\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">literal</span><span class="eol">
+</span><span class="indent">  </span><span class="trailing_space"> </span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -4899,11 +4981,15 @@ YAML      : &quot;? explicit: entry,&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a b c d\ne</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">a b c d</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">e</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a b c d\ne</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">a b c d</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">e</span><span class="eol">
 </span></pre>
 </td>
 </tr>
@@ -5075,8 +5161,11 @@ YAML      : &quot;? explicit: entry,&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"># text\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"># text\n\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"># text</span><span class="eol">
+</span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"># text</span><span class="eol">
+</span><span class="eol">
 </span><span class="default">strip</span><span class="colon">:</span><span class="default"> </span><span class="singlequote">&#39;</span><span class="singlequoted"># text</span><span class="singlequote">&#39;</span><span class="eol">
 </span></pre>
 </td>
@@ -5211,7 +5300,8 @@ YAML      : &quot;? explicit: entry,&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">line1 line2 line3\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">line1 line2 line3</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -5449,7 +5539,8 @@ YAML      : &quot;? foo :,\n  &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">folded text\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">folded text</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -5532,7 +5623,14 @@ YAML      : &quot;? foo :,\n  &quot;
 <pre><span class="doc_start">---</span><span class="eol">
 </span><span class="default">bar</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="eol">
 </span><span class="default">foo</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="eol">
-</span><span class="default">text</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">a\n  \nb\n\nc\n\nd\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">text</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">a</span><span class="eol">
+</span><span class="indent">  </span><span class="trailing_space">  </span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">b</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">c</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">d</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -5617,9 +5715,12 @@ YAML      : &quot;? foo :,\n  &quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">accomplishment</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Mark set a major league home run record in 1998.\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">accomplishment</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Mark set a major league home run record in 1998.</span><span class="eol">
 </span><span class="default">name</span><span class="colon">:</span><span class="default"> </span><span class="default">Mark McGwire</span><span class="eol">
-</span><span class="default">stats</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">65 Home Runs\n0.278 Batting Average\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">stats</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">65 Home Runs</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">0.278 Batting Average</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -5691,11 +5792,15 @@ YAML      : &quot;? foo :,\n  &quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">1st non-empty\n2nd non-empty 3rd non-empty</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">1st non-empty</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">2nd non-empty 3rd non-empty</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doublequote">&quot;</span><span class="doublequoted">1st non-empty\n2nd non-empty 3rd non-empty</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">1st non-empty</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">2nd non-empty 3rd non-empty</span><span class="eol">
 </span></pre>
 </td>
 </tr>
@@ -6203,7 +6308,11 @@ Doc 2: [
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">trimmed\n\n\nas space</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">trimmed</span><span class="eol">
+</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">as space</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -6282,7 +6391,7 @@ Doc 2: [
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="default">strip</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="eol">
 </span><span class="default">clip</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="default">keep</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">+</span><span class="eol">
 </span><span class="eol">
 </span></pre>
 </td>
@@ -6352,9 +6461,12 @@ Doc 2: [
 </span><span class="default">complex2</span><span class="colon">:</span><span class="eol">
 </span><span class="indent">  </span><span class="singlequote">&#39;</span><span class="singlequoted">[&#39;&#39;a&#39;&#39;]</span><span class="singlequote">&#39;</span><span class="colon">:</span><span class="default"> </span><span class="default">b</span><span class="eol">
 </span><span class="default">complex3</span><span class="colon">:</span><span class="eol">
-</span><span class="indent">  </span><span class="singlequote">&#39;</span><span class="singlequoted">[&#39;&#39;a&#39;&#39;]</span><span class="singlequote">&#39;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">b\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="indent">  </span><span class="singlequote">&#39;</span><span class="singlequoted">[&#39;&#39;a&#39;&#39;]</span><span class="singlequote">&#39;</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">    </span><span class="block_scalar_content">b</span><span class="eol">
 </span><span class="default">complex4</span><span class="colon">:</span><span class="eol">
-</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">a\n</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">null</span><span class="eol">
+</span><span class="indent">  </span><span class="question">?</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">    </span><span class="block_scalar_content">a</span><span class="eol">
+</span><span class="indent">  </span><span class="colon">:</span><span class="default"> </span><span class="default">null</span><span class="eol">
 </span><span class="default">complex5</span><span class="colon">:</span><span class="eol">
 </span><span class="indent">  </span><span class="singlequote">&#39;</span><span class="singlequoted">[&#39;&#39;a&#39;&#39;]</span><span class="singlequote">&#39;</span><span class="colon">:</span><span class="eol">
 </span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="eol">
@@ -6757,7 +6869,11 @@ YAML      : &quot;: value,  &quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">ab\n\ncd\nef\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">ab</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">cd</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">ef</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -6799,8 +6915,10 @@ YAML      : &quot;: value,  &quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">value</span><span class="eol">
+</span><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">value</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -6906,7 +7024,8 @@ Doc 3: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="default"> </span><span class="default">Bare document</span><span class="eol">
 </span><span class="doc_start">---</span><span class="default"> </span><span class="default">null</span><span class="eol">
-</span><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">%!PS-Adobe-2.0 # Not the first line\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">%!PS-Adobe-2.0 # Not the first line</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -7159,7 +7278,8 @@ Doc 3: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 </span><span class="dash">-</span><span class="default"> </span><span class="default">plain</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">double quoted</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">single quoted</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">block\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">block</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">plain again</span><span class="eol">
 </span></pre>
 </td>
@@ -7273,22 +7393,26 @@ Doc 3: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">literal\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> folded\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">keep\n\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">literal</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> folded</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">keep</span><span class="eol">
+</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="singlequote">&#39;</span><span class="singlequoted"> strip</span><span class="singlequote">&#39;</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
 </span><span class="indent">  </span><span class="block_scalar_content">literal</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
-</span><span class="indent">   </span><span class="block_scalar_content">folded</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="default">2</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> folded</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">+</span><span class="eol">
 </span><span class="indent">  </span><span class="block_scalar_content">keep</span><span class="eol">
 </span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="default">-</span><span class="eol">
-</span><span class="indent">   </span><span class="block_scalar_content">strip</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="default">2</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> strip</span><span class="eol">
 </span></pre>
 </td>
 </tr>
@@ -7444,13 +7568,15 @@ Doc 3: &quot;%!PS-Adobe-2.0 # Not the first line\n&quot;
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty\n2nd non-empty 3rd non-empty </span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> 1st non-empty</span><span class="eol">
+</span><span class="indent">  </span><span class="trailing_space">2nd non-empty 3rd non-empty </span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="singlequote">&#39;</span><span class="singlequoted"> 1st non-empty</span><span class="eol">
 </span><span class="eol">
-</span><span class="singlequoted">2nd non-empty 3rd non-empty </span><span class="singlequote">&#39;</span><span class="eol">
+</span><span class="singlequoted">  2nd non-empty 3rd non-empty </span><span class="singlequote">&#39;</span><span class="eol">
 </span></pre>
 </td>
 </tr>
@@ -7777,9 +7903,14 @@ YAML      : &quot;: bar&quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">detected\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\n\n# detected\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> explicit\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">detected</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"># detected</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> explicit</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\t\ndetected\n</span><span class="doublequote">&quot;</span><span class="eol">
 </span></pre>
 </td>
@@ -7790,8 +7921,8 @@ YAML      : &quot;: bar&quot;
 </span><span class="eol">
 </span><span class="eol">
 </span><span class="indent">  </span><span class="block_scalar_content"># detected</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
-</span><span class="indent">   </span><span class="block_scalar_content">explicit</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> explicit</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="folded">&gt;</span><span class="eol">
 </span><span class="indent">  </span><span class="block_scalar_content"></span><span class="tab">	</span><span class="eol">
 </span><span class="eol">
@@ -7971,7 +8102,8 @@ YAML      : &quot;: bar&quot;
 </span><span class="dash">-</span><span class="default"> </span><span class="default">seq2</span><span class="eol">
 </span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">double quotes</span><span class="eol">
 </span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="default">plain value</span><span class="eol">
-</span><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">abcde\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">abcde</span><span class="eol">
 </span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="eol">
 </span><span class="default">e</span><span class="colon">:</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">x</span><span class="colon">:</span><span class="default"> </span><span class="default">y</span><span class="eol">
@@ -8097,7 +8229,8 @@ Doc 3: {
 </span><span class="default">Date</span><span class="colon">:</span><span class="default"> </span><span class="default">2001-11-23 15:03:17 -5</span><span class="eol">
 </span><span class="default">Fatal</span><span class="colon">:</span><span class="default"> </span><span class="default">Unknown variable &quot;bar&quot;</span><span class="eol">
 </span><span class="default">Stack</span><span class="colon">:</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="default">code</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">x = MoreObject(\&quot;345\\n\&quot;)\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">code</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">    </span><span class="block_scalar_content">x = MoreObject(&quot;345\n&quot;)</span><span class="eol">
 </span><span class="indent">  </span><span class="default">file</span><span class="colon">:</span><span class="default"> </span><span class="default">TopClass.py</span><span class="eol">
 </span><span class="indent">  </span><span class="default">line</span><span class="colon">:</span><span class="default"> </span><span class="default">23</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">code</span><span class="colon">:</span><span class="default"> </span><span class="default">foo = bar</span><span class="eol">
@@ -8522,7 +8655,13 @@ Doc 3: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">\n\nliteral\n \n\ntext\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">literal</span><span class="eol">
+</span><span class="indent">  </span><span class="trailing_space"> </span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">text</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -8560,13 +8699,15 @@ Doc 3: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> 1st non-empty\n2nd non-empty 3rd non-empty </span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> 1st non-empty</span><span class="eol">
+</span><span class="indent">  </span><span class="trailing_space">2nd non-empty 3rd non-empty </span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="default"> </span><span class="singlequote">&#39;</span><span class="singlequoted"> 1st non-empty</span><span class="eol">
 </span><span class="eol">
-</span><span class="singlequoted">2nd non-empty 3rd non-empty </span><span class="singlequote">&#39;</span><span class="eol">
+</span><span class="singlequoted">  2nd non-empty 3rd non-empty </span><span class="singlequote">&#39;</span><span class="eol">
 </span></pre>
 </td>
 </tr>
@@ -8666,7 +8807,10 @@ Doc 3: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted"> foo\nbar\nbaz </span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="default">2</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content"> foo</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">bar</span><span class="eol">
+</span><span class="indent">  </span><span class="trailing_space">baz </span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -8701,7 +8845,11 @@ Doc 3: {
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">ab cd\nef\n\ngh\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">ab cd</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">ef</span><span class="eol">
+</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">gh</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -9105,7 +9253,9 @@ Doc 2: {
 </span><span class="default">bill-to</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;1</span><span class="eol">
 </span><span class="indent">  </span><span class="default">address</span><span class="colon">:</span><span class="eol">
 </span><span class="indent">    </span><span class="default">city</span><span class="colon">:</span><span class="default"> </span><span class="default">Royal Oak</span><span class="eol">
-</span><span class="indent">    </span><span class="default">lines</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">458 Walkman Dr.\nSuite #292\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="indent">    </span><span class="default">lines</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">      </span><span class="block_scalar_content">458 Walkman Dr.</span><span class="eol">
+</span><span class="indent">      </span><span class="block_scalar_content">Suite #292</span><span class="eol">
 </span><span class="indent">    </span><span class="default">postal</span><span class="colon">:</span><span class="default"> </span><span class="default">48046</span><span class="eol">
 </span><span class="indent">    </span><span class="default">state</span><span class="colon">:</span><span class="default"> </span><span class="default">MI</span><span class="eol">
 </span><span class="indent">  </span><span class="default">family</span><span class="colon">:</span><span class="default"> </span><span class="default">Dumars</span><span class="eol">
@@ -9322,7 +9472,8 @@ YAML      : &quot;% : 20 }\n&quot;
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">null</span><span class="eol">
-</span><span class="dash">-</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">block node\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">block node</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="eol">
 </span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">two</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">one</span><span class="colon">:</span><span class="default"> </span><span class="default">two</span><span class="eol">
@@ -9349,7 +9500,7 @@ YAML      : &quot;% : 20 }\n&quot;
 </span><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
 </span><span class="block_scalar_content">%!PS-Adobe-2.0</span><span class="eol">
 </span><span class="doc_end">...</span><span class="eol">
-</span><span class="yaml_directive">%YAML1.2</span><span class="eol">
+</span><span class="yaml_directive">%YAML 1.2</span><span class="eol">
 </span><span class="doc_start">---</span><span class="eol">
 </span><span class="eol"># Empty
 </span><span class="doc_end">...</span><span class="eol">
@@ -9368,7 +9519,8 @@ Doc 2: null
 </pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
-<pre><span class="doc_start">---</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">%!PS-Adobe-2.0\n</span><span class="doublequote">&quot;</span><span class="eol">
+<pre><span class="doc_start">---</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">%!PS-Adobe-2.0</span><span class="eol">
 </span><span class="doc_start">---</span><span class="default"> </span><span class="default">null</span><span class="eol">
 </span></pre>
 </td>
@@ -9488,9 +9640,11 @@ YAML      : &quot;,  &quot;
 <pre><span class="question">?</span><span class="default"> </span><span class="anchor">&amp;a</span><span class="eol">
 </span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="eol">
 </span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="anchor">&amp;b</span><span class="default"> </span><span class="default">b</span><span class="eol">
-</span><span class="colon">:</span><span class="default"> </span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="eol">
-</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="alias">*b</span><span class="eol">
-</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">d</span><span class="eol">
+</span><span class="colon">:</span><span class="default"> </span><span class="alias">*b</span><span class="eol">
+</span><span class="alias">*a</span><span class="default"> </span><span class="colon">:</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">c</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="alias">*b</span><span class="eol">
+</span><span class="dash">-</span><span class="default"> </span><span class="default">d</span><span class="eol">
 </span></pre>
 </td>
 </tr>
@@ -9558,8 +9712,11 @@ YAML      : &quot;,  &quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">Chomping</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Clipped empty lines\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="default">Folding</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Empty line\nas a line feed</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">Chomping</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Clipped empty lines</span><span class="eol">
+</span><span class="default">Folding</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="default">-</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">Empty line</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">as a line feed</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -9629,7 +9786,8 @@ YAML      : &quot;,  &quot;
 </span><span class="dash">-</span><span class="default"> </span><span class="default">seq2</span><span class="eol">
 </span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">double quotes</span><span class="eol">
 </span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="default">plain value</span><span class="eol">
-</span><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">abcde\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">block</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">abcde</span><span class="eol">
 </span><span class="default">c</span><span class="colon">:</span><span class="default"> </span><span class="default">d</span><span class="eol">
 </span><span class="default">e</span><span class="colon">:</span><span class="eol">
 </span><span class="dash">-</span><span class="default"> </span><span class="default">x</span><span class="colon">:</span><span class="default"> </span><span class="default">y</span><span class="eol">
@@ -9742,8 +9900,10 @@ YAML      : &quot;,  &quot;
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
 <pre><span class="doc_start">---</span><span class="eol">
-</span><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value\n</span><span class="doublequote">&quot;</span><span class="eol">
-</span><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">value\n</span><span class="doublequote">&quot;</span><span class="eol">
+</span><span class="default">folded</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">value</span><span class="eol">
+</span><span class="default">literal</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="eol">
+</span><span class="indent">  </span><span class="block_scalar_content">value</span><span class="eol">
 </span></pre>
 </td>
 <td valign="top" style="max-width: 20em; overflow-x: auto;">
@@ -11338,6 +11498,40 @@ YAML      : &quot;key2: \&quot;bad indentation\&quot; &quot;
 </td>
 </tr>
 <tr>
+<td colspan="6" valign="top" style="background-color: #dddddd"><b>NTY5 - Missing space in YAML directive
+</b></td></tr>
+<tr>
+<td style="max-width: 15em;" valign="top" >Tags:<br>directive, error<br>
+<a href="https://github.com/yaml/yaml-test-suite/blob/master/test/NTY5.tml">View source</a><br>
+</td>
+<td style="max-width: 20em; overflow-x: auto;" valign="top"><pre class="error"><span class="error">%YAML1.2
+</span><span class="error">---
+key: value
+</span></pre>
+<pre>Line      : 1
+Column    : 0
+Expected  : ALIAS COLON DOUBLEQUOTE FLOWMAP_START FLOWSEQ_START FOLDED LITERAL PLAIN QUESTION SINGLEQUOTE
+Got       : Invalid directive
+Where     : YAML/PP/Parser.pm line 487
+YAML      : &quot;%YAML1.2\n&quot;
+  at YAML/PP/Loader.pm line 59.
+</pre>
+
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+<td valign="top" style="max-width: 20em; overflow-x: auto;">
+<pre></pre>
+</td>
+</tr>
+<tr>
 <td colspan="6" valign="top" style="background-color: #dddddd"><b>Q4CL - Trailing content after quoted value
 </b></td></tr>
 <tr>
@@ -11637,7 +11831,7 @@ YAML      : &quot;invalid&quot;
 </td>
 </tr>
 <tr>
-<td colspan="6" valign="top" style="background-color: #dddddd"><b>U44R - Bad indentation in mapping
+<td colspan="6" valign="top" style="background-color: #dddddd"><b>U44R - Bad indentation in mapping (2)
 </b></td></tr>
 <tr>
 <td style="max-width: 15em;" valign="top" >Tags:<br>double, error, indent, mapping<br>
