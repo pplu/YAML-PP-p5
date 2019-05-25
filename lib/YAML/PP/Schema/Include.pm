@@ -72,18 +72,18 @@ YAML::PP::Schema::Include - Include YAML files
 
 =head1 SYNOPSIS
 
-    my $include_paths = ["/path/to/include/yaml/1", "/path/to/include/yaml/2"];
+    my @include_paths = ("/path/to/include/yaml/1", "/path/to/include/yaml/2");
     my %pp_args = (
         boolean => 'JSON::PP',
         cyclic_refs => 'fatal',
     );
     my $include = YAML::PP::Schema::Include->new(
-        paths => $include_paths,
+        paths => \@include_paths,
         pp_args => \%pp_args,
     );
     my $yp = YAML::PP->new( schema => ['JSON', $include], %pp_args );
 
-    # file1.yaml
+    # /path/to/include/yaml/1/file1.yaml
     # ---
     # a: b
 
